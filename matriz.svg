@@ -1,0 +1,401 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="617" height="1000" viewBox="0 0 617 1000" font-family="sans-serif" font-size="12" fill="#222">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="24" font-size="18" font-weight="bold">Combinator</text>
+<text x="20" y="44" >0/329 combinacións con notas · 0 aceptadas · 0 pendentes · 0 descartadas</text>
+<rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
+<text x="40" y="64" >Baleira</text>
+<rect x="97.6" y="53" width="14" height="14" rx="2" fill="#f5c542"/>
+<text x="117.6" y="64" >Pendente</text>
+<rect x="182" y="53" width="14" height="14" rx="2" fill="#43a047"/>
+<text x="202" y="64" >Algunha aceptada</text>
+<rect x="320.8" y="53" width="14" height="14" rx="2" fill="#9e9e9e"/>
+<text x="340.8" y="64" >Todo descartado</text>
+<text x="20" y="94" font-size="15" font-weight="bold">Operación · mecánica</text>
+<text x="204.2" y="196.16652224137047" transform="rotate(-45 204.2 196.16652224137047)">A veces</text>
+<text x="226.2" y="196.16652224137047" transform="rotate(-45 226.2 196.16652224137047)">Ao revés</text>
+<text x="248.2" y="196.16652224137047" transform="rotate(-45 248.2 196.16652224137047)">Cada X Y</text>
+<text x="270.2" y="196.16652224137047" transform="rotate(-45 270.2 196.16652224137047)">Canto máis X máis Y</text>
+<text x="292.2" y="196.16652224137047" transform="rotate(-45 292.2 196.16652224137047)">Canto menos X máis Y</text>
+<text x="314.2" y="196.16652224137047" transform="rotate(-45 314.2 196.16652224137047)">Destrúe</text>
+<text x="336.2" y="196.16652224137047" transform="rotate(-45 336.2 196.16652224137047)">Máis</text>
+<text x="358.2" y="196.16652224137047" transform="rotate(-45 358.2 196.16652224137047)">Menos</text>
+<text x="380.2" y="196.16652224137047" transform="rotate(-45 380.2 196.16652224137047)">Necesitas máis</text>
+<text x="402.2" y="196.16652224137047" transform="rotate(-45 402.2 196.16652224137047)">Necesitas menos</text>
+<text x="424.2" y="196.16652224137047" transform="rotate(-45 424.2 196.16652224137047)">Non/Nunca</text>
+<text x="446.2" y="196.16652224137047" transform="rotate(-45 446.2 196.16652224137047)">Outra vez</text>
+<text x="468.2" y="196.16652224137047" transform="rotate(-45 468.2 196.16652224137047)">Se X entón Y</text>
+<text x="490.2" y="196.16652224137047" transform="rotate(-45 490.2 196.16652224137047)">Sempre</text>
+<text x="512.2" y="196.16652224137047" transform="rotate(-45 512.2 196.16652224137047)">X &lt;&gt; Y</text>
+<text x="534.2" y="196.16652224137047" transform="rotate(-45 534.2 196.16652224137047)">X = Y</text>
+<text x="556.2" y="196.16652224137047" transform="rotate(-45 556.2 196.16652224137047)">Xenera</text>
+<text x="185.2" y="215.16652224137047" text-anchor="end">Anotar</text>
+<rect x="194.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="237.16652224137047" text-anchor="end">Anotar marxinalia</text>
+<rect x="194.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="259.16652224137044" text-anchor="end">Arrastrar herba ao cacho</text>
+<rect x="194.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="245.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="281.16652224137044" text-anchor="end">Colocar herba no cacho</text>
+<rect x="194.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="267.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="303.16652224137044" text-anchor="end">Cortar</text>
+<rect x="194.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="289.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="325.16652224137044" text-anchor="end">Crear cacho</text>
+<rect x="194.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="311.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="347.16652224137044" text-anchor="end">Dar obxecto</text>
+<rect x="194.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="369.16652224137044" text-anchor="end">Falar</text>
+<rect x="194.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="355.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="391.16652224137044" text-anchor="end">Gardar no inventario</text>
+<rect x="194.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="377.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="413.16652224137044" text-anchor="end">Identificar</text>
+<rect x="194.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="435.16652224137044" text-anchor="end">Incorporar misión</text>
+<rect x="194.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="421.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="457.16652224137044" text-anchor="end">Moverse</text>
+<rect x="194.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="479.16652224137044" text-anchor="end">Recoller</text>
+<rect x="194.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="501.16652224137044" text-anchor="end">Tachar misión</text>
+<rect x="194.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Ao revés · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Destrúe · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Non/Nunca · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="502.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="524.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="546.2" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="20" y="548.1665222413704" font-size="15" font-weight="bold">Mecánica + mecánica</text>
+<text x="204.2" y="669.566348931015" transform="rotate(-45 204.2 669.566348931015)">Anotar</text>
+<text x="226.2" y="669.566348931015" transform="rotate(-45 226.2 669.566348931015)">Anotar marxinalia</text>
+<text x="248.2" y="669.566348931015" transform="rotate(-45 248.2 669.566348931015)">Arrastrar herba ao cacho</text>
+<text x="270.2" y="669.566348931015" transform="rotate(-45 270.2 669.566348931015)">Colocar herba no cacho</text>
+<text x="292.2" y="669.566348931015" transform="rotate(-45 292.2 669.566348931015)">Cortar</text>
+<text x="314.2" y="669.566348931015" transform="rotate(-45 314.2 669.566348931015)">Crear cacho</text>
+<text x="336.2" y="669.566348931015" transform="rotate(-45 336.2 669.566348931015)">Dar obxecto</text>
+<text x="358.2" y="669.566348931015" transform="rotate(-45 358.2 669.566348931015)">Falar</text>
+<text x="380.2" y="669.566348931015" transform="rotate(-45 380.2 669.566348931015)">Gardar no inventario</text>
+<text x="402.2" y="669.566348931015" transform="rotate(-45 402.2 669.566348931015)">Identificar</text>
+<text x="424.2" y="669.566348931015" transform="rotate(-45 424.2 669.566348931015)">Incorporar misión</text>
+<text x="446.2" y="669.566348931015" transform="rotate(-45 446.2 669.566348931015)">Moverse</text>
+<text x="468.2" y="669.566348931015" transform="rotate(-45 468.2 669.566348931015)">Recoller</text>
+<text x="185.2" y="688.566348931015" text-anchor="end">Anotar marxinalia</text>
+<rect x="194.2" y="674.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="710.566348931015" text-anchor="end">Arrastrar herba ao cacho</text>
+<rect x="194.2" y="696.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="696.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="732.566348931015" text-anchor="end">Colocar herba no cacho</text>
+<rect x="194.2" y="718.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="718.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="718.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="754.566348931015" text-anchor="end">Cortar</text>
+<rect x="194.2" y="740.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="740.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="740.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="740.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="776.566348931015" text-anchor="end">Crear cacho</text>
+<rect x="194.2" y="762.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="762.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="762.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="762.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="762.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="798.566348931015" text-anchor="end">Dar obxecto</text>
+<rect x="194.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="784.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="820.566348931015" text-anchor="end">Falar</text>
+<rect x="194.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="806.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="842.566348931015" text-anchor="end">Gardar no inventario</text>
+<rect x="194.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="828.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="864.566348931015" text-anchor="end">Identificar</text>
+<rect x="194.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="850.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="886.566348931015" text-anchor="end">Incorporar misión</text>
+<rect x="194.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="872.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="908.566348931015" text-anchor="end">Moverse</text>
+<rect x="194.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="894.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Incorporar misión + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="930.566348931015" text-anchor="end">Recoller</text>
+<rect x="194.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Incorporar misión + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="916.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Moverse + Recoller: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="952.566348931015" text-anchor="end">Tachar misión</text>
+<rect x="194.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Incorporar misión + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Moverse + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Recoller + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+</svg>

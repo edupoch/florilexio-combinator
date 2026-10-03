@@ -1,0 +1,9 @@
+{
+  "name": "combinator",
+  "private": true,
+  "description": "Cuaderno de combinaciones de mecánicas y operaciones para Obsidian",
+  "scripts": {
+    "combinar": "node combinar.js",
+    "test": "node --test"
+  }
+}
