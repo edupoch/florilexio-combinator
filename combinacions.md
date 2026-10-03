@@ -434,6 +434,7 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#Crear cacho + Moverse|Crear cacho]] · [[#Dar obxecto + Moverse|Dar obxecto]] · [[#Falar + Moverse|Falar]] · [[#Gardar no inventario + Moverse|Gardar no inventario]] · [[#Identificar + Moverse|Identificar]]
 
 #### Moverse + Pasar tempo
+- [ ] Unha herba ou obxecto que che fai perder tempo se te moves
 
 ### Operacións
 

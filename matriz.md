@@ -3,7 +3,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="1003" viewBox="0 0 520 1003" style="max-width:100%;height:auto" font-family="sans-serif" font-size="12" fill="#222">
 <rect width="100%" height="100%" fill="#fff"/>
 <text x="20" y="24" font-size="18" font-weight="bold">Combinator</text>
-<text x="20" y="44" >30/207 combinacións con notas · 0 aceptadas · 38 pendentes · 0 descartadas</text>
+<text x="20" y="44" >31/207 combinacións con notas · 0 aceptadas · 39 pendentes · 0 descartadas</text>
 <rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
 <text x="40" y="64" >Baleira</text>
 <rect x="97.6" y="53" width="14" height="14" rx="2" fill="#f5c542"/>
@@ -293,7 +293,7 @@
 <a class="internal-link" data-href="combinacions#Falar + Moverse" href="combinacions#Falar + Moverse"><rect x="255" y="919.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
 <a class="internal-link" data-href="combinacions#Gardar no inventario + Moverse" href="combinacions#Gardar no inventario + Moverse"><rect x="277" y="919.3330444827409" width="20" height="20" rx="3" fill="#f5c542"><title>Gardar no inventario + Moverse: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="287" y="933.3330444827409" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text></a>
 <a class="internal-link" data-href="combinacions#Identificar + Moverse" href="combinacions#Identificar + Moverse"><rect x="299" y="919.3330444827409" width="20" height="20" rx="3" fill="#f5c542"><title>Identificar + Moverse: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="309" y="933.3330444827409" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text></a>
-<a class="internal-link" data-href="combinacions#Moverse + Pasar tempo" href="combinacions#Moverse + Pasar tempo"><rect x="343" y="919.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Moverse + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
+<a class="internal-link" data-href="combinacions#Moverse + Pasar tempo" href="combinacions#Moverse + Pasar tempo"><rect x="343" y="919.3330444827409" width="20" height="20" rx="3" fill="#f5c542"><title>Moverse + Pasar tempo: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="353" y="933.3330444827409" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text></a>
 <text x="158" y="955.3330444827409" text-anchor="end">Pasar tempo</text>
 <a class="internal-link" data-href="combinacions#Anotar + Pasar tempo" href="combinacions#Anotar + Pasar tempo"><rect x="167" y="941.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
 <a class="internal-link" data-href="combinacions#Cortar + Pasar tempo" href="combinacions#Cortar + Pasar tempo"><rect x="189" y="941.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
@@ -302,5 +302,5 @@
 <a class="internal-link" data-href="combinacions#Falar + Pasar tempo" href="combinacions#Falar + Pasar tempo"><rect x="255" y="941.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
 <a class="internal-link" data-href="combinacions#Gardar no inventario + Pasar tempo" href="combinacions#Gardar no inventario + Pasar tempo"><rect x="277" y="941.3330444827409" width="20" height="20" rx="3" fill="#f5c542"><title>Gardar no inventario + Pasar tempo: 0 aceptadas, 3 pendentes, 0 descartadas</title></rect><text x="287" y="955.3330444827409" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">3</text></a>
 <a class="internal-link" data-href="combinacions#Identificar + Pasar tempo" href="combinacions#Identificar + Pasar tempo"><rect x="299" y="941.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
-<a class="internal-link" data-href="combinacions#Moverse + Pasar tempo" href="combinacions#Moverse + Pasar tempo"><rect x="321" y="941.3330444827409" width="20" height="20" rx="3" fill="#f0f0f0"><title>Moverse + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect></a>
+<a class="internal-link" data-href="combinacions#Moverse + Pasar tempo" href="combinacions#Moverse + Pasar tempo"><rect x="321" y="941.3330444827409" width="20" height="20" rx="3" fill="#f5c542"><title>Moverse + Pasar tempo: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="331" y="955.3330444827409" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text></a>
 </svg>
