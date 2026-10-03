@@ -383,6 +383,7 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]] · [[#Crear cacho + Identificar|Crear cacho]] · [[#Dar obxecto + Identificar|Dar obxecto]] · [[#Falar + Identificar|Falar]] · [[#Gardar no inventario + Identificar|Gardar no inventario]]
 
 #### Identificar + Moverse
+- [ ] Unha herba que só a podes identificar se estás en movemento ou quedo
 
 #### Identificar + Pasar tempo
 
@@ -439,6 +440,7 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#C
 #### A veces · Moverse
 
 #### Ao revés · Moverse
+- [ ] Herba que che altera a dirección do movemento
 
 #### Cada X Y · Moverse
 
@@ -514,6 +516,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 - [ ] Momentos nos que non pasa o tempo
 
 #### Outra vez · Pasar tempo
+- [ ] Obxecto ou herba que che permita repetir o día ou mesmo a vida mantendo os coñecementos
 
 #### Se X entón Y · Pasar tempo
 
