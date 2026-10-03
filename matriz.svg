@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="617" height="1044" viewBox="0 0 617 1044" font-family="sans-serif" font-size="12" fill="#222">
 <rect width="100%" height="100%" fill="#fff"/>
 <text x="20" y="24" font-size="18" font-weight="bold">Combinator</text>
-<text x="20" y="44" >6/360 combinacións con notas · 0 aceptadas · 0 pendentes · 0 descartadas</text>
+<text x="20" y="44" >6/360 combinacións con notas · 0 aceptadas · 8 pendentes · 0 descartadas</text>
 <rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
 <text x="40" y="64" >Baleira</text>
 <rect x="97.6" y="53" width="14" height="14" rx="2" fill="#f5c542"/>
@@ -34,7 +34,7 @@
 <rect x="238.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f5c542"><title>Destrúe · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f5c542"><title>Destrúe · Anotar: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="314.2" y="215.16652224137047" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="326.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="348.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="201.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -52,7 +52,7 @@
 <rect x="238.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f5c542"><title>Destrúe · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f5c542"><title>Destrúe · Anotar marxinalia: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="314.2" y="237.16652224137047" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="326.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Máis · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="348.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="223.16652224137047" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -237,7 +237,7 @@
 <rect x="348.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="392.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="414.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Non/Nunca · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Non/Nunca · Moverse: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="424.2" y="457.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="436.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="458.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="480.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -246,7 +246,7 @@
 <rect x="546.2" y="443.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <text x="185.2" y="479.16652224137044" text-anchor="end">Pasar tempo</text>
 <rect x="194.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>A veces · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="216.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Ao revés · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Ao revés · Pasar tempo: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="226.2" y="479.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="238.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cada X Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto máis X máis Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Canto menos X máis Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -255,7 +255,7 @@
 <rect x="348.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Menos · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas máis · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="392.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Necesitas menos · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="414.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Non/Nunca · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Non/Nunca · Pasar tempo: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="424.2" y="479.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="436.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Outra vez · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="458.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Se X entón Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="480.2" y="465.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -399,7 +399,7 @@
 <rect x="304.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="326.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="348.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="370.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f5c542"><title>Gardar no inventario + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f5c542"><title>Gardar no inventario + Pasar tempo: 0 aceptadas, 3 pendentes, 0 descartadas</title></rect><text x="380.2" y="952.566348931015" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">3</text>
 <rect x="392.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="414.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Incorporar misión + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="436.2" y="938.566348931015" width="20" height="20" rx="3" fill="#f0f0f0"><title>Moverse + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>

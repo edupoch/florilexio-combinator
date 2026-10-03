@@ -6,7 +6,8 @@
 // Lee las listas `mecanicas` y `operacions` del front matter, regenera el cuerpo
 // (un `## Índice` con enlaces a cada mecánica y la matriz, y una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
 // en `### Operacións`, en orden alfabético) conservando las notas escritas bajo
-// cada título `####`, y genera `matriz.svg` al lado.
+// cada título `####`. Genera al lado `matriz.md`, una nota con la matriz en SVG
+// cuyas casillas enlazan con su combinación, y `matriz.svg`, la misma imagen sin enlaces.
 // Las notas que ya no encajan en ninguna combinación van a la sección `## Orfas`.
 'use strict';
 
@@ -25,7 +26,9 @@ const INDICE = 'Índice';
 const ENLACE_INDICE_GENERADO = /^- \[\[#[^\]]*\]\]\s*$/;
 const RESERVADOS = [INDICE, ORFAS, GRUPO_PARES, GRUPO_OPS];
 const SVG_NOME = 'matriz.svg';
-const EMBED = `![[${SVG_NOME}]]`;
+const NOTA_MATRIZ = 'matriz';
+const EMBED = `![[${NOTA_MATRIZ}]]`;
+const EMBEDS_GENERADOS = new Set([EMBED, `![[${NOTA_MATRIZ}.md]]`, `![[${SVG_NOME}]]`]);
 const PROHIBIDOS = /[+·#|^[\]:]/;
 
 const comparar = (a, b) => a.localeCompare(b, LOCALE, { sensitivity: 'base' });
@@ -109,7 +112,7 @@ function leerNotas(cuerpo) {
   const notas = new Map();
   let destino = preambulo;
   let seccion = null; // título de la `##` actual
-  let trasTitulo = false; // justo después de un título es donde el script escribe "Ver tamén"
+  let generales = false; // notas generales de una mecánica o grupo, donde el script escribe "Ver tamén"
   let enIndice = false;
   let enCodigo = false;
 
@@ -123,25 +126,26 @@ function leerNotas(cuerpo) {
 
   for (const linea of cuerpo.split(/\r?\n/)) {
     const generada =
-      ((destino === preambulo || enIndice) && linea.trim() === EMBED) ||
+      ((destino === preambulo || enIndice) && EMBEDS_GENERADOS.has(linea.trim())) ||
       (enIndice && ENLACE_INDICE_GENERADO.test(linea)) ||
-      (trasTitulo && VER_TAMEN_GENERADO.test(linea));
-    trasTitulo = false;
+      (generales && VER_TAMEN_GENERADO.test(linea));
     if (/^\s*(```|~~~)/.test(linea)) enCodigo = !enCodigo;
     const titulo = !enCodigo && linea.match(/^(#{2,4})\s+(.+?)\s*$/);
     if (titulo) {
       const nivel = titulo[1].length;
       const texto = normalizar(titulo[2]);
       enIndice = nivel === 2 && clave(texto) === clave(INDICE);
+      let k = claveDeTitulo(texto);
+      let nombre = texto;
       if (nivel === 2) {
         seccion = texto;
-        destino = abrir(claveSeccion(texto), texto);
+        k = claveSeccion(texto);
       } else if (nivel === 3 && grupo(texto) && seccion) {
-        destino = abrir(claveGrupo(texto, seccion), `${grupo(texto)} de ${seccion}`);
-      } else {
-        destino = abrir(claveDeTitulo(texto), texto);
+        k = claveGrupo(texto, seccion);
+        nombre = `${grupo(texto)} de ${seccion}`;
       }
-      trasTitulo = true;
+      destino = abrir(k, nombre);
+      generales = !k.startsWith('p:') && !k.startsWith('o:');
     } else if (!generada) {
       destino.push(linea);
     }
@@ -263,7 +267,8 @@ const COLORES = {
 
 const escapar = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-function generarSVG(mecanicas, operaciones, conteos) {
+// Con `nota`, cada casilla enlaza con su título en esa nota de Obsidian.
+function generarSVG(mecanicas, operaciones, conteos, nota = null) {
   const FUENTE = 12, ANCHO_LETRA = 6.8, CELDA = 22, MARGEN = 20;
   const anchoTexto = s => s.length * ANCHO_LETRA;
   const diagonal = lista => Math.max(0, ...lista.map(anchoTexto)) * Math.SQRT1_2;
@@ -317,13 +322,19 @@ function generarSVG(mecanicas, operaciones, conteos) {
         const color = COLORES[estado(c)];
         const notasTotales = c.aceptadas + c.pendientes + c.descartadas;
         const cx = x0 + j * CELDA;
-        piezas.push(
+        const titulo = tituloCelda(fila, col);
+        let casilla =
           `<rect x="${cx + 1}" y="${fy + 1}" width="${CELDA - 2}" height="${CELDA - 2}" rx="3" fill="${color.fondo}">` +
-          `<title>${escapar(`${tituloCelda(fila, col)}: ${c.aceptadas} aceptadas, ${c.pendientes} pendentes, ${c.descartadas} descartadas`)}</title></rect>`);
+          `<title>${escapar(`${titulo}: ${c.aceptadas} aceptadas, ${c.pendientes} pendentes, ${c.descartadas} descartadas`)}</title></rect>`;
         if (notasTotales) {
-          piezas.push(texto(cx + CELDA / 2, fy + CELDA / 2 + 4, String(notasTotales),
-            `text-anchor="middle" font-size="10" fill="${color.texto}" pointer-events="none"`));
+          casilla += texto(cx + CELDA / 2, fy + CELDA / 2 + 4, String(notasTotales),
+            `text-anchor="middle" font-size="10" fill="${color.texto}" pointer-events="none"`);
         }
+        if (nota) {
+          const destino = escapar(`${nota}#${titulo}`);
+          casilla = `<a class="internal-link" data-href="${destino}" href="${destino}">${casilla}</a>`;
+        }
+        piezas.push(casilla);
       });
     });
     anchoTotal = Math.max(anchoTotal, x0 + columnas.length * CELDA + diagonal(columnas.slice(-1)) + MARGEN);
@@ -339,7 +350,8 @@ function generarSVG(mecanicas, operaciones, conteos) {
 
   const ancho = Math.ceil(Math.max(anchoTotal, 520));
   const alto = Math.ceil(y);
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}" ` +
+  const estilo = nota ? ' style="max-width:100%;height:auto"' : '';
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}"${estilo} ` +
     `font-family="sans-serif" font-size="${FUENTE}" fill="#222">\n` +
     `<rect width="100%" height="100%" fill="#fff"/>\n${piezas.join('\n')}\n</svg>\n`;
 }
@@ -355,31 +367,38 @@ function escribirSiCambia(ruta, contenido, copia) {
   return true;
 }
 
-// Transforma el texto del cuaderno sin tocar el disco.
-function procesar(texto) {
+// Transforma el texto del cuaderno sin tocar el disco. `nota` es el nombre del
+// cuaderno en Obsidian (sin `.md`), al que enlazan las casillas de la matriz.
+function procesar(texto, nota = 'combinacions') {
   const fm = separarFrontMatter(texto);
   const mecanicas = validar(leerLista(fm.yaml, /^mec[aá]nicas\s*:/i, 'mecanicas'), 'mecanicas');
   const operaciones = validar(leerLista(fm.yaml, /^operaci[oó]ns\s*:/i, 'operacions'), 'operacions');
   const { preambulo, notas } = leerNotas(fm.cuerpo);
   const { markdown, conteos, nuevas, orfas } = generarMarkdown(fm.bruto, preambulo, notas, mecanicas, operaciones);
   const svg = generarSVG(mecanicas, operaciones, conteos);
-  return { markdown, svg, conteos, nuevas, orfas, mecanicas, operaciones };
+  // Sin líneas en blanco dentro del SVG: Obsidian cortaría ahí el bloque HTML.
+  const notaMatriz = `%% Generado por combinar.js a partir de ${nota}.md: no editar. %%\n\n` +
+    generarSVG(mecanicas, operaciones, conteos, nota);
+  return { markdown, svg, notaMatriz, conteos, nuevas, orfas, mecanicas, operaciones };
 }
 
 function main(argumento) {
   const ruta = path.resolve(argumento || 'combinacions.md');
-  const { markdown, svg, nuevas, orfas, mecanicas, operaciones } = procesar(fs.readFileSync(ruta, 'utf8'));
+  const resultado = procesar(fs.readFileSync(ruta, 'utf8'), path.basename(ruta, '.md'));
+  const { markdown, svg, notaMatriz, nuevas, orfas, mecanicas, operaciones } = resultado;
 
-  const cambioMd = escribirSiCambia(ruta, markdown, true);
-  const cambioSvg = escribirSiCambia(path.join(path.dirname(ruta), SVG_NOME), svg, false);
+  const carpeta = path.dirname(ruta);
+  const actualizados = [
+    escribirSiCambia(ruta, markdown, true) && path.basename(ruta),
+    escribirSiCambia(path.join(carpeta, `${NOTA_MATRIZ}.md`), notaMatriz, false) && `${NOTA_MATRIZ}.md`,
+    escribirSiCambia(path.join(carpeta, SVG_NOME), svg, false) && SVG_NOME,
+  ].filter(Boolean);
 
   const pares = (mecanicas.length * (mecanicas.length - 1)) / 2;
   console.log(`${mecanicas.length} mecánicas, ${operaciones.length} operaciones → ` +
     `${pares} pares + ${mecanicas.length * operaciones.length} operación·mecánica.`);
   console.log(`Combinaciones nuevas: ${nuevas}. Huérfanas: ${orfas}.`);
-  console.log(cambioMd || cambioSvg
-    ? `Actualizado: ${[cambioMd && path.basename(ruta), cambioSvg && SVG_NOME].filter(Boolean).join(', ')}.`
-    : 'Sin cambios.');
+  console.log(actualizados.length ? `Actualizado: ${actualizados.join(', ')}.` : 'Sin cambios.');
 }
 
 module.exports = { procesar, contar, estado, claveDeTitulo };

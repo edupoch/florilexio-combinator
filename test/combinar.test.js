@@ -113,7 +113,7 @@ test('empieza con un índice que enlaza todas las mecánicas, seguido de la matr
   const md = ejecutar(cuaderno(MECS, OPS));
   assert.ok(md.startsWith(cuaderno(MECS, OPS) + '\n## Índice\n' +
     '- [[#Cortar|Cortar]]\n- [[#Falar|Falar]]\n- [[#Moverse|Moverse]]\n- [[#Recoller|Recoller]]\n' +
-    '\n![[matriz.svg]]\n\n## Cortar\n'));
+    '\n![[matriz]]\n\n## Cortar\n'));
 });
 
 test('el índice enlaza Orfas solo mientras existe', () => {
@@ -127,9 +127,9 @@ test('el índice enlaza Orfas solo mientras existe', () => {
 
 test('conserva el texto propio escrito bajo el índice', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
-  md = md.replace('![[matriz.svg]]\n', '![[matriz.svg]]\n\nVer tamén a nota [[Deseño xeral]].\n- [[Outra nota]]\n');
+  md = md.replace('![[matriz]]\n', '![[matriz]]\n\nVer tamén a nota [[Deseño xeral]].\n- [[Outra nota]]\n');
   md = ejecutar(ejecutar(md));
-  assert.deepEqual(notasDe(md, 'Índice', '##').slice(-4), ['![[matriz.svg]]', '', 'Ver tamén a nota [[Deseño xeral]].', '- [[Outra nota]]']);
+  assert.deepEqual(notasDe(md, 'Índice', '##').slice(-4), ['![[matriz]]', '', 'Ver tamén a nota [[Deseño xeral]].', '- [[Outra nota]]']);
   assert.equal(md.split('- [[#Cortar|Cortar]]').length, 2, 'los enlaces no se duplican');
 });
 
@@ -176,7 +176,7 @@ test('conserva el texto libre antes de la primera sección', () => {
   md = md.replace('## Índice\n', '# Sesión do luns\n\nAsistentes: todo o equipo.\n\n## Índice\n');
   md = ejecutar(md);
   assert.ok(md.includes('---\n\n# Sesión do luns\n\nAsistentes: todo o equipo.\n\n## Índice\n'));
-  assert.equal(md.split('![[matriz.svg]]').length, 2, 'la matriz no se duplica');
+  assert.equal(md.split('![[matriz]]').length, 2, 'la matriz no se duplica');
 });
 
 test('conserva las notas generales de una mecánica y de sus grupos sin duplicar "Ver tamén"', () => {
@@ -194,10 +194,21 @@ test('conserva las notas generales de una mecánica y de sus grupos sin duplicar
 });
 
 test('no borra líneas de nota que se parecen a las generadas', () => {
-  const lineas = ['Ver tamén: o documento de deseño', '![[matriz.svg]]', 'Ver tamén: [[#Cortar + Falar|Cortar]]'];
+  const lineas = ['Ver tamén: o documento de deseño', '![[matriz]]', '![[matriz.svg]]', 'Ver tamén: [[#Cortar + Falar|Cortar]]'];
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', ...lineas);
   md = ejecutar(md);
   assert.deepEqual(notasDe(md, 'Máis · Falar'), lineas);
+});
+
+test('no duplica "Ver tamén" aunque haya líneas en blanco o copias anteriores', () => {
+  const verTamen = 'Ver tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]';
+  let md = ejecutar(cuaderno(MECS, OPS));
+  md = md.replace(`### Combinacións\n${verTamen}\n`, `### Combinacións\n\n${verTamen}\n\n${verTamen}\nNota propia.\n`);
+  md = md.replace('## Moverse\n', `## Moverse\n\n${verTamen}\n`);
+  md = ejecutar(md);
+  assert.equal(md.split(verTamen).length, 2);
+  assert.deepEqual(notasDe(desde(md, '## Moverse'), 'Combinacións', '###'), [verTamen, '', 'Nota propia.']);
+  assert.deepEqual(notasDe(desde(md, '## Moverse'), 'Moverse', '##'), []);
 });
 
 test('reordenar las listas no mueve ni pierde notas', () => {
@@ -319,7 +330,7 @@ test('migra el formato anterior (combinaciones en `###`) sin perder notas', () =
     '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Máis · Moverse\n- [ ] outra\n');
   const md = ejecutar(anterior);
   assert.equal(md, cuaderno(['Cortar', 'Moverse'], ['Máis'],
-    '\n## Índice\n- [[#Cortar|Cortar]]\n- [[#Moverse|Moverse]]\n\n![[matriz.svg]]\n\n' +
+    '\n## Índice\n- [[#Cortar|Cortar]]\n- [[#Moverse|Moverse]]\n\n![[matriz]]\n\n' +
     '## Cortar\nGeneral.\n\n### Combinacións\n\n#### Cortar + Moverse\n- [+] par\n\n### Operacións\n\n#### Máis · Cortar\n- [-] op\n\n' +
     '## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Operacións\n\n#### Máis · Moverse\n- [ ] outra\n'));
   assert.equal(ejecutar(md), md);
@@ -442,6 +453,29 @@ test('la matriz tiene una celda por combinación con su estado', () => {
   assert.ok(svg.includes('<title>Cortar + Moverse: 1 aceptadas, 1 pendentes, 0 descartadas</title>'));
   assert.ok(svg.includes('<title>X &lt;&gt; Y · Falar: 0 aceptadas, 0 pendentes, 1 descartadas</title>'));
   assert.ok(!/<[^>/!a-z]/.test(svg.replace(/<\/?[a-z]/g, '')), 'no hay "<" sin escapar');
+  assert.ok(!svg.includes('<a '), 'matriz.svg no lleva enlaces');
+});
+
+test('cada casilla de la nota de la matriz enlaza con su combinación', () => {
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
+  const { notaMatriz } = procesar(md, 'caderno');
+  const enlaces = [...notaMatriz.matchAll(/<a class="internal-link" data-href="([^"]*)" href="([^"]*)">/g)];
+  assert.equal(enlaces.length, 6 + 4 * 3);
+  for (const [, dataHref, href] of enlaces) assert.equal(dataHref, href);
+  const destinos = enlaces.map(e => e[1]);
+  assert.ok(destinos.includes('caderno#Cortar + Moverse'));
+  assert.ok(destinos.includes('caderno#X &lt;&gt; Y · Falar'));
+  // Cada destino es un título `####` real del cuaderno.
+  const h4 = new Set(titulos(md).filter(t => t.startsWith('#### ')).map(t => t.slice(5)));
+  for (const d of destinos) {
+    assert.ok(h4.has(d.slice('caderno#'.length).replace('&lt;', '<').replace('&gt;', '>')), d);
+  }
+  assert.match(notaMatriz, /^%% .* %%\n\n<svg [^>]*style="max-width:100%;height:auto"/);
+  assert.ok(!/\n\s*\n/.test(notaMatriz.slice(notaMatriz.indexOf('<svg'))), 'sin líneas en blanco dentro del SVG');
+});
+
+test('la nota de la matriz usa el nombre del cuaderno', () => {
+  assert.ok(procesar(cuaderno(MECS, OPS)).notaMatriz.includes('data-href="combinacions#'));
 });
 
 // --- Línea de comandos --------------------------------------------------------
@@ -457,6 +491,7 @@ test('la línea de comandos escribe el cuaderno, la matriz y una copia de seguri
   assert.match(salida, /Combinaciones nuevas: 18/);
   assert.equal(fs.readFileSync(ruta + '.bak', 'utf8'), original);
   assert.ok(fs.existsSync(path.join(dir, 'matriz.svg')));
+  assert.ok(fs.readFileSync(path.join(dir, 'matriz.md'), 'utf8').includes('data-href="combinacions#Cortar + Moverse"'));
   assert.ok(!fs.existsSync(ruta + '.tmp'));
 
   fs.rmSync(ruta + '.bak');

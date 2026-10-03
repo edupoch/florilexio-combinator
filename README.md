@@ -15,9 +15,9 @@ vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya exis
 
 | Comando | Qué hace |
 | --- | --- |
-| `npm run combinar` | Actualiza `combinacions.md` y `matriz.svg`. |
+| `npm run combinar` | Actualiza `combinacions.md`, `matriz.md` y `matriz.svg`. |
 | `node combinar.js` | Lo mismo, sin pasar por npm. |
-| `node combinar.js otro.md` | Actualiza otro cuaderno; `matriz.svg` se crea junto a él. |
+| `node combinar.js otro.md` | Actualiza otro cuaderno; la matriz se crea junto a él. |
 | `npm test` | Ejecuta los tests automáticos. |
 | `node --test --test-reporter=spec` | Los tests, con un informe legible test a test. |
 
@@ -60,7 +60,7 @@ Todo se ordena alfabéticamente, sin importar el orden de las listas:
 - [[#Anotar|Anotar]]
 - [[#Cortar|Cortar]]
 
-![[matriz.svg]]
+![[matriz]]
 
 ## Cortar
 Notas generales sobre Cortar.
@@ -97,9 +97,13 @@ Una línea de lista sin marca (`- idea`) cuenta como sin validar.
 
 ### La matriz
 
-`matriz.svg` muestra todas las combinaciones de un vistazo, coloreadas por estado:
-vacía, pendiente, alguna aceptada o todo descartado. El número de cada celda es su
-cantidad de notas; al pasar el ratón se ve el detalle.
+La matriz muestra todas las combinaciones de un vistazo, coloreadas por estado:
+vacía, pendiente, alguna aceptada o todo descartado. El número de cada casilla es su
+cantidad de notas.
+
+- En Obsidian está en la nota `matriz.md`, incrustada en el índice. **Al pulsar una
+  casilla se salta a esa combinación**, y al pasar el ratón se ven sus notas.
+- `matriz.svg` es la misma imagen sin enlaces, para verla fuera de Obsidian.
 
 ## Qué pasa con las notas al cambiar las listas
 
@@ -132,6 +136,7 @@ Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
 | --- | --- |
 | `combinar.js` | El script. |
 | `combinacions.md` | El cuaderno: listas en el front matter y notas del equipo. |
-| `matriz.svg` | Generado; no se edita a mano. |
+| `matriz.md` | Generado: la matriz con enlaces para Obsidian. No se edita a mano. |
+| `matriz.svg` | Generado: la matriz como imagen. No se edita a mano. |
 | `test/combinar.test.js` | Tests automáticos (`node:test`). |
 | `docs/ideas/combinator.md` | Documento de diseño original. |
