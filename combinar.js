@@ -4,8 +4,9 @@
 // Uso: node combinar.js [ficheiro.md]   (por defecto: combinacions.md)
 //
 // Lee las listas `mecanicas` y `operacions` del front matter, regenera el cuerpo
-// (pares de mecánicas y operación · mecánica, en orden alfabético) conservando
-// las notas escritas bajo cada título `###`, y genera `matriz.svg` al lado.
+// (una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
+// en `### Operacións`, en orden alfabético) conservando las notas escritas bajo
+// cada título `####`, y genera `matriz.svg` al lado.
 // Las notas que ya no encajan en ninguna combinación van a la sección `## Orfas`.
 'use strict';
 
@@ -16,7 +17,11 @@ const LOCALE = 'gl';
 const SEP_PAR = ' + ';
 const SEP_OP = ' · ';
 const VER_TAMEN = 'Ver tamén:';
+const VER_TAMEN_GENERADO = /^Ver tamén: \[\[#[^\]]*\]\]( · \[\[#[^\]]*\]\])*\s*$/;
 const ORFAS = 'Orfas';
+const GRUPO_PARES = 'Combinacións';
+const GRUPO_OPS = 'Operacións';
+const RESERVADOS = [ORFAS, GRUPO_PARES, GRUPO_OPS];
 const SVG_NOME = 'matriz.svg';
 const EMBED = `![[${SVG_NOME}]]`;
 const PROHIBIDOS = /[+·#|^[\]:]/;
@@ -28,12 +33,19 @@ const clave = s => normalizar(s).toLowerCase();
 const clavePar = (a, b) => 'p:' + [clave(a), clave(b)].sort().join('|');
 const claveOp = (op, m) => 'o:' + clave(op) + '|' + clave(m);
 const claveSeccion = m => 's:' + clave(m);
+const claveGrupo = (grupo, m) => 'g:' + clave(grupo) + '|' + clave(m);
+
+// Nombre canónico de un grupo (`Combinacións`/`Operacións`), o null si no lo es.
+const grupo = titulo => [GRUPO_PARES, GRUPO_OPS].find(g => clave(g) === clave(titulo)) || null;
 
 function claveDeTitulo(titulo) {
   const par = titulo.split(SEP_PAR);
   if (par.length === 2) return clavePar(par[0], par[1]);
   const op = titulo.split(SEP_OP);
   if (op.length === 2) return claveOp(op[0], op[1]);
+  // Notas generales de un grupo que quedaron huérfanas: "Combinacións de Cortar".
+  const deGrupo = titulo.match(/^(\S+) de (.+)$/);
+  if (deGrupo && grupo(deGrupo[1])) return claveGrupo(deGrupo[1], deGrupo[2]);
   return claveSeccion(titulo);
 }
 
@@ -72,7 +84,7 @@ function validar(lista, nombre) {
   const resultado = [];
   for (const item of lista) {
     if (PROHIBIDOS.test(item)) errores.push(`"${item}" contiene alguno de estos caracteres: + · # | ^ [ ] :`);
-    if (clave(item) === clave(ORFAS)) errores.push(`"${item}" es un nombre reservado.`);
+    if (RESERVADOS.some(r => clave(r) === clave(item))) errores.push(`"${item}" es un nombre reservado.`);
     if (vistos.has(clave(item))) {
       console.warn(`Aviso: "${item}" está repetido en ${nombre}; se usa una sola vez.`);
       continue;
@@ -87,12 +99,15 @@ function validar(lista, nombre) {
 // --- Lectura de notas -------------------------------------------------------
 
 // Devuelve el preámbulo (texto antes del primer `##`) y un Map clave -> {titulo, lineas}.
-// Solo `##` y `###` son estructura; todo lo demás es nota y se copia literal.
+// Solo `##`, `###` y `####` son estructura; todo lo demás es nota y se copia literal.
+// Las entradas se reconocen por su título, así que también se leen las que están
+// en `###` (formato anterior) o fuera de su sección.
 function leerNotas(cuerpo) {
   const preambulo = [];
   const notas = new Map();
   let destino = preambulo;
-  let trasH2 = false; // la línea justo después de `##` es donde el script escribe "Ver tamén"
+  let seccion = null; // título de la `##` actual
+  let trasTitulo = false; // justo después de un título es donde el script escribe "Ver tamén"
   let enCodigo = false;
 
   const abrir = (k, titulo) => {
@@ -104,18 +119,22 @@ function leerNotas(cuerpo) {
   };
 
   for (const linea of cuerpo.split(/\r?\n/)) {
-    const generada = (destino === preambulo && linea.trim() === EMBED) || (trasH2 && linea.startsWith(VER_TAMEN));
-    trasH2 = false;
+    const generada = (destino === preambulo && linea.trim() === EMBED) || (trasTitulo && VER_TAMEN_GENERADO.test(linea));
+    trasTitulo = false;
     if (/^\s*(```|~~~)/.test(linea)) enCodigo = !enCodigo;
-    const h2 = !enCodigo && linea.match(/^##\s+(.+?)\s*$/);
-    const h3 = !enCodigo && linea.match(/^###\s+(.+?)\s*$/);
-    if (h2) {
-      const titulo = normalizar(h2[1]);
-      destino = abrir(claveSeccion(titulo), titulo);
-      trasH2 = true;
-    } else if (h3) {
-      const titulo = normalizar(h3[1]);
-      destino = abrir(claveDeTitulo(titulo), titulo);
+    const titulo = !enCodigo && linea.match(/^(#{2,4})\s+(.+?)\s*$/);
+    if (titulo) {
+      const nivel = titulo[1].length;
+      const texto = normalizar(titulo[2]);
+      if (nivel === 2) {
+        seccion = texto;
+        destino = abrir(claveSeccion(texto), texto);
+      } else if (nivel === 3 && grupo(texto) && seccion) {
+        destino = abrir(claveGrupo(texto, seccion), `${grupo(texto)} de ${seccion}`);
+      } else {
+        destino = abrir(claveDeTitulo(texto), texto);
+      }
+      trasTitulo = true;
     } else if (!generada) {
       destino.push(linea);
     }
@@ -167,25 +186,41 @@ function generarMarkdown(frontMatter, preambulo, notas, mecanicas, operaciones) 
   const conteos = new Map();
   let nuevas = 0;
 
-  const entrada = (k, titulo) => {
+  const notasDe = k => {
     usadas.add(k);
-    const lineas = notas.has(k) ? notas.get(k).lineas : (nuevas++, []);
+    return notas.has(k) ? notas.get(k).lineas : [];
+  };
+  const titulo = (cabecera, lineas, generadas = []) => {
+    salida.push(cabecera, ...generadas);
+    if (lineas.length) salida.push(...(generadas.length ? [''] : []), ...lineas);
+    salida.push('');
+  };
+  const entrada = (k, texto) => {
+    if (!notas.has(k)) nuevas++;
+    const lineas = notasDe(k);
     conteos.set(k, contar(lineas));
-    salida.push(`### ${titulo}`, ...lineas, '');
+    titulo(`#### ${texto}`, lineas);
   };
 
   mecanicas.forEach((m, i) => {
-    salida.push(`## ${m}`);
+    titulo(`## ${m}`, notasDe(claveSeccion(m)));
+
     const anteriores = mecanicas.slice(0, i);
-    if (anteriores.length) {
-      salida.push(`${VER_TAMEN} ` + anteriores.map(a => `[[#${a}${SEP_PAR}${m}|${a}]]`).join(' · '));
+    const posteriores = mecanicas.slice(i + 1);
+    const notasPares = notasDe(claveGrupo(GRUPO_PARES, m));
+    if (anteriores.length || posteriores.length || notasPares.length) {
+      const verTamen = anteriores.length
+        ? [`${VER_TAMEN} ` + anteriores.map(a => `[[#${a}${SEP_PAR}${m}|${a}]]`).join(' · ')]
+        : [];
+      titulo(`### ${GRUPO_PARES}`, notasPares, verTamen);
+      for (const otra of posteriores) entrada(clavePar(m, otra), `${m}${SEP_PAR}${otra}`);
     }
-    const ks = claveSeccion(m);
-    usadas.add(ks);
-    if (notas.has(ks) && notas.get(ks).lineas.length) salida.push('', ...notas.get(ks).lineas);
-    salida.push('');
-    for (const otra of mecanicas.slice(i + 1)) entrada(clavePar(m, otra), `${m}${SEP_PAR}${otra}`);
-    for (const op of operaciones) entrada(claveOp(op, m), `${op}${SEP_OP}${m}`);
+
+    const notasOps = notasDe(claveGrupo(GRUPO_OPS, m));
+    if (operaciones.length || notasOps.length) {
+      titulo(`### ${GRUPO_OPS}`, notasOps);
+      for (const op of operaciones) entrada(claveOp(op, m), `${op}${SEP_OP}${m}`);
+    }
   });
 
   const claveOrfas = claveSeccion(ORFAS);

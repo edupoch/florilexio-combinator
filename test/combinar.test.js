@@ -24,15 +24,15 @@ function cambiarListas(md, mecanicas, operacions) {
   return md.replace(/^---\n[\s\S]*?\n---\n/, `---\nmecanicas: ${mecanicas.join(', ')}\noperacions: ${operacions.join(', ')}\n---\n`);
 }
 
-// Escribe notas debajo de un título `###` existente.
+// Escribe notas debajo de un título existente (por defecto, una combinación `####`).
 function anotar(md, titulo, ...lineas) {
-  const cabecera = `### ${titulo}\n`;
+  const cabecera = titulo.startsWith('#') ? `${titulo}\n` : `#### ${titulo}\n`;
   assert.ok(md.includes(cabecera), `no existe el título "${titulo}"`);
   return md.replace(cabecera, cabecera + lineas.join('\n') + '\n');
 }
 
-// Devuelve las líneas que hay entre `### titulo` (o `## titulo`) y el siguiente título.
-function notasDe(md, titulo, nivel = '###') {
+// Devuelve las líneas que hay entre `#### titulo` (u otro nivel) y el siguiente título.
+function notasDe(md, titulo, nivel = '####') {
   const lineas = md.split('\n');
   const inicio = lineas.indexOf(`${nivel} ${titulo}`);
   if (inicio < 0) return null;
@@ -40,14 +40,15 @@ function notasDe(md, titulo, nivel = '###') {
   let enCodigo = false;
   for (const l of lineas.slice(inicio + 1)) {
     if (/^\s*(```|~~~)/.test(l)) enCodigo = !enCodigo;
-    if (!enCodigo && /^#{2,3}\s/.test(l)) break;
+    if (!enCodigo && /^#{2,4}\s/.test(l)) break;
     resto.push(l);
   }
   while (resto.length && !resto[resto.length - 1].trim()) resto.pop();
   return resto;
 }
 
-const titulos = md => md.split('\n').filter(l => /^#{2,3}\s/.test(l));
+const titulos = md => md.split('\n').filter(l => /^#{2,4}\s/.test(l));
+const desde = (md, titulo) => md.slice(md.indexOf(titulo));
 
 // Generador pseudoaleatorio con semilla, para que los fallos sean reproducibles.
 function aleatorio(semilla) {
@@ -68,11 +69,11 @@ const OPS = ['Non/Nunca', 'Máis', 'X <> Y'];
 
 test('genera todos los pares y todas las combinaciones operación · mecánica', () => {
   const md = ejecutar(cuaderno(MECS, OPS));
-  const h3 = titulos(md).filter(t => t.startsWith('### '));
-  assert.equal(h3.length, 6 + 4 * 3);
-  assert.equal(new Set(h3).size, h3.length, 'no hay títulos duplicados');
-  assert.ok(md.includes('### Cortar + Moverse\n'));
-  assert.ok(md.includes('### X <> Y · Falar\n'));
+  const h4 = titulos(md).filter(t => t.startsWith('#### '));
+  assert.equal(h4.length, 6 + 4 * 3);
+  assert.equal(new Set(h4).size, h4.length, 'no hay títulos duplicados');
+  assert.ok(md.includes('#### Cortar + Moverse\n'));
+  assert.ok(md.includes('#### X <> Y · Falar\n'));
 });
 
 test('ordena mecánicas, pares y operaciones alfabéticamente', () => {
@@ -80,17 +81,32 @@ test('ordena mecánicas, pares y operaciones alfabéticamente', () => {
   const h2 = titulos(md).filter(t => t.startsWith('## '));
   assert.deepEqual(h2, ['## Cortar', '## Falar', '## Moverse', '## Recoller']);
   assert.deepEqual(notasDe(md, 'Cortar', '##'), []);
-  const cortar = titulos(md).slice(1, 1 + 3 + 3);
+  const cortar = titulos(md).slice(0, 9);
   assert.deepEqual(cortar, [
-    '### Cortar + Falar', '### Cortar + Moverse', '### Cortar + Recoller',
-    '### Máis · Cortar', '### Non/Nunca · Cortar', '### X <> Y · Cortar',
+    '## Cortar',
+    '### Combinacións', '#### Cortar + Falar', '#### Cortar + Moverse', '#### Cortar + Recoller',
+    '### Operacións', '#### Máis · Cortar', '#### Non/Nunca · Cortar', '#### X <> Y · Cortar',
   ]);
+});
+
+test('separa pares y operaciones en los grupos Combinacións y Operacións', () => {
+  const md = ejecutar(cuaderno(MECS, OPS));
+  const recoller = titulos(desde(md, '## Recoller'));
+  assert.deepEqual(recoller.slice(0, 3), ['## Recoller', '### Combinacións', '### Operacións'],
+    'la última mecánica no tiene pares propios, pero sí "Ver tamén"');
+  assert.equal(titulos(md).filter(t => t === '### Combinacións').length, 4);
+  assert.equal(titulos(md).filter(t => t === '### Operacións').length, 4);
+});
+
+test('con una sola mecánica no genera el grupo Combinacións', () => {
+  assert.ok(!ejecutar(cuaderno(['Cortar'], OPS)).includes('### Combinacións'));
+  assert.ok(!ejecutar(cuaderno(['Cortar', 'Moverse'], [])).includes('### Operacións'));
 });
 
 test('cada sección enlaza con wikilinks a sus pares que viven en otras secciones', () => {
   const md = ejecutar(cuaderno(MECS, OPS));
-  assert.ok(md.includes('## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]\n'));
-  assert.ok(md.includes('## Cortar\n\n'), 'la primera sección no tiene "Ver tamén"');
+  assert.ok(md.includes('## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]\n'));
+  assert.ok(md.includes('## Cortar\n\n### Combinacións\n\n#### '), 'la primera sección no tiene "Ver tamén"');
 });
 
 test('incrusta la matriz al principio del cuerpo', () => {
@@ -120,7 +136,7 @@ test('copia las notas literalmente, con sublistas, espacios y líneas en blanco'
     '',
     'Un párrafo libre.',
     '\t- tabulada',
-    '#### un subtítulo propio',
+    '##### un subtítulo propio',
     '- [-] descartada',
   ];
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Non/Nunca · Cortar', ...lineas);
@@ -129,7 +145,7 @@ test('copia las notas literalmente, con sublistas, espacios y líneas en blanco'
 });
 
 test('los títulos dentro de bloques de código no se interpretan', () => {
-  const lineas = ['```', '## no es una sección', '### ni una combinación', '```', '~~~', '## tampoco', '~~~'];
+  const lineas = ['```', '## no es una sección', '### ni un grupo', '#### ni una combinación', '```', '~~~', '## tampoco', '~~~'];
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Falar', ...lineas);
   md = ejecutar(md);
   assert.deepEqual(notasDe(md, 'Cortar + Falar'), lineas);
@@ -144,21 +160,22 @@ test('conserva el texto libre antes de la primera sección', () => {
   assert.equal(md.split('![[matriz.svg]]').length, 2, 'la matriz no se duplica');
 });
 
-test('conserva las notas generales de una mecánica sin duplicar "Ver tamén"', () => {
+test('conserva las notas generales de una mecánica y de sus grupos sin duplicar "Ver tamén"', () => {
+  const verTamen = 'Ver tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]';
   let md = ejecutar(cuaderno(MECS, OPS));
-  md = md.replace('## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]\n',
-    '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]\nMoverse é a base de todo.\n');
-  md = ejecutar(md);
-  md = ejecutar(md);
-  assert.deepEqual(notasDe(md, 'Moverse', '##'), [
-    'Ver tamén: [[#Cortar + Moverse|Cortar]] · [[#Falar + Moverse|Falar]]',
-    '',
-    'Moverse é a base de todo.',
-  ]);
+  md = md
+    .replace('## Moverse\n', '## Moverse\nMoverse é a base de todo.\n')
+    .replace(`${verTamen}\n`, `${verTamen}\nSobre os pares.\n`)
+    .replace(/(## Moverse[\s\S]*?### Operacións\n)/, '$1Sobre as operacións.\n');
+  md = ejecutar(ejecutar(md));
+  const seccion = desde(md, '## Moverse');
+  assert.deepEqual(notasDe(seccion, 'Moverse', '##'), ['Moverse é a base de todo.']);
+  assert.deepEqual(notasDe(seccion, 'Combinacións', '###'), [verTamen, '', 'Sobre os pares.']);
+  assert.deepEqual(notasDe(seccion, 'Operacións', '###'), ['Sobre as operacións.']);
 });
 
 test('no borra líneas de nota que se parecen a las generadas', () => {
-  const lineas = ['Ver tamén: o documento de deseño', '![[matriz.svg]]'];
+  const lineas = ['Ver tamén: o documento de deseño', '![[matriz.svg]]', 'Ver tamén: [[#Cortar + Falar|Cortar]]'];
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', ...lineas);
   md = ejecutar(md);
   assert.deepEqual(notasDe(md, 'Máis · Falar'), lineas);
@@ -193,15 +210,20 @@ test('las notas de una mecánica eliminada van a Orfas y vuelven al restaurarla'
   let md = ejecutar(cuaderno(MECS, OPS));
   md = anotar(md, 'Cortar + Moverse', '- [+] par');
   md = anotar(md, 'Non/Nunca · Cortar', '- [-] op');
-  md = md.replace('## Cortar\n', '## Cortar\nGeneral de cortar.\n');
+  md = md
+    .replace('## Cortar\n', '## Cortar\nGeneral de cortar.\n')
+    .replace(/(## Cortar[\s\S]*?### Combinacións\n)/, '$1Pares de cortar.\n')
+    .replace(/(## Cortar[\s\S]*?### Operacións\n)/, '$1Ops de cortar.\n');
 
   const sinCortar = ejecutar(cambiarListas(md, ['Moverse', 'Recoller', 'Falar'], OPS));
   assert.ok(!titulos(sinCortar).includes('## Cortar'));
-  const orfas = sinCortar.slice(sinCortar.indexOf('## Orfas'));
-  assert.deepEqual(notasDe(orfas, 'Cortar + Moverse'), ['- [+] par']);
-  assert.deepEqual(notasDe(orfas, 'Non/Nunca · Cortar'), ['- [-] op']);
-  assert.deepEqual(notasDe(orfas, 'Cortar'), ['General de cortar.']);
-  assert.equal(procesar(sinCortar).orfas, 3);
+  const orfas = desde(sinCortar, '## Orfas');
+  assert.deepEqual(notasDe(orfas, 'Cortar + Moverse', '###'), ['- [+] par']);
+  assert.deepEqual(notasDe(orfas, 'Non/Nunca · Cortar', '###'), ['- [-] op']);
+  assert.deepEqual(notasDe(orfas, 'Cortar', '###'), ['General de cortar.']);
+  assert.deepEqual(notasDe(orfas, 'Combinacións de Cortar', '###'), ['Pares de cortar.']);
+  assert.deepEqual(notasDe(orfas, 'Operacións de Cortar', '###'), ['Ops de cortar.']);
+  assert.equal(procesar(sinCortar).orfas, 5);
   assert.equal(ejecutar(sinCortar), sinCortar, 'Orfas también es estable');
 
   const restaurado = ejecutar(cambiarListas(sinCortar, MECS, OPS));
@@ -212,35 +234,38 @@ test('las notas de una mecánica eliminada van a Orfas y vuelven al restaurarla'
 test('las notas de una operación eliminada van a Orfas', () => {
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'X <> Y · Falar', '- [ ] distinto');
   md = ejecutar(cambiarListas(md, MECS, ['Non/Nunca', 'Máis']));
-  assert.deepEqual(notasDe(md.slice(md.indexOf('## Orfas')), 'X <> Y · Falar'), ['- [ ] distinto']);
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'X <> Y · Falar', '###'), ['- [ ] distinto']);
 });
 
 test('las combinaciones vacías eliminadas desaparecen sin dejar huérfanas', () => {
   const md = ejecutar(cambiarListas(ejecutar(cuaderno(MECS, OPS)), ['Cortar', 'Moverse'], ['Máis']));
   assert.ok(!md.includes('## Orfas'));
-  assert.equal(titulos(md).length, 2 + 1 + 2);
+  assert.deepEqual(titulos(md), [
+    '## Cortar', '### Combinacións', '#### Cortar + Moverse', '### Operacións', '#### Máis · Cortar',
+    '## Moverse', '### Combinacións', '### Operacións', '#### Máis · Moverse',
+  ]);
 });
 
 test('un título editado a mano lleva sus notas a Orfas', () => {
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] idea');
-  md = ejecutar(md.replace('### Máis · Falar', '### Máis · Falar moito'));
-  assert.ok(md.includes('### Máis · Falar\n'), 'la combinación se regenera vacía');
-  assert.deepEqual(notasDe(md.slice(md.indexOf('## Orfas')), 'Máis · Falar moito'), ['- [ ] idea']);
+  md = ejecutar(md.replace('#### Máis · Falar', '#### Máis · Falar moito'));
+  assert.ok(md.includes('#### Máis · Falar\n'), 'la combinación se regenera vacía');
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Máis · Falar moito', '###'), ['- [ ] idea']);
 });
 
 test('una sección `##` inventada se conserva en Orfas', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
   md = md.replace('## Cortar\n', '## Ideas sueltas\nAlgo que no encaja.\n\n## Cortar\n');
   md = ejecutar(md);
-  assert.deepEqual(notasDe(md.slice(md.indexOf('## Orfas')), 'Ideas sueltas'), ['Algo que no encaja.']);
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Ideas sueltas', '###'), ['Algo que no encaja.']);
 });
 
 test('fusiona las notas de un título repetido', () => {
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] primera');
-  md += '\n### Máis · Falar\n- [ ] segunda\n';
+  md += '\n#### Máis · Falar\n- [ ] segunda\n';
   md = ejecutar(md);
   assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [ ] primera', '', '- [ ] segunda']);
-  assert.equal(titulos(md).filter(t => t === '### Máis · Falar').length, 1);
+  assert.equal(titulos(md).filter(t => t === '#### Máis · Falar').length, 1);
 });
 
 test('al restaurar, fusiona las notas de Orfas con las nuevas de la misma combinación', () => {
@@ -267,6 +292,26 @@ test('acepta saltos de línea de Windows sin perder notas', () => {
   assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [+] crlf']);
 });
 
+test('migra el formato anterior (combinaciones en `###`) sin perder notas', () => {
+  const anterior = cuaderno(['Cortar', 'Moverse'], ['Máis'],
+    '\n![[matriz.svg]]\n\n' +
+    '## Cortar\n\nGeneral.\n\n### Cortar + Moverse\n- [+] par\n\n### Máis · Cortar\n- [-] op\n\n' +
+    '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Máis · Moverse\n- [ ] outra\n');
+  const md = ejecutar(anterior);
+  assert.equal(md, cuaderno(['Cortar', 'Moverse'], ['Máis'],
+    '\n![[matriz.svg]]\n\n' +
+    '## Cortar\nGeneral.\n\n### Combinacións\n\n#### Cortar + Moverse\n- [+] par\n\n### Operacións\n\n#### Máis · Cortar\n- [-] op\n\n' +
+    '## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Operacións\n\n#### Máis · Moverse\n- [ ] outra\n'));
+  assert.equal(ejecutar(md), md);
+});
+
+test('un `####` escrito dentro de una nota se convierte en entrada, pero no se pierde', () => {
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] antes', '#### Subtítulo propio', 'despois');
+  md = ejecutar(md);
+  assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [ ] antes']);
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Subtítulo propio', '###'), ['despois']);
+});
+
 // --- Propiedad general: ninguna línea de nota se pierde ----------------------
 
 test('ninguna línea de nota se pierde ante cambios aleatorios de las listas', () => {
@@ -286,9 +331,9 @@ test('ninguna línea de nota se pierde ante cambios aleatorios de las listas', (
     let md = ejecutar(cuaderno(m, o));
     const escritas = [];
     for (let ronda = 0; ronda < 4; ronda++) {
-      const h3 = titulos(md).filter(t => t.startsWith('### '));
+      const h4 = titulos(md).filter(t => t.startsWith('#### '));
       for (let i = 0; i < 3; i++) {
-        const titulo = h3[Math.floor(azar() * h3.length)].slice(4);
+        const titulo = h4[Math.floor(azar() * h4.length)].slice(5);
         const nota = `- [${' +-x'[Math.floor(azar() * 4)]}] s${semilla}r${ronda}n${i}`;
         md = anotar(md, titulo, nota);
         escritas.push(nota);
@@ -331,7 +376,9 @@ test('rechaza nombres que romperían títulos o enlaces', () => {
   for (const nombre of ['A+B', 'A · B', 'A#', 'A|B', 'A^', '[A]', 'A: B']) {
     assert.throws(() => procesar(cuaderno([nombre, 'Cortar'], ['Non'])), /no válidos/, nombre);
   }
-  assert.throws(() => procesar(cuaderno(['Orfas', 'Cortar'], ['Non'])), /reservado/);
+  for (const reservado of ['Orfas', 'combinacións', 'Operacións']) {
+    assert.throws(() => procesar(cuaderno([reservado, 'Cortar'], ['Non'])), /reservado/, reservado);
+  }
 });
 
 test('rechaza un fichero sin front matter o sin listas', () => {
@@ -358,6 +405,8 @@ test('reconoce el tipo de cada título', () => {
   assert.equal(claveDeTitulo('Moverse + Cortar'), claveDeTitulo('cortar + MOVERSE'));
   assert.equal(claveDeTitulo('Non · Cortar'), 'o:non|cortar');
   assert.equal(claveDeTitulo('Cortar'), 's:cortar');
+  assert.equal(claveDeTitulo('Combinacións de Gardar no inventario'), 'g:combinacións|gardar no inventario');
+  assert.equal(claveDeTitulo('Ideas de Cortar'), 's:ideas de cortar');
 });
 
 // --- Matriz SVG ---------------------------------------------------------------

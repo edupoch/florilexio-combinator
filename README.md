@@ -1,0 +1,129 @@
+# Combinator
+
+Cuaderno de Obsidian para generar ideas de diseño combinando **mecánicas** entre sí
+(`Cortar + Moverse`) y **operaciones** con mecánicas (`Non/Nunca · Cortar`).
+
+El script `combinar.js` crea en `combinacions.md` una entrada por combinación y, cada
+vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya existen.
+
+## Requisitos
+
+- [Node.js](https://nodejs.org/) 18 o superior (probado con Node 22). No hay dependencias
+  que instalar.
+
+## Comandos
+
+| Comando | Qué hace |
+| --- | --- |
+| `npm run combinar` | Actualiza `combinacions.md` y `matriz.svg`. |
+| `node combinar.js` | Lo mismo, sin pasar por npm. |
+| `node combinar.js otro.md` | Actualiza otro cuaderno; `matriz.svg` se crea junto a él. |
+| `npm test` | Ejecuta los tests automáticos. |
+| `node --test --test-reporter=spec` | Los tests, con un informe legible test a test. |
+
+Al terminar, el script resume lo que ha hecho:
+
+```
+14 mecánicas, 17 operaciones → 91 pares + 238 operación·mecánica.
+Combinaciones nuevas: 0. Huérfanas: 0.
+Sin cambios.
+```
+
+Si algo está mal (por ejemplo, un nombre no válido), muestra el error y **no modifica
+ningún fichero**.
+
+## Flujo de trabajo
+
+1. Edita las listas en el front matter de `combinacions.md`. Valen las dos formas, y
+   también se pueden editar desde el panel de Propiedades de Obsidian:
+
+   ```yaml
+   ---
+   mecanicas: Moverse, Cortar, Recoller
+   operacions:
+     - Non/Nunca
+     - Máis
+   ---
+   ```
+
+2. Ejecuta `npm run combinar`.
+3. Abre `combinacions.md` en Obsidian y anota ideas bajo cada combinación.
+4. Repite cuando cambien las listas. Ejecutarlo de más no hace daño: si no hay nada
+   nuevo, no cambia nada.
+
+## Estructura del cuaderno
+
+Todo se ordena alfabéticamente, sin importar el orden de las listas:
+
+```markdown
+![[matriz.svg]]
+
+## Cortar
+Notas generales sobre Cortar.
+
+### Combinacións
+Ver tamén: [[#Anotar + Cortar|Anotar]]
+
+#### Cortar + Moverse
+- [+] Cortar el camino para poder moverse
+- [ ] Moverse corta lo que toca
+- [-] Cortar mientras te mueves
+
+### Operacións
+
+#### Non/Nunca · Cortar
+```
+
+- Cada **par** aparece una sola vez, bajo la mecánica que va antes alfabéticamente.
+  En la otra, la línea **Ver tamén** enlaza con él.
+- Se puede escribir texto libre en cualquier parte: antes de la primera sección, bajo
+  `## Mecánica`, bajo `### Combinacións` / `### Operacións` y bajo cada `####`.
+
+### Marcar las notas
+
+| Marca | Significado |
+| --- | --- |
+| `- [ ]` | Sin validar |
+| `- [+]` | Aceptada (`[x]` también cuenta como aceptada) |
+| `- [-]` | Descartada |
+
+Una línea de lista sin marca (`- idea`) cuenta como sin validar.
+
+### La matriz
+
+`matriz.svg` muestra todas las combinaciones de un vistazo, coloreadas por estado:
+vacía, pendiente, alguna aceptada o todo descartado. El número de cada celda es su
+cantidad de notas; al pasar el ratón se ve el detalle.
+
+## Qué pasa con las notas al cambiar las listas
+
+- **Reordenar** las listas o cambiar mayúsculas no mueve ni pierde nada.
+- **Quitar** una mecánica u operación lleva sus notas a la sección `## Orfas`, al final.
+  Las combinaciones vacías simplemente desaparecen.
+- **Volver a añadirla** devuelve las notas de Orfas a su sitio automáticamente.
+- **Renombrar** equivale a quitar y añadir: las notas van a Orfas y hay que moverlas a
+  mano bajo el título nuevo (o devolver el nombre anterior).
+
+Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
+`combinacions.md.bak` (Obsidian no lo muestra y git lo ignora).
+
+## Reglas para no tener sorpresas
+
+- **No edites el texto de los títulos** `##`, `###` ni `####`: el script reconoce cada
+  combinación por su título. Si cambia, sus notas pasan a Orfas.
+- **No uses `##`, `###` ni `####` dentro de las notas**: son la estructura del cuaderno.
+  Para subtítulos propios usa `#####` o más. (Dentro de bloques de código no importa.)
+- Los nombres no pueden contener `+ · # | ^ [ ] :` ni llamarse `Orfas`, `Combinacións`
+  u `Operacións`. El script avisa si ocurre.
+- Si varias personas editan a la vez, sincronizad (git, Obsidian Sync…) antes de
+  ejecutar el script.
+
+## Ficheros
+
+| Fichero | Contenido |
+| --- | --- |
+| `combinar.js` | El script. |
+| `combinacions.md` | El cuaderno: listas en el front matter y notas del equipo. |
+| `matriz.svg` | Generado; no se edita a mano. |
+| `test/combinar.test.js` | Tests automáticos (`node:test`). |
+| `docs/ideas/combinator.md` | Documento de diseño original. |

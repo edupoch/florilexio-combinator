@@ -11,8 +11,9 @@ listas, recoge las notas existentes por clave normalizada, regenera el cuerpo y
 recoloca cada nota. Es idempotente: ejecutarlo dos veces no cambia nada.
 
 Estructura, todo en orden alfabético (`localeCompare('gl')`): una `##` por mecánica
-con sus pares (con las mecánicas que van después alfabéticamente) y sus operaciones
-como `###` (`Cortar + Moverse`, `Non · Cortar`). Cada sección empieza con
+con dos grupos, `### Combinacións` (sus pares con las mecánicas que van después
+alfabéticamente) y `### Operacións`, y cada combinación como `####`
+(`Cortar + Moverse`, `Non · Cortar`). `### Combinacións` empieza con
 "Ver tamén" y wikilinks a los pares que viven en otras secciones. Las notas se
 marcan línea a línea con `[ ]` (sin validar), `[+]` (aceptada) y `[-]` (descartada).
 El script las copia tal cual y solo las cuenta. Lo que ya no encaja va a `## Orfas`.

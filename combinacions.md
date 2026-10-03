@@ -7,699 +7,755 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 
 ## Anotar
 
-### Anotar + Anotar marxinalia
+### Combinacións
 
-### Anotar + Arrastrar herba ao cacho
+#### Anotar + Anotar marxinalia
 
-### Anotar + Colocar herba no cacho
+#### Anotar + Arrastrar herba ao cacho
 
-### Anotar + Cortar
+#### Anotar + Colocar herba no cacho
 
-### Anotar + Crear cacho
+#### Anotar + Cortar
 
-### Anotar + Dar obxecto
+#### Anotar + Crear cacho
 
-### Anotar + Falar
+#### Anotar + Dar obxecto
 
-### Anotar + Gardar no inventario
+#### Anotar + Falar
 
-### Anotar + Identificar
+#### Anotar + Gardar no inventario
 
-### Anotar + Incorporar misión
+#### Anotar + Identificar
 
-### Anotar + Moverse
+#### Anotar + Incorporar misión
 
-### Anotar + Recoller
+#### Anotar + Moverse
 
-### Anotar + Tachar misión
+#### Anotar + Recoller
 
-### A veces · Anotar
+#### Anotar + Tachar misión
 
-### Ao revés · Anotar
+### Operacións
 
-### Cada X Y · Anotar
+#### A veces · Anotar
 
-### Canto máis X máis Y · Anotar
+#### Ao revés · Anotar
 
-### Canto menos X máis Y · Anotar
+#### Cada X Y · Anotar
 
-### Destrúe · Anotar
+#### Canto máis X máis Y · Anotar
 
-### Máis · Anotar
+#### Canto menos X máis Y · Anotar
 
-### Menos · Anotar
+#### Destrúe · Anotar
 
-### Necesitas máis · Anotar
+#### Máis · Anotar
 
-### Necesitas menos · Anotar
+#### Menos · Anotar
 
-### Non/Nunca · Anotar
+#### Necesitas máis · Anotar
 
-### Outra vez · Anotar
+#### Necesitas menos · Anotar
 
-### Se X entón Y · Anotar
+#### Non/Nunca · Anotar
 
-### Sempre · Anotar
+#### Outra vez · Anotar
 
-### X <> Y · Anotar
+#### Se X entón Y · Anotar
 
-### X = Y · Anotar
+#### Sempre · Anotar
 
-### Xenera · Anotar
+#### X <> Y · Anotar
+
+#### X = Y · Anotar
+
+#### Xenera · Anotar
 
 ## Anotar marxinalia
+
+### Combinacións
 Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 
-### Anotar marxinalia + Arrastrar herba ao cacho
+#### Anotar marxinalia + Arrastrar herba ao cacho
 
-### Anotar marxinalia + Colocar herba no cacho
+#### Anotar marxinalia + Colocar herba no cacho
 
-### Anotar marxinalia + Cortar
+#### Anotar marxinalia + Cortar
 
-### Anotar marxinalia + Crear cacho
+#### Anotar marxinalia + Crear cacho
 
-### Anotar marxinalia + Dar obxecto
+#### Anotar marxinalia + Dar obxecto
 
-### Anotar marxinalia + Falar
+#### Anotar marxinalia + Falar
 
-### Anotar marxinalia + Gardar no inventario
+#### Anotar marxinalia + Gardar no inventario
 
-### Anotar marxinalia + Identificar
+#### Anotar marxinalia + Identificar
 
-### Anotar marxinalia + Incorporar misión
+#### Anotar marxinalia + Incorporar misión
 
-### Anotar marxinalia + Moverse
+#### Anotar marxinalia + Moverse
 
-### Anotar marxinalia + Recoller
+#### Anotar marxinalia + Recoller
 
-### Anotar marxinalia + Tachar misión
+#### Anotar marxinalia + Tachar misión
 
-### A veces · Anotar marxinalia
+### Operacións
 
-### Ao revés · Anotar marxinalia
+#### A veces · Anotar marxinalia
 
-### Cada X Y · Anotar marxinalia
+#### Ao revés · Anotar marxinalia
 
-### Canto máis X máis Y · Anotar marxinalia
+#### Cada X Y · Anotar marxinalia
 
-### Canto menos X máis Y · Anotar marxinalia
+#### Canto máis X máis Y · Anotar marxinalia
 
-### Destrúe · Anotar marxinalia
+#### Canto menos X máis Y · Anotar marxinalia
 
-### Máis · Anotar marxinalia
+#### Destrúe · Anotar marxinalia
 
-### Menos · Anotar marxinalia
+#### Máis · Anotar marxinalia
 
-### Necesitas máis · Anotar marxinalia
+#### Menos · Anotar marxinalia
 
-### Necesitas menos · Anotar marxinalia
+#### Necesitas máis · Anotar marxinalia
 
-### Non/Nunca · Anotar marxinalia
+#### Necesitas menos · Anotar marxinalia
 
-### Outra vez · Anotar marxinalia
+#### Non/Nunca · Anotar marxinalia
 
-### Se X entón Y · Anotar marxinalia
+#### Outra vez · Anotar marxinalia
 
-### Sempre · Anotar marxinalia
+#### Se X entón Y · Anotar marxinalia
 
-### X <> Y · Anotar marxinalia
+#### Sempre · Anotar marxinalia
 
-### X = Y · Anotar marxinalia
+#### X <> Y · Anotar marxinalia
 
-### Xenera · Anotar marxinalia
+#### X = Y · Anotar marxinalia
+
+#### Xenera · Anotar marxinalia
 
 ## Arrastrar herba ao cacho
+
+### Combinacións
 Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinalia + Arrastrar herba ao cacho|Anotar marxinalia]]
 
-### Arrastrar herba ao cacho + Colocar herba no cacho
+#### Arrastrar herba ao cacho + Colocar herba no cacho
 
-### Arrastrar herba ao cacho + Cortar
+#### Arrastrar herba ao cacho + Cortar
 
-### Arrastrar herba ao cacho + Crear cacho
+#### Arrastrar herba ao cacho + Crear cacho
 
-### Arrastrar herba ao cacho + Dar obxecto
+#### Arrastrar herba ao cacho + Dar obxecto
 
-### Arrastrar herba ao cacho + Falar
+#### Arrastrar herba ao cacho + Falar
 
-### Arrastrar herba ao cacho + Gardar no inventario
+#### Arrastrar herba ao cacho + Gardar no inventario
 
-### Arrastrar herba ao cacho + Identificar
+#### Arrastrar herba ao cacho + Identificar
 
-### Arrastrar herba ao cacho + Incorporar misión
+#### Arrastrar herba ao cacho + Incorporar misión
 
-### Arrastrar herba ao cacho + Moverse
+#### Arrastrar herba ao cacho + Moverse
 
-### Arrastrar herba ao cacho + Recoller
+#### Arrastrar herba ao cacho + Recoller
 
-### Arrastrar herba ao cacho + Tachar misión
+#### Arrastrar herba ao cacho + Tachar misión
 
-### A veces · Arrastrar herba ao cacho
+### Operacións
 
-### Ao revés · Arrastrar herba ao cacho
+#### A veces · Arrastrar herba ao cacho
 
-### Cada X Y · Arrastrar herba ao cacho
+#### Ao revés · Arrastrar herba ao cacho
 
-### Canto máis X máis Y · Arrastrar herba ao cacho
+#### Cada X Y · Arrastrar herba ao cacho
 
-### Canto menos X máis Y · Arrastrar herba ao cacho
+#### Canto máis X máis Y · Arrastrar herba ao cacho
 
-### Destrúe · Arrastrar herba ao cacho
+#### Canto menos X máis Y · Arrastrar herba ao cacho
 
-### Máis · Arrastrar herba ao cacho
+#### Destrúe · Arrastrar herba ao cacho
 
-### Menos · Arrastrar herba ao cacho
+#### Máis · Arrastrar herba ao cacho
 
-### Necesitas máis · Arrastrar herba ao cacho
+#### Menos · Arrastrar herba ao cacho
 
-### Necesitas menos · Arrastrar herba ao cacho
+#### Necesitas máis · Arrastrar herba ao cacho
 
-### Non/Nunca · Arrastrar herba ao cacho
+#### Necesitas menos · Arrastrar herba ao cacho
 
-### Outra vez · Arrastrar herba ao cacho
+#### Non/Nunca · Arrastrar herba ao cacho
 
-### Se X entón Y · Arrastrar herba ao cacho
+#### Outra vez · Arrastrar herba ao cacho
 
-### Sempre · Arrastrar herba ao cacho
+#### Se X entón Y · Arrastrar herba ao cacho
 
-### X <> Y · Arrastrar herba ao cacho
+#### Sempre · Arrastrar herba ao cacho
 
-### X = Y · Arrastrar herba ao cacho
+#### X <> Y · Arrastrar herba ao cacho
 
-### Xenera · Arrastrar herba ao cacho
+#### X = Y · Arrastrar herba ao cacho
+
+#### Xenera · Arrastrar herba ao cacho
 
 ## Colocar herba no cacho
+
+### Combinacións
 Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia + Colocar herba no cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Colocar herba no cacho|Arrastrar herba ao cacho]]
 
-### Colocar herba no cacho + Cortar
+#### Colocar herba no cacho + Cortar
 
-### Colocar herba no cacho + Crear cacho
+#### Colocar herba no cacho + Crear cacho
 
-### Colocar herba no cacho + Dar obxecto
+#### Colocar herba no cacho + Dar obxecto
 
-### Colocar herba no cacho + Falar
+#### Colocar herba no cacho + Falar
 
-### Colocar herba no cacho + Gardar no inventario
+#### Colocar herba no cacho + Gardar no inventario
 
-### Colocar herba no cacho + Identificar
+#### Colocar herba no cacho + Identificar
 
-### Colocar herba no cacho + Incorporar misión
+#### Colocar herba no cacho + Incorporar misión
 
-### Colocar herba no cacho + Moverse
+#### Colocar herba no cacho + Moverse
 
-### Colocar herba no cacho + Recoller
+#### Colocar herba no cacho + Recoller
 
-### Colocar herba no cacho + Tachar misión
+#### Colocar herba no cacho + Tachar misión
 
-### A veces · Colocar herba no cacho
+### Operacións
 
-### Ao revés · Colocar herba no cacho
+#### A veces · Colocar herba no cacho
 
-### Cada X Y · Colocar herba no cacho
+#### Ao revés · Colocar herba no cacho
 
-### Canto máis X máis Y · Colocar herba no cacho
+#### Cada X Y · Colocar herba no cacho
 
-### Canto menos X máis Y · Colocar herba no cacho
+#### Canto máis X máis Y · Colocar herba no cacho
 
-### Destrúe · Colocar herba no cacho
+#### Canto menos X máis Y · Colocar herba no cacho
 
-### Máis · Colocar herba no cacho
+#### Destrúe · Colocar herba no cacho
 
-### Menos · Colocar herba no cacho
+#### Máis · Colocar herba no cacho
 
-### Necesitas máis · Colocar herba no cacho
+#### Menos · Colocar herba no cacho
 
-### Necesitas menos · Colocar herba no cacho
+#### Necesitas máis · Colocar herba no cacho
 
-### Non/Nunca · Colocar herba no cacho
+#### Necesitas menos · Colocar herba no cacho
 
-### Outra vez · Colocar herba no cacho
+#### Non/Nunca · Colocar herba no cacho
 
-### Se X entón Y · Colocar herba no cacho
+#### Outra vez · Colocar herba no cacho
 
-### Sempre · Colocar herba no cacho
+#### Se X entón Y · Colocar herba no cacho
 
-### X <> Y · Colocar herba no cacho
+#### Sempre · Colocar herba no cacho
 
-### X = Y · Colocar herba no cacho
+#### X <> Y · Colocar herba no cacho
 
-### Xenera · Colocar herba no cacho
+#### X = Y · Colocar herba no cacho
+
+#### Xenera · Colocar herba no cacho
 
 ## Cortar
+
+### Combinacións
 Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Cortar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Cortar|Colocar herba no cacho]]
 
-### Cortar + Crear cacho
+#### Cortar + Crear cacho
 
-### Cortar + Dar obxecto
+#### Cortar + Dar obxecto
 
-### Cortar + Falar
+#### Cortar + Falar
 
-### Cortar + Gardar no inventario
+#### Cortar + Gardar no inventario
 
-### Cortar + Identificar
+#### Cortar + Identificar
 
-### Cortar + Incorporar misión
+#### Cortar + Incorporar misión
 
-### Cortar + Moverse
+#### Cortar + Moverse
 
-### Cortar + Recoller
+#### Cortar + Recoller
 
-### Cortar + Tachar misión
+#### Cortar + Tachar misión
 
-### A veces · Cortar
+### Operacións
 
-### Ao revés · Cortar
+#### A veces · Cortar
 
-### Cada X Y · Cortar
+#### Ao revés · Cortar
 
-### Canto máis X máis Y · Cortar
+#### Cada X Y · Cortar
 
-### Canto menos X máis Y · Cortar
+#### Canto máis X máis Y · Cortar
 
-### Destrúe · Cortar
+#### Canto menos X máis Y · Cortar
 
-### Máis · Cortar
+#### Destrúe · Cortar
 
-### Menos · Cortar
+#### Máis · Cortar
 
-### Necesitas máis · Cortar
+#### Menos · Cortar
 
-### Necesitas menos · Cortar
+#### Necesitas máis · Cortar
 
-### Non/Nunca · Cortar
+#### Necesitas menos · Cortar
 
-### Outra vez · Cortar
+#### Non/Nunca · Cortar
 
-### Se X entón Y · Cortar
+#### Outra vez · Cortar
 
-### Sempre · Cortar
+#### Se X entón Y · Cortar
 
-### X <> Y · Cortar
+#### Sempre · Cortar
 
-### X = Y · Cortar
+#### X <> Y · Cortar
 
-### Xenera · Cortar
+#### X = Y · Cortar
+
+#### Xenera · Cortar
 
 ## Crear cacho
+
+### Combinacións
 Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Crear cacho|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Crear cacho|Colocar herba no cacho]] · [[#Cortar + Crear cacho|Cortar]]
 
-### Crear cacho + Dar obxecto
+#### Crear cacho + Dar obxecto
 
-### Crear cacho + Falar
+#### Crear cacho + Falar
 
-### Crear cacho + Gardar no inventario
+#### Crear cacho + Gardar no inventario
 
-### Crear cacho + Identificar
+#### Crear cacho + Identificar
 
-### Crear cacho + Incorporar misión
+#### Crear cacho + Incorporar misión
 
-### Crear cacho + Moverse
+#### Crear cacho + Moverse
 
-### Crear cacho + Recoller
+#### Crear cacho + Recoller
 
-### Crear cacho + Tachar misión
+#### Crear cacho + Tachar misión
 
-### A veces · Crear cacho
+### Operacións
 
-### Ao revés · Crear cacho
+#### A veces · Crear cacho
 
-### Cada X Y · Crear cacho
+#### Ao revés · Crear cacho
 
-### Canto máis X máis Y · Crear cacho
+#### Cada X Y · Crear cacho
 
-### Canto menos X máis Y · Crear cacho
+#### Canto máis X máis Y · Crear cacho
 
-### Destrúe · Crear cacho
+#### Canto menos X máis Y · Crear cacho
 
-### Máis · Crear cacho
+#### Destrúe · Crear cacho
 
-### Menos · Crear cacho
+#### Máis · Crear cacho
 
-### Necesitas máis · Crear cacho
+#### Menos · Crear cacho
 
-### Necesitas menos · Crear cacho
+#### Necesitas máis · Crear cacho
 
-### Non/Nunca · Crear cacho
+#### Necesitas menos · Crear cacho
 
-### Outra vez · Crear cacho
+#### Non/Nunca · Crear cacho
 
-### Se X entón Y · Crear cacho
+#### Outra vez · Crear cacho
 
-### Sempre · Crear cacho
+#### Se X entón Y · Crear cacho
 
-### X <> Y · Crear cacho
+#### Sempre · Crear cacho
 
-### X = Y · Crear cacho
+#### X <> Y · Crear cacho
 
-### Xenera · Crear cacho
+#### X = Y · Crear cacho
+
+#### Xenera · Crear cacho
 
 ## Dar obxecto
+
+### Combinacións
 Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxecto|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Dar obxecto|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Dar obxecto|Colocar herba no cacho]] · [[#Cortar + Dar obxecto|Cortar]] · [[#Crear cacho + Dar obxecto|Crear cacho]]
 
-### Dar obxecto + Falar
+#### Dar obxecto + Falar
 
-### Dar obxecto + Gardar no inventario
+#### Dar obxecto + Gardar no inventario
 
-### Dar obxecto + Identificar
+#### Dar obxecto + Identificar
 
-### Dar obxecto + Incorporar misión
+#### Dar obxecto + Incorporar misión
 
-### Dar obxecto + Moverse
+#### Dar obxecto + Moverse
 
-### Dar obxecto + Recoller
+#### Dar obxecto + Recoller
 
-### Dar obxecto + Tachar misión
+#### Dar obxecto + Tachar misión
 
-### A veces · Dar obxecto
+### Operacións
 
-### Ao revés · Dar obxecto
+#### A veces · Dar obxecto
 
-### Cada X Y · Dar obxecto
+#### Ao revés · Dar obxecto
 
-### Canto máis X máis Y · Dar obxecto
+#### Cada X Y · Dar obxecto
 
-### Canto menos X máis Y · Dar obxecto
+#### Canto máis X máis Y · Dar obxecto
 
-### Destrúe · Dar obxecto
+#### Canto menos X máis Y · Dar obxecto
 
-### Máis · Dar obxecto
+#### Destrúe · Dar obxecto
 
-### Menos · Dar obxecto
+#### Máis · Dar obxecto
 
-### Necesitas máis · Dar obxecto
+#### Menos · Dar obxecto
 
-### Necesitas menos · Dar obxecto
+#### Necesitas máis · Dar obxecto
 
-### Non/Nunca · Dar obxecto
+#### Necesitas menos · Dar obxecto
 
-### Outra vez · Dar obxecto
+#### Non/Nunca · Dar obxecto
 
-### Se X entón Y · Dar obxecto
+#### Outra vez · Dar obxecto
 
-### Sempre · Dar obxecto
+#### Se X entón Y · Dar obxecto
 
-### X <> Y · Dar obxecto
+#### Sempre · Dar obxecto
 
-### X = Y · Dar obxecto
+#### X <> Y · Dar obxecto
 
-### Xenera · Dar obxecto
+#### X = Y · Dar obxecto
+
+#### Xenera · Dar obxecto
 
 ## Falar
+
+### Combinacións
 Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Falar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Falar|Colocar herba no cacho]] · [[#Cortar + Falar|Cortar]] · [[#Crear cacho + Falar|Crear cacho]] · [[#Dar obxecto + Falar|Dar obxecto]]
 
-### Falar + Gardar no inventario
+#### Falar + Gardar no inventario
 
-### Falar + Identificar
+#### Falar + Identificar
 
-### Falar + Incorporar misión
+#### Falar + Incorporar misión
 
-### Falar + Moverse
+#### Falar + Moverse
 
-### Falar + Recoller
+#### Falar + Recoller
 
-### Falar + Tachar misión
+#### Falar + Tachar misión
 
-### A veces · Falar
+### Operacións
 
-### Ao revés · Falar
+#### A veces · Falar
 
-### Cada X Y · Falar
+#### Ao revés · Falar
 
-### Canto máis X máis Y · Falar
+#### Cada X Y · Falar
 
-### Canto menos X máis Y · Falar
+#### Canto máis X máis Y · Falar
 
-### Destrúe · Falar
+#### Canto menos X máis Y · Falar
 
-### Máis · Falar
+#### Destrúe · Falar
 
-### Menos · Falar
+#### Máis · Falar
 
-### Necesitas máis · Falar
+#### Menos · Falar
 
-### Necesitas menos · Falar
+#### Necesitas máis · Falar
 
-### Non/Nunca · Falar
+#### Necesitas menos · Falar
 
-### Outra vez · Falar
+#### Non/Nunca · Falar
 
-### Se X entón Y · Falar
+#### Outra vez · Falar
 
-### Sempre · Falar
+#### Se X entón Y · Falar
 
-### X <> Y · Falar
+#### Sempre · Falar
 
-### X = Y · Falar
+#### X <> Y · Falar
 
-### Xenera · Falar
+#### X = Y · Falar
+
+#### Xenera · Falar
 
 ## Gardar no inventario
+
+### Combinacións
 Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + Gardar no inventario|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Gardar no inventario|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Gardar no inventario|Colocar herba no cacho]] · [[#Cortar + Gardar no inventario|Cortar]] · [[#Crear cacho + Gardar no inventario|Crear cacho]] · [[#Dar obxecto + Gardar no inventario|Dar obxecto]] · [[#Falar + Gardar no inventario|Falar]]
 
-### Gardar no inventario + Identificar
+#### Gardar no inventario + Identificar
 
-### Gardar no inventario + Incorporar misión
+#### Gardar no inventario + Incorporar misión
 
-### Gardar no inventario + Moverse
+#### Gardar no inventario + Moverse
 
-### Gardar no inventario + Recoller
+#### Gardar no inventario + Recoller
 
-### Gardar no inventario + Tachar misión
+#### Gardar no inventario + Tachar misión
 
-### A veces · Gardar no inventario
+### Operacións
 
-### Ao revés · Gardar no inventario
+#### A veces · Gardar no inventario
 
-### Cada X Y · Gardar no inventario
+#### Ao revés · Gardar no inventario
 
-### Canto máis X máis Y · Gardar no inventario
+#### Cada X Y · Gardar no inventario
 
-### Canto menos X máis Y · Gardar no inventario
+#### Canto máis X máis Y · Gardar no inventario
 
-### Destrúe · Gardar no inventario
+#### Canto menos X máis Y · Gardar no inventario
 
-### Máis · Gardar no inventario
+#### Destrúe · Gardar no inventario
 
-### Menos · Gardar no inventario
+#### Máis · Gardar no inventario
 
-### Necesitas máis · Gardar no inventario
+#### Menos · Gardar no inventario
 
-### Necesitas menos · Gardar no inventario
+#### Necesitas máis · Gardar no inventario
 
-### Non/Nunca · Gardar no inventario
+#### Necesitas menos · Gardar no inventario
 
-### Outra vez · Gardar no inventario
+#### Non/Nunca · Gardar no inventario
 
-### Se X entón Y · Gardar no inventario
+#### Outra vez · Gardar no inventario
 
-### Sempre · Gardar no inventario
+#### Se X entón Y · Gardar no inventario
 
-### X <> Y · Gardar no inventario
+#### Sempre · Gardar no inventario
 
-### X = Y · Gardar no inventario
+#### X <> Y · Gardar no inventario
 
-### Xenera · Gardar no inventario
+#### X = Y · Gardar no inventario
+
+#### Xenera · Gardar no inventario
 
 ## Identificar
+
+### Combinacións
 Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identificar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Identificar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Identificar|Colocar herba no cacho]] · [[#Cortar + Identificar|Cortar]] · [[#Crear cacho + Identificar|Crear cacho]] · [[#Dar obxecto + Identificar|Dar obxecto]] · [[#Falar + Identificar|Falar]] · [[#Gardar no inventario + Identificar|Gardar no inventario]]
 
-### Identificar + Incorporar misión
+#### Identificar + Incorporar misión
 
-### Identificar + Moverse
+#### Identificar + Moverse
 
-### Identificar + Recoller
+#### Identificar + Recoller
 
-### Identificar + Tachar misión
+#### Identificar + Tachar misión
 
-### A veces · Identificar
+### Operacións
 
-### Ao revés · Identificar
+#### A veces · Identificar
 
-### Cada X Y · Identificar
+#### Ao revés · Identificar
 
-### Canto máis X máis Y · Identificar
+#### Cada X Y · Identificar
 
-### Canto menos X máis Y · Identificar
+#### Canto máis X máis Y · Identificar
 
-### Destrúe · Identificar
+#### Canto menos X máis Y · Identificar
 
-### Máis · Identificar
+#### Destrúe · Identificar
 
-### Menos · Identificar
+#### Máis · Identificar
 
-### Necesitas máis · Identificar
+#### Menos · Identificar
 
-### Necesitas menos · Identificar
+#### Necesitas máis · Identificar
 
-### Non/Nunca · Identificar
+#### Necesitas menos · Identificar
 
-### Outra vez · Identificar
+#### Non/Nunca · Identificar
 
-### Se X entón Y · Identificar
+#### Outra vez · Identificar
 
-### Sempre · Identificar
+#### Se X entón Y · Identificar
 
-### X <> Y · Identificar
+#### Sempre · Identificar
 
-### X = Y · Identificar
+#### X <> Y · Identificar
 
-### Xenera · Identificar
+#### X = Y · Identificar
+
+#### Xenera · Identificar
 
 ## Incorporar misión
+
+### Combinacións
 Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + Incorporar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Incorporar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Incorporar misión|Colocar herba no cacho]] · [[#Cortar + Incorporar misión|Cortar]] · [[#Crear cacho + Incorporar misión|Crear cacho]] · [[#Dar obxecto + Incorporar misión|Dar obxecto]] · [[#Falar + Incorporar misión|Falar]] · [[#Gardar no inventario + Incorporar misión|Gardar no inventario]] · [[#Identificar + Incorporar misión|Identificar]]
 
-### Incorporar misión + Moverse
+#### Incorporar misión + Moverse
 
-### Incorporar misión + Recoller
+#### Incorporar misión + Recoller
 
-### Incorporar misión + Tachar misión
+#### Incorporar misión + Tachar misión
 
-### A veces · Incorporar misión
+### Operacións
 
-### Ao revés · Incorporar misión
+#### A veces · Incorporar misión
 
-### Cada X Y · Incorporar misión
+#### Ao revés · Incorporar misión
 
-### Canto máis X máis Y · Incorporar misión
+#### Cada X Y · Incorporar misión
 
-### Canto menos X máis Y · Incorporar misión
+#### Canto máis X máis Y · Incorporar misión
 
-### Destrúe · Incorporar misión
+#### Canto menos X máis Y · Incorporar misión
 
-### Máis · Incorporar misión
+#### Destrúe · Incorporar misión
 
-### Menos · Incorporar misión
+#### Máis · Incorporar misión
 
-### Necesitas máis · Incorporar misión
+#### Menos · Incorporar misión
 
-### Necesitas menos · Incorporar misión
+#### Necesitas máis · Incorporar misión
 
-### Non/Nunca · Incorporar misión
+#### Necesitas menos · Incorporar misión
 
-### Outra vez · Incorporar misión
+#### Non/Nunca · Incorporar misión
 
-### Se X entón Y · Incorporar misión
+#### Outra vez · Incorporar misión
 
-### Sempre · Incorporar misión
+#### Se X entón Y · Incorporar misión
 
-### X <> Y · Incorporar misión
+#### Sempre · Incorporar misión
 
-### X = Y · Incorporar misión
+#### X <> Y · Incorporar misión
 
-### Xenera · Incorporar misión
+#### X = Y · Incorporar misión
+
+#### Xenera · Incorporar misión
 
 ## Moverse
+
+### Combinacións
 Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Moverse|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Moverse|Colocar herba no cacho]] · [[#Cortar + Moverse|Cortar]] · [[#Crear cacho + Moverse|Crear cacho]] · [[#Dar obxecto + Moverse|Dar obxecto]] · [[#Falar + Moverse|Falar]] · [[#Gardar no inventario + Moverse|Gardar no inventario]] · [[#Identificar + Moverse|Identificar]] · [[#Incorporar misión + Moverse|Incorporar misión]]
 
-### Moverse + Recoller
+#### Moverse + Recoller
 
-### Moverse + Tachar misión
+#### Moverse + Tachar misión
 
-### A veces · Moverse
+### Operacións
 
-### Ao revés · Moverse
+#### A veces · Moverse
 
-### Cada X Y · Moverse
+#### Ao revés · Moverse
 
-### Canto máis X máis Y · Moverse
+#### Cada X Y · Moverse
 
-### Canto menos X máis Y · Moverse
+#### Canto máis X máis Y · Moverse
 
-### Destrúe · Moverse
+#### Canto menos X máis Y · Moverse
 
-### Máis · Moverse
+#### Destrúe · Moverse
 
-### Menos · Moverse
+#### Máis · Moverse
 
-### Necesitas máis · Moverse
+#### Menos · Moverse
 
-### Necesitas menos · Moverse
+#### Necesitas máis · Moverse
 
-### Non/Nunca · Moverse
+#### Necesitas menos · Moverse
 
-### Outra vez · Moverse
+#### Non/Nunca · Moverse
 
-### Se X entón Y · Moverse
+#### Outra vez · Moverse
 
-### Sempre · Moverse
+#### Se X entón Y · Moverse
 
-### X <> Y · Moverse
+#### Sempre · Moverse
 
-### X = Y · Moverse
+#### X <> Y · Moverse
 
-### Xenera · Moverse
+#### X = Y · Moverse
+
+#### Xenera · Moverse
 
 ## Recoller
+
+### Combinacións
 Ver tamén: [[#Anotar + Recoller|Anotar]] · [[#Anotar marxinalia + Recoller|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Recoller|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Recoller|Colocar herba no cacho]] · [[#Cortar + Recoller|Cortar]] · [[#Crear cacho + Recoller|Crear cacho]] · [[#Dar obxecto + Recoller|Dar obxecto]] · [[#Falar + Recoller|Falar]] · [[#Gardar no inventario + Recoller|Gardar no inventario]] · [[#Identificar + Recoller|Identificar]] · [[#Incorporar misión + Recoller|Incorporar misión]] · [[#Moverse + Recoller|Moverse]]
 
-### Recoller + Tachar misión
+#### Recoller + Tachar misión
 
-### A veces · Recoller
+### Operacións
 
-### Ao revés · Recoller
+#### A veces · Recoller
 
-### Cada X Y · Recoller
+#### Ao revés · Recoller
 
-### Canto máis X máis Y · Recoller
+#### Cada X Y · Recoller
 
-### Canto menos X máis Y · Recoller
+#### Canto máis X máis Y · Recoller
 
-### Destrúe · Recoller
+#### Canto menos X máis Y · Recoller
 
-### Máis · Recoller
+#### Destrúe · Recoller
 
-### Menos · Recoller
+#### Máis · Recoller
 
-### Necesitas máis · Recoller
+#### Menos · Recoller
 
-### Necesitas menos · Recoller
+#### Necesitas máis · Recoller
 
-### Non/Nunca · Recoller
+#### Necesitas menos · Recoller
 
-### Outra vez · Recoller
+#### Non/Nunca · Recoller
 
-### Se X entón Y · Recoller
+#### Outra vez · Recoller
 
-### Sempre · Recoller
+#### Se X entón Y · Recoller
 
-### X <> Y · Recoller
+#### Sempre · Recoller
 
-### X = Y · Recoller
+#### X <> Y · Recoller
 
-### Xenera · Recoller
+#### X = Y · Recoller
+
+#### Xenera · Recoller
 
 ## Tachar misión
+
+### Combinacións
 Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Tachar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Tachar misión|Colocar herba no cacho]] · [[#Cortar + Tachar misión|Cortar]] · [[#Crear cacho + Tachar misión|Crear cacho]] · [[#Dar obxecto + Tachar misión|Dar obxecto]] · [[#Falar + Tachar misión|Falar]] · [[#Gardar no inventario + Tachar misión|Gardar no inventario]] · [[#Identificar + Tachar misión|Identificar]] · [[#Incorporar misión + Tachar misión|Incorporar misión]] · [[#Moverse + Tachar misión|Moverse]] · [[#Recoller + Tachar misión|Recoller]]
 
-### A veces · Tachar misión
+### Operacións
 
-### Ao revés · Tachar misión
+#### A veces · Tachar misión
 
-### Cada X Y · Tachar misión
+#### Ao revés · Tachar misión
 
-### Canto máis X máis Y · Tachar misión
+#### Cada X Y · Tachar misión
 
-### Canto menos X máis Y · Tachar misión
+#### Canto máis X máis Y · Tachar misión
 
-### Destrúe · Tachar misión
+#### Canto menos X máis Y · Tachar misión
 
-### Máis · Tachar misión
+#### Destrúe · Tachar misión
 
-### Menos · Tachar misión
+#### Máis · Tachar misión
 
-### Necesitas máis · Tachar misión
+#### Menos · Tachar misión
 
-### Necesitas menos · Tachar misión
+#### Necesitas máis · Tachar misión
 
-### Non/Nunca · Tachar misión
+#### Necesitas menos · Tachar misión
 
-### Outra vez · Tachar misión
+#### Non/Nunca · Tachar misión
 
-### Se X entón Y · Tachar misión
+#### Outra vez · Tachar misión
 
-### Sempre · Tachar misión
+#### Se X entón Y · Tachar misión
 
-### X <> Y · Tachar misión
+#### Sempre · Tachar misión
 
-### X = Y · Tachar misión
+#### X <> Y · Tachar misión
 
-### Xenera · Tachar misión
+#### X = Y · Tachar misión
+
+#### Xenera · Tachar misión
