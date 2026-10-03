@@ -456,6 +456,14 @@ test('la matriz tiene una celda por combinación con su estado', () => {
   assert.ok(!svg.includes('<a '), 'matriz.svg no lleva enlaces');
 });
 
+test('en la matriz de operaciones, las operaciones son las filas y las mecánicas las columnas', () => {
+  const { svg } = procesar(ejecutar(cuaderno(MECS, OPS)));
+  const filas = [...svg.matchAll(/<text [^>]*text-anchor="end"[^>]*>([^<]*)<\/text>/g)].map(m => m[1]);
+  const columnas = [...svg.matchAll(/<text [^>]*rotate\(-45[^>]*>([^<]*)<\/text>/g)].map(m => m[1]);
+  assert.deepEqual(filas.slice(0, 3), ['Máis', 'Non/Nunca', 'X &lt;&gt; Y']);
+  assert.deepEqual(columnas.slice(0, 4), ['Cortar', 'Falar', 'Moverse', 'Recoller']);
+});
+
 test('cada casilla de la nota de la matriz enlaza con su combinación', () => {
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
   const { notaMatriz } = procesar(md, 'caderno');

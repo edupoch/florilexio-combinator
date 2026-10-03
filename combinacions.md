@@ -78,6 +78,7 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 #### Necesitas menos · Anotar
 
 #### Non/Nunca · Anotar
+- [ ] Momentos nos que non tes o Florilexio
 
 #### Outra vez · Anotar
 

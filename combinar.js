@@ -272,7 +272,8 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
   const FUENTE = 12, ANCHO_LETRA = 6.8, CELDA = 22, MARGEN = 20;
   const anchoTexto = s => s.length * ANCHO_LETRA;
   const diagonal = lista => Math.max(0, ...lista.map(anchoTexto)) * Math.SQRT1_2;
-  const etiquetaFila = Math.max(...mecanicas.map(anchoTexto)) + 10;
+  // Mismo ancho de etiquetas en los dos bloques para que las cuadrículas queden alineadas.
+  const etiquetaFila = Math.max(...mecanicas.map(anchoTexto), ...operaciones.map(anchoTexto)) + 10;
   const piezas = [];
   let y = MARGEN;
   let anchoTotal = 0;
@@ -341,8 +342,8 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
     y += filas.length * CELDA + 40;
   };
 
-  bloque('Operación · mecánica', mecanicas, operaciones,
-    (m, op) => claveOp(op, m), (m, op) => `${op}${SEP_OP}${m}`);
+  bloque('Operación · mecánica', operaciones, mecanicas,
+    (op, m) => claveOp(op, m), (op, m) => `${op}${SEP_OP}${m}`);
   if (mecanicas.length > 1) {
     bloque('Mecánica + mecánica', mecanicas.slice(1), mecanicas.slice(0, -1),
       (a, b, i, j) => (j <= i ? clavePar(a, b) : null), (a, b) => `${b}${SEP_PAR}${a}`);
