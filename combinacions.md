@@ -1,6 +1,6 @@
 ---
-mecanicas: Moverse, Cortar, Recoller, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Incorporar misión, Tachar misión, Anotar marxinalia, Arrastrar herba ao cacho, Colocar herba no cacho, Crear cacho, Pasar tempo
-operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y
+mecanicas: Moverse, Cortar, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Incorporar misión, Tachar misión, Anotar marxinalia, Arrastrar herba ao cacho, Colocar herba no cacho, Crear cacho, Pasar tempo
+operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Canto máis X menos Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y, Con outras cousas
 ---
 
 ## Índice
@@ -17,7 +17,6 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 - [[#Incorporar misión|Incorporar misión]]
 - [[#Moverse|Moverse]]
 - [[#Pasar tempo|Pasar tempo]]
-- [[#Recoller|Recoller]]
 - [[#Tachar misión|Tachar misión]]
 
 ![[matriz]]
@@ -50,8 +49,6 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 
 #### Anotar + Pasar tempo
 
-#### Anotar + Recoller
-
 #### Anotar + Tachar misión
 
 ### Operacións
@@ -64,7 +61,11 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 
 #### Canto máis X máis Y · Anotar
 
+#### Canto máis X menos Y · Anotar
+
 #### Canto menos X máis Y · Anotar
+
+#### Con outras cousas · Anotar
 
 #### Destrúe · Anotar
 - [ ] Momentos nos que perdes anotacións, son como perder recordos
@@ -78,7 +79,8 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 #### Necesitas menos · Anotar
 
 #### Non/Nunca · Anotar
-- [ ] Momentos nos que non tes o Florilexio
+- [ ] Momentos nos que non tes o florilexio
+- [ ] Momentos nos que non tes con que escribir no florilexio
 
 #### Outra vez · Anotar
 
@@ -119,8 +121,6 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 
 #### Anotar marxinalia + Pasar tempo
 
-#### Anotar marxinalia + Recoller
-
 #### Anotar marxinalia + Tachar misión
 
 ### Operacións
@@ -133,7 +133,11 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 
 #### Canto máis X máis Y · Anotar marxinalia
 
+#### Canto máis X menos Y · Anotar marxinalia
+
 #### Canto menos X máis Y · Anotar marxinalia
+
+#### Con outras cousas · Anotar marxinalia
 
 #### Destrúe · Anotar marxinalia
 - [ ] Momentos nos que perdes marxinalia, son como perder recordos
@@ -185,8 +189,6 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 
 #### Arrastrar herba ao cacho + Pasar tempo
 
-#### Arrastrar herba ao cacho + Recoller
-
 #### Arrastrar herba ao cacho + Tachar misión
 
 ### Operacións
@@ -199,7 +201,11 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 
 #### Canto máis X máis Y · Arrastrar herba ao cacho
 
+#### Canto máis X menos Y · Arrastrar herba ao cacho
+
 #### Canto menos X máis Y · Arrastrar herba ao cacho
+
+#### Con outras cousas · Arrastrar herba ao cacho
 
 #### Destrúe · Arrastrar herba ao cacho
 
@@ -222,6 +228,7 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 #### X <> Y · Arrastrar herba ao cacho
 
 #### X = Y · Arrastrar herba ao cacho
+- [ ] Poder botar no cacho cousas que non son herbas pero que funcionen como tal
 
 #### Xenera · Arrastrar herba ao cacho
 
@@ -248,8 +255,6 @@ Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia 
 
 #### Colocar herba no cacho + Pasar tempo
 
-#### Colocar herba no cacho + Recoller
-
 #### Colocar herba no cacho + Tachar misión
 
 ### Operacións
@@ -262,7 +267,11 @@ Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia 
 
 #### Canto máis X máis Y · Colocar herba no cacho
 
+#### Canto máis X menos Y · Colocar herba no cacho
+
 #### Canto menos X máis Y · Colocar herba no cacho
+
+#### Con outras cousas · Colocar herba no cacho
 
 #### Destrúe · Colocar herba no cacho
 
@@ -300,6 +309,7 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 #### Cortar + Falar
 
 #### Cortar + Gardar no inventario
+- [ ] Tixeiras que che permiten cortar certo tipo de herbas
 
 #### Cortar + Identificar
 
@@ -308,8 +318,6 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 #### Cortar + Moverse
 
 #### Cortar + Pasar tempo
-
-#### Cortar + Recoller
 
 #### Cortar + Tachar misión
 
@@ -323,19 +331,31 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 
 #### Canto máis X máis Y · Cortar
 
+#### Canto máis X menos Y · Cortar
+
 #### Canto menos X máis Y · Cortar
+
+#### Con outras cousas · Cortar
+- [ ] Cortar o fío da vida
+- [ ] Cortar unha relación
+- [ ] Cortar un pensamento rumiante
+- [ ] Cortar un cable para avanzar nunha misión
+- [ ] Cortar bimbio para facer un cesto
 
 #### Destrúe · Cortar
 
 #### Máis · Cortar
 
 #### Menos · Cortar
+- [ ] Se chove, é máis difícil cortar herbas
 
 #### Necesitas máis · Cortar
 
 #### Necesitas menos · Cortar
+- [ ] Obxecto que che permita cortar herbas con menos cortes
 
 #### Non/Nunca · Cortar
+- [ ] Momentos nos que perdes a habilidade de cortar herbas
 
 #### Outra vez · Cortar
 
@@ -368,8 +388,6 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cac
 
 #### Crear cacho + Pasar tempo
 
-#### Crear cacho + Recoller
-
 #### Crear cacho + Tachar misión
 
 ### Operacións
@@ -382,7 +400,13 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cac
 
 #### Canto máis X máis Y · Crear cacho
 
+#### Canto máis X menos Y · Crear cacho
+
 #### Canto menos X máis Y · Crear cacho
+
+#### Con outras cousas · Crear cacho
+- [ ] Facer unha infusión
+- [ ] Xuntar pensamentos
 
 #### Destrúe · Crear cacho
 
@@ -425,8 +449,6 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxec
 
 #### Dar obxecto + Pasar tempo
 
-#### Dar obxecto + Recoller
-
 #### Dar obxecto + Tachar misión
 
 ### Operacións
@@ -439,7 +461,11 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxec
 
 #### Canto máis X máis Y · Dar obxecto
 
+#### Canto máis X menos Y · Dar obxecto
+
 #### Canto menos X máis Y · Dar obxecto
+
+#### Con outras cousas · Dar obxecto
 
 #### Destrúe · Dar obxecto
 
@@ -480,8 +506,6 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar ma
 
 #### Falar + Pasar tempo
 
-#### Falar + Recoller
-
 #### Falar + Tachar misión
 
 ### Operacións
@@ -494,7 +518,11 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar ma
 
 #### Canto máis X máis Y · Falar
 
+#### Canto máis X menos Y · Falar
+
 #### Canto menos X máis Y · Falar
+
+#### Con outras cousas · Falar
 
 #### Destrúe · Falar
 
@@ -530,13 +558,12 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 #### Gardar no inventario + Incorporar misión
 
 #### Gardar no inventario + Moverse
+- [ ] Unha bicicleta, que che permite moverte máis rápido
 
 #### Gardar no inventario + Pasar tempo
 - [ ] Obxectos que fan pasar o tempo máis rápido
 - [ ] Obxectos que fan pasar o tempo máis lento
 - [ ] Obxectos que deteñen o tempo
-
-#### Gardar no inventario + Recoller
 
 #### Gardar no inventario + Tachar misión
 
@@ -549,10 +576,17 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 #### Cada X Y · Gardar no inventario
 
 #### Canto máis X máis Y · Gardar no inventario
+- [ ] Canto máis herbas teñas dun tipo, máis rápido te moves (por exemplo, ortiga)
+
+#### Canto máis X menos Y · Gardar no inventario
+- [ ] Canto máis herbas teñas dun tipo, máis lento pasa o tempo
 
 #### Canto menos X máis Y · Gardar no inventario
 
+#### Con outras cousas · Gardar no inventario
+
 #### Destrúe · Gardar no inventario
+- [ ] Vento violento: faiche perder herbas
 
 #### Máis · Gardar no inventario
 
@@ -563,6 +597,7 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 #### Necesitas menos · Gardar no inventario
 
 #### Non/Nunca · Gardar no inventario
+- [ ] Obxecto ou herba demasiado grande. Por exemplo, a flor do fento macho
 
 #### Outra vez · Gardar no inventario
 
@@ -571,6 +606,7 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 #### Sempre · Gardar no inventario
 
 #### X <> Y · Gardar no inventario
+- [ ] Variacións de herbas, como os peixes mutantes de Dredge. Herbas mutantes
 
 #### X = Y · Gardar no inventario
 
@@ -587,8 +623,6 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identific
 
 #### Identificar + Pasar tempo
 
-#### Identificar + Recoller
-
 #### Identificar + Tachar misión
 
 ### Operacións
@@ -601,7 +635,11 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identific
 
 #### Canto máis X máis Y · Identificar
 
+#### Canto máis X menos Y · Identificar
+
 #### Canto menos X máis Y · Identificar
+
+#### Con outras cousas · Identificar
 
 #### Destrúe · Identificar
 
@@ -637,8 +675,6 @@ Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + In
 
 #### Incorporar misión + Pasar tempo
 
-#### Incorporar misión + Recoller
-
 #### Incorporar misión + Tachar misión
 
 ### Operacións
@@ -651,7 +687,11 @@ Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + In
 
 #### Canto máis X máis Y · Incorporar misión
 
+#### Canto máis X menos Y · Incorporar misión
+
 #### Canto menos X máis Y · Incorporar misión
+
+#### Con outras cousas · Incorporar misión
 
 #### Destrúe · Incorporar misión
 
@@ -684,8 +724,6 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 
 #### Moverse + Pasar tempo
 
-#### Moverse + Recoller
-
 #### Moverse + Tachar misión
 
 ### Operacións
@@ -698,7 +736,11 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 
 #### Canto máis X máis Y · Moverse
 
+#### Canto máis X menos Y · Moverse
+
 #### Canto menos X máis Y · Moverse
+
+#### Con outras cousas · Moverse
 
 #### Destrúe · Moverse
 
@@ -731,8 +773,6 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 ### Combinacións
 Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tempo|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Pasar tempo|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Pasar tempo|Colocar herba no cacho]] · [[#Cortar + Pasar tempo|Cortar]] · [[#Crear cacho + Pasar tempo|Crear cacho]] · [[#Dar obxecto + Pasar tempo|Dar obxecto]] · [[#Falar + Pasar tempo|Falar]] · [[#Gardar no inventario + Pasar tempo|Gardar no inventario]] · [[#Identificar + Pasar tempo|Identificar]] · [[#Incorporar misión + Pasar tempo|Incorporar misión]] · [[#Moverse + Pasar tempo|Moverse]]
 
-#### Pasar tempo + Recoller
-
 #### Pasar tempo + Tachar misión
 
 ### Operacións
@@ -746,13 +786,19 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 
 #### Canto máis X máis Y · Pasar tempo
 
+#### Canto máis X menos Y · Pasar tempo
+
 #### Canto menos X máis Y · Pasar tempo
+
+#### Con outras cousas · Pasar tempo
 
 #### Destrúe · Pasar tempo
 
 #### Máis · Pasar tempo
+- [ ] Coa idade, o tempo pasa máis rápido
 
 #### Menos · Pasar tempo
+- [ ] Co vento lento, o tempo pasa máis lento
 
 #### Necesitas máis · Pasar tempo
 
@@ -766,6 +812,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### Se X entón Y · Pasar tempo
 
 #### Sempre · Pasar tempo
+- [ ] Momentos no que o tempo pasa independentemente do que fagas, a tempo real
 
 #### X <> Y · Pasar tempo
 
@@ -774,53 +821,10 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### Xenera · Pasar tempo
 - [ ] Accións ou obxectos que permiten extender o tempo límite do día
 
-## Recoller
-
-### Combinacións
-Ver tamén: [[#Anotar + Recoller|Anotar]] · [[#Anotar marxinalia + Recoller|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Recoller|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Recoller|Colocar herba no cacho]] · [[#Cortar + Recoller|Cortar]] · [[#Crear cacho + Recoller|Crear cacho]] · [[#Dar obxecto + Recoller|Dar obxecto]] · [[#Falar + Recoller|Falar]] · [[#Gardar no inventario + Recoller|Gardar no inventario]] · [[#Identificar + Recoller|Identificar]] · [[#Incorporar misión + Recoller|Incorporar misión]] · [[#Moverse + Recoller|Moverse]] · [[#Pasar tempo + Recoller|Pasar tempo]]
-
-#### Recoller + Tachar misión
-
-### Operacións
-
-#### A veces · Recoller
-
-#### Ao revés · Recoller
-
-#### Cada X Y · Recoller
-
-#### Canto máis X máis Y · Recoller
-
-#### Canto menos X máis Y · Recoller
-
-#### Destrúe · Recoller
-
-#### Máis · Recoller
-
-#### Menos · Recoller
-
-#### Necesitas máis · Recoller
-
-#### Necesitas menos · Recoller
-
-#### Non/Nunca · Recoller
-
-#### Outra vez · Recoller
-
-#### Se X entón Y · Recoller
-
-#### Sempre · Recoller
-
-#### X <> Y · Recoller
-
-#### X = Y · Recoller
-
-#### Xenera · Recoller
-
 ## Tachar misión
 
 ### Combinacións
-Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Tachar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Tachar misión|Colocar herba no cacho]] · [[#Cortar + Tachar misión|Cortar]] · [[#Crear cacho + Tachar misión|Crear cacho]] · [[#Dar obxecto + Tachar misión|Dar obxecto]] · [[#Falar + Tachar misión|Falar]] · [[#Gardar no inventario + Tachar misión|Gardar no inventario]] · [[#Identificar + Tachar misión|Identificar]] · [[#Incorporar misión + Tachar misión|Incorporar misión]] · [[#Moverse + Tachar misión|Moverse]] · [[#Pasar tempo + Tachar misión|Pasar tempo]] · [[#Recoller + Tachar misión|Recoller]]
+Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Tachar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Tachar misión|Colocar herba no cacho]] · [[#Cortar + Tachar misión|Cortar]] · [[#Crear cacho + Tachar misión|Crear cacho]] · [[#Dar obxecto + Tachar misión|Dar obxecto]] · [[#Falar + Tachar misión|Falar]] · [[#Gardar no inventario + Tachar misión|Gardar no inventario]] · [[#Identificar + Tachar misión|Identificar]] · [[#Incorporar misión + Tachar misión|Incorporar misión]] · [[#Moverse + Tachar misión|Moverse]] · [[#Pasar tempo + Tachar misión|Pasar tempo]]
 
 ### Operacións
 
@@ -832,7 +836,11 @@ Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar
 
 #### Canto máis X máis Y · Tachar misión
 
+#### Canto máis X menos Y · Tachar misión
+
 #### Canto menos X máis Y · Tachar misión
+
+#### Con outras cousas · Tachar misión
 
 #### Destrúe · Tachar misión
 
