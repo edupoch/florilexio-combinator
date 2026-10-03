@@ -613,6 +613,7 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identific
 #### Necesitas menos · Identificar
 
 #### Non/Nunca · Identificar
+- [ ] Momentos nos que levas no inventario obxectos ou herbas que non identificaches previamente. Mesmo poden ter implicacións negativas (como por exemplo, que o tempo vaia máis rápido) e non o saibas.
 
 #### Outra vez · Identificar
 
@@ -716,6 +717,7 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 #### Se X entón Y · Moverse
 
 #### Sempre · Moverse
+- [ ] Se levas unha ortiga, non podes parar de moverte
 
 #### X <> Y · Moverse
 
@@ -769,6 +771,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### X = Y · Pasar tempo
 
 #### Xenera · Pasar tempo
+- [ ] Accións ou obxectos que permiten extender o tempo límite do día
 
 ## Recoller
 
