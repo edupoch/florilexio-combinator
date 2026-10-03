@@ -3,6 +3,23 @@ mecanicas: Moverse, Cortar, Recoller, Gardar no inventario, Dar obxecto, Falar, 
 operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y
 ---
 
+## Índice
+- [[#Anotar|Anotar]]
+- [[#Anotar marxinalia|Anotar marxinalia]]
+- [[#Arrastrar herba ao cacho|Arrastrar herba ao cacho]]
+- [[#Colocar herba no cacho|Colocar herba no cacho]]
+- [[#Cortar|Cortar]]
+- [[#Crear cacho|Crear cacho]]
+- [[#Dar obxecto|Dar obxecto]]
+- [[#Falar|Falar]]
+- [[#Gardar no inventario|Gardar no inventario]]
+- [[#Identificar|Identificar]]
+- [[#Incorporar misión|Incorporar misión]]
+- [[#Moverse|Moverse]]
+- [[#Pasar tempo|Pasar tempo]]
+- [[#Recoller|Recoller]]
+- [[#Tachar misión|Tachar misión]]
+
 ![[matriz.svg]]
 
 ## Anotar
@@ -50,6 +67,7 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 #### Canto menos X máis Y · Anotar
 
 #### Destrúe · Anotar
+[ ] Momentos nos que perdes anotacións, son como perder recordos
 
 #### Máis · Anotar
 
@@ -119,6 +137,7 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 #### Canto menos X máis Y · Anotar marxinalia
 
 #### Destrúe · Anotar marxinalia
+[ ] Momentos nos que perdes marxinalia, son como perder recordos
 
 #### Máis · Anotar marxinalia
 
@@ -528,6 +547,9 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 #### Gardar no inventario + Moverse
 
 #### Gardar no inventario + Pasar tempo
+[ ] Obxectos que fan pasar o tempo máis rápido
+[ ] Obxectos que fan pasar o tempo máis lento
+[ ] Obxectos que deteñen o tempo
 
 #### Gardar no inventario + Recoller
 
@@ -709,6 +731,7 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 #### Necesitas menos · Moverse
 
 #### Non/Nunca · Moverse
+[ ] Momentos nos que non te podes mover
 
 #### Outra vez · Moverse
 
@@ -736,6 +759,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### A veces · Pasar tempo
 
 #### Ao revés · Pasar tempo
+[ ] Momentos nos que o tempo redúcese en vez de avanzar
 
 #### Cada X Y · Pasar tempo
 
@@ -754,6 +778,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### Necesitas menos · Pasar tempo
 
 #### Non/Nunca · Pasar tempo
+[ ] Momentos nos que non pasa o tempo
 
 #### Outra vez · Pasar tempo
 

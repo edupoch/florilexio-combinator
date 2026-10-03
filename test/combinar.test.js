@@ -79,9 +79,9 @@ test('genera todos los pares y todas las combinaciones operación · mecánica',
 test('ordena mecánicas, pares y operaciones alfabéticamente', () => {
   const md = ejecutar(cuaderno(MECS, OPS));
   const h2 = titulos(md).filter(t => t.startsWith('## '));
-  assert.deepEqual(h2, ['## Cortar', '## Falar', '## Moverse', '## Recoller']);
+  assert.deepEqual(h2, ['## Índice', '## Cortar', '## Falar', '## Moverse', '## Recoller']);
   assert.deepEqual(notasDe(md, 'Cortar', '##'), []);
-  const cortar = titulos(md).slice(0, 9);
+  const cortar = titulos(desde(md, '## Cortar')).slice(0, 9);
   assert.deepEqual(cortar, [
     '## Cortar',
     '### Combinacións', '#### Cortar + Falar', '#### Cortar + Moverse', '#### Cortar + Recoller',
@@ -109,9 +109,28 @@ test('cada sección enlaza con wikilinks a sus pares que viven en otras seccione
   assert.ok(md.includes('## Cortar\n\n### Combinacións\n\n#### '), 'la primera sección no tiene "Ver tamén"');
 });
 
-test('incrusta la matriz al principio del cuerpo', () => {
+test('empieza con un índice que enlaza todas las mecánicas, seguido de la matriz', () => {
   const md = ejecutar(cuaderno(MECS, OPS));
-  assert.match(md, /^---\n[\s\S]*?\n---\n\n!\[\[matriz\.svg\]\]\n\n## /);
+  assert.ok(md.startsWith(cuaderno(MECS, OPS) + '\n## Índice\n' +
+    '- [[#Cortar|Cortar]]\n- [[#Falar|Falar]]\n- [[#Moverse|Moverse]]\n- [[#Recoller|Recoller]]\n' +
+    '\n![[matriz.svg]]\n\n## Cortar\n'));
+});
+
+test('el índice enlaza Orfas solo mientras existe', () => {
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] x');
+  md = ejecutar(cambiarListas(md, ['Cortar', 'Moverse'], OPS));
+  assert.deepEqual(notasDe(md, 'Índice', '##').slice(0, 3), ['- [[#Cortar|Cortar]]', '- [[#Moverse|Moverse]]', '- [[#Orfas|Orfas]]']);
+  assert.ok(!md.includes('[[#Falar|Falar]]'), 'no quedan enlaces a mecánicas eliminadas');
+  md = ejecutar(cambiarListas(md, MECS, OPS));
+  assert.ok(!md.includes('[[#Orfas|Orfas]]'));
+});
+
+test('conserva el texto propio escrito bajo el índice', () => {
+  let md = ejecutar(cuaderno(MECS, OPS));
+  md = md.replace('![[matriz.svg]]\n', '![[matriz.svg]]\n\nVer tamén a nota [[Deseño xeral]].\n- [[Outra nota]]\n');
+  md = ejecutar(ejecutar(md));
+  assert.deepEqual(notasDe(md, 'Índice', '##').slice(-4), ['![[matriz.svg]]', '', 'Ver tamén a nota [[Deseño xeral]].', '- [[Outra nota]]']);
+  assert.equal(md.split('- [[#Cortar|Cortar]]').length, 2, 'los enlaces no se duplican');
 });
 
 test('conserva intacto el resto del front matter', () => {
@@ -154,9 +173,9 @@ test('los títulos dentro de bloques de código no se interpretan', () => {
 
 test('conserva el texto libre antes de la primera sección', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
-  md = md.replace('![[matriz.svg]]', '# Sesión do luns\n\nAsistentes: todo o equipo.\n\n![[matriz.svg]]');
+  md = md.replace('## Índice\n', '# Sesión do luns\n\nAsistentes: todo o equipo.\n\n## Índice\n');
   md = ejecutar(md);
-  assert.ok(md.includes('---\n\n# Sesión do luns\n\nAsistentes: todo o equipo.\n\n![[matriz.svg]]\n\n## Cortar'));
+  assert.ok(md.includes('---\n\n# Sesión do luns\n\nAsistentes: todo o equipo.\n\n## Índice\n'));
   assert.equal(md.split('![[matriz.svg]]').length, 2, 'la matriz no se duplica');
 });
 
@@ -241,6 +260,7 @@ test('las combinaciones vacías eliminadas desaparecen sin dejar huérfanas', ()
   const md = ejecutar(cambiarListas(ejecutar(cuaderno(MECS, OPS)), ['Cortar', 'Moverse'], ['Máis']));
   assert.ok(!md.includes('## Orfas'));
   assert.deepEqual(titulos(md), [
+    '## Índice',
     '## Cortar', '### Combinacións', '#### Cortar + Moverse', '### Operacións', '#### Máis · Cortar',
     '## Moverse', '### Combinacións', '### Operacións', '#### Máis · Moverse',
   ]);
@@ -299,7 +319,7 @@ test('migra el formato anterior (combinaciones en `###`) sin perder notas', () =
     '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Máis · Moverse\n- [ ] outra\n');
   const md = ejecutar(anterior);
   assert.equal(md, cuaderno(['Cortar', 'Moverse'], ['Máis'],
-    '\n![[matriz.svg]]\n\n' +
+    '\n## Índice\n- [[#Cortar|Cortar]]\n- [[#Moverse|Moverse]]\n\n![[matriz.svg]]\n\n' +
     '## Cortar\nGeneral.\n\n### Combinacións\n\n#### Cortar + Moverse\n- [+] par\n\n### Operacións\n\n#### Máis · Cortar\n- [-] op\n\n' +
     '## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Operacións\n\n#### Máis · Moverse\n- [ ] outra\n'));
   assert.equal(ejecutar(md), md);
@@ -376,7 +396,7 @@ test('rechaza nombres que romperían títulos o enlaces', () => {
   for (const nombre of ['A+B', 'A · B', 'A#', 'A|B', 'A^', '[A]', 'A: B']) {
     assert.throws(() => procesar(cuaderno([nombre, 'Cortar'], ['Non'])), /no válidos/, nombre);
   }
-  for (const reservado of ['Orfas', 'combinacións', 'Operacións']) {
+  for (const reservado of ['Índice', 'Orfas', 'combinacións', 'Operacións']) {
     assert.throws(() => procesar(cuaderno([reservado, 'Cortar'], ['Non'])), /reservado/, reservado);
   }
 });

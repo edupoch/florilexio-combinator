@@ -56,6 +56,10 @@ ningún fichero**.
 Todo se ordena alfabéticamente, sin importar el orden de las listas:
 
 ```markdown
+## Índice
+- [[#Anotar|Anotar]]
+- [[#Cortar|Cortar]]
+
 ![[matriz.svg]]
 
 ## Cortar
@@ -74,10 +78,12 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 #### Non/Nunca · Cortar
 ```
 
+- El **índice** del principio enlaza todas las mecánicas (y `Orfas`, si existe) y
+  muestra la matriz. Se regenera solo; puedes añadir texto propio debajo.
 - Cada **par** aparece una sola vez, bajo la mecánica que va antes alfabéticamente.
   En la otra, la línea **Ver tamén** enlaza con él.
-- Se puede escribir texto libre en cualquier parte: antes de la primera sección, bajo
-  `## Mecánica`, bajo `### Combinacións` / `### Operacións` y bajo cada `####`.
+- Se puede escribir texto libre en cualquier parte: antes del índice, bajo
+  `## Índice`, bajo `## Mecánica`, bajo `### Combinacións` / `### Operacións` y bajo cada `####`.
 
 ### Marcar las notas
 
@@ -113,8 +119,10 @@ Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
   combinación por su título. Si cambia, sus notas pasan a Orfas.
 - **No uses `##`, `###` ni `####` dentro de las notas**: son la estructura del cuaderno.
   Para subtítulos propios usa `#####` o más. (Dentro de bloques de código no importa.)
-- Los nombres no pueden contener `+ · # | ^ [ ] :` ni llamarse `Orfas`, `Combinacións`
-  u `Operacións`. El script avisa si ocurre.
+- Bajo `## Índice`, las líneas con la forma `- [[#Algo]]` son del script y se
+  regeneran. Para tus propios enlaces usa otra forma (por ejemplo, `- [[Otra nota]]`).
+- Los nombres no pueden contener `+ · # | ^ [ ] :` ni llamarse `Índice`, `Orfas`,
+  `Combinacións` u `Operacións`. El script avisa si ocurre.
 - Si varias personas editan a la vez, sincronizad (git, Obsidian Sync…) antes de
   ejecutar el script.
 

@@ -4,7 +4,7 @@
 // Uso: node combinar.js [ficheiro.md]   (por defecto: combinacions.md)
 //
 // Lee las listas `mecanicas` y `operacions` del front matter, regenera el cuerpo
-// (una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
+// (un `## Índice` con enlaces a cada mecánica y la matriz, y una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
 // en `### Operacións`, en orden alfabético) conservando las notas escritas bajo
 // cada título `####`, y genera `matriz.svg` al lado.
 // Las notas que ya no encajan en ninguna combinación van a la sección `## Orfas`.
@@ -21,7 +21,9 @@ const VER_TAMEN_GENERADO = /^Ver tamén: \[\[#[^\]]*\]\]( · \[\[#[^\]]*\]\])*\s
 const ORFAS = 'Orfas';
 const GRUPO_PARES = 'Combinacións';
 const GRUPO_OPS = 'Operacións';
-const RESERVADOS = [ORFAS, GRUPO_PARES, GRUPO_OPS];
+const INDICE = 'Índice';
+const ENLACE_INDICE_GENERADO = /^- \[\[#[^\]]*\]\]\s*$/;
+const RESERVADOS = [INDICE, ORFAS, GRUPO_PARES, GRUPO_OPS];
 const SVG_NOME = 'matriz.svg';
 const EMBED = `![[${SVG_NOME}]]`;
 const PROHIBIDOS = /[+·#|^[\]:]/;
@@ -108,6 +110,7 @@ function leerNotas(cuerpo) {
   let destino = preambulo;
   let seccion = null; // título de la `##` actual
   let trasTitulo = false; // justo después de un título es donde el script escribe "Ver tamén"
+  let enIndice = false;
   let enCodigo = false;
 
   const abrir = (k, titulo) => {
@@ -119,13 +122,17 @@ function leerNotas(cuerpo) {
   };
 
   for (const linea of cuerpo.split(/\r?\n/)) {
-    const generada = (destino === preambulo && linea.trim() === EMBED) || (trasTitulo && VER_TAMEN_GENERADO.test(linea));
+    const generada =
+      ((destino === preambulo || enIndice) && linea.trim() === EMBED) ||
+      (enIndice && ENLACE_INDICE_GENERADO.test(linea)) ||
+      (trasTitulo && VER_TAMEN_GENERADO.test(linea));
     trasTitulo = false;
     if (/^\s*(```|~~~)/.test(linea)) enCodigo = !enCodigo;
     const titulo = !enCodigo && linea.match(/^(#{2,4})\s+(.+?)\s*$/);
     if (titulo) {
       const nivel = titulo[1].length;
       const texto = normalizar(titulo[2]);
+      enIndice = nivel === 2 && clave(texto) === clave(INDICE);
       if (nivel === 2) {
         seccion = texto;
         destino = abrir(claveSeccion(texto), texto);
@@ -180,7 +187,7 @@ function estado(c) {
 function generarMarkdown(frontMatter, preambulo, notas, mecanicas, operaciones) {
   const salida = [frontMatter.trimEnd(), ''];
   if (preambulo.length) salida.push(...preambulo, '');
-  salida.push(EMBED, '');
+  const posicionIndice = salida.length; // el índice se inserta al final, cuando se sabe si hay Orfas
 
   const usadas = new Set();
   const conteos = new Map();
@@ -223,6 +230,7 @@ function generarMarkdown(frontMatter, preambulo, notas, mecanicas, operaciones) 
     }
   });
 
+  const notasIndice = notasDe(claveSeccion(INDICE));
   const claveOrfas = claveSeccion(ORFAS);
   usadas.add(claveOrfas);
   const orfas = [...notas.entries()]
@@ -235,6 +243,11 @@ function generarMarkdown(frontMatter, preambulo, notas, mecanicas, operaciones) 
     salida.push('');
     for (const [, e] of orfas) salida.push(`### ${e.titulo}`, ...e.lineas, '');
   }
+
+  const enlaces = [...mecanicas, ...(salida.includes(`## ${ORFAS}`) ? [ORFAS] : [])].map(t => `- [[#${t}|${t}]]`);
+  const indice = [`## ${INDICE}`, ...enlaces, '', EMBED, ''];
+  if (notasIndice.length) indice.push(...notasIndice, '');
+  salida.splice(posicionIndice, 0, ...indice);
 
   return { markdown: salida.join('\n').trimEnd() + '\n', conteos, nuevas, orfas: orfas.length };
 }
