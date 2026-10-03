@@ -467,7 +467,7 @@ test('la matriz tiene una celda por combinación con su estado', () => {
   const { svg } = procesar(md);
   assert.match(svg, /^<svg [^>]*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/);
   assert.ok(svg.trimEnd().endsWith('</svg>'));
-  assert.equal((svg.match(/<title>/g) || []).length, 6 + 4 * 3);
+  assert.equal((svg.match(/<title>/g) || []).length, 2 * 6 + 4 * 3, 'cada par aparece dos veces');
   assert.ok(svg.includes('<title>Cortar + Moverse: 1 aceptadas, 1 pendentes, 0 descartadas</title>'));
   assert.ok(svg.includes('<title>X &lt;&gt; Y · Falar: 0 aceptadas, 0 pendentes, 1 descartadas</title>'));
   assert.ok(!/<[^>/!a-z]/.test(svg.replace(/<\/?[a-z]/g, '')), 'no hay "<" sin escapar');
@@ -482,11 +482,27 @@ test('en la matriz de operaciones, las operaciones son las filas y las mecánica
   assert.deepEqual(columnas.slice(0, 4), ['Cortar', 'Falar', 'Moverse', 'Recoller']);
 });
 
+test('la matriz de pares es un cuadrado en espejo con la diagonal vacía', () => {
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
+  const { svg } = procesar(md);
+  const filas = [...svg.matchAll(/<text [^>]*text-anchor="end"[^>]*>([^<]*)<\/text>/g)].map(m => m[1]);
+  assert.deepEqual(filas.slice(OPS.length), ['Cortar', 'Falar', 'Moverse', 'Recoller']);
+  // Fila a fila, cada par aparece dos veces con el título real (orden alfabético).
+  const pares = [...svg.matchAll(/<title>([^:<]* \+ [^:<]*):/g)].map(m => m[1]);
+  assert.deepEqual(pares, [
+    'Cortar + Falar', 'Cortar + Moverse', 'Cortar + Recoller',
+    'Cortar + Falar', 'Falar + Moverse', 'Falar + Recoller',
+    'Cortar + Moverse', 'Falar + Moverse', 'Moverse + Recoller',
+    'Cortar + Recoller', 'Falar + Recoller', 'Moverse + Recoller',
+  ]);
+  assert.equal(svg.split('<title>Cortar + Moverse: 1 aceptadas').length, 3, 'las dos casillas muestran el mismo estado');
+});
+
 test('cada casilla de la nota de la matriz enlaza con su combinación', () => {
   let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
   const { notaMatriz } = procesar(md, 'caderno');
   const enlaces = [...notaMatriz.matchAll(/<a class="internal-link" data-href="([^"]*)" href="([^"]*)">/g)];
-  assert.equal(enlaces.length, 6 + 4 * 3);
+  assert.equal(enlaces.length, 2 * 6 + 4 * 3);
   for (const [, dataHref, href] of enlaces) assert.equal(dataHref, href);
   const destinos = enlaces.map(e => e[1]);
   assert.ok(destinos.includes('caderno#Cortar + Moverse'));

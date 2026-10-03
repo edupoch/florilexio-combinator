@@ -372,8 +372,11 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
   bloque('Operación · mecánica', operaciones, mecanicas,
     (op, m) => claveOp(op, m), (op, m) => `${op}${SEP_OP}${m}`);
   if (mecanicas.length > 1) {
-    bloque('Mecánica + mecánica', mecanicas.slice(1), mecanicas.slice(0, -1),
-      (a, b, i, j) => (j <= i ? clavePar(a, b) : null), (a, b) => `${b}${SEP_PAR}${a}`);
+    // Cuadrado completo en espejo: cada par aparece dos veces, simétrico respecto a la
+    // diagonal, y ambas casillas enlazan con su único título (primero el nombre alfabético).
+    bloque('Mecánica + mecánica', mecanicas, mecanicas,
+      (a, b, i, j) => (i !== j ? clavePar(a, b) : null),
+      (a, b) => (comparar(a, b) < 0 ? `${a}${SEP_PAR}${b}` : `${b}${SEP_PAR}${a}`));
   }
 
   const ancho = Math.ceil(Math.max(anchoTotal, 520));
