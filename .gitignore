@@ -1,3 +1,6 @@
 *.bak
 *.tmp
 node_modules/
+
+# Obsidian: estado local de cada persona (ficheros abiertos, paneles…)
+.obsidian/workspace*.json
