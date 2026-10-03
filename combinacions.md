@@ -1,5 +1,5 @@
 ---
-mecanicas: Moverse, Cortar, Recoller, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Incorporar misión, Tachar misión, Anotar marxinalia, Arrastrar herba ao cacho, Colocar herba no cacho, Crear cacho
+mecanicas: Moverse, Cortar, Recoller, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Incorporar misión, Tachar misión, Anotar marxinalia, Arrastrar herba ao cacho, Colocar herba no cacho, Crear cacho, Pasar tempo
 operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y
 ---
 
@@ -30,6 +30,8 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 #### Anotar + Incorporar misión
 
 #### Anotar + Moverse
+
+#### Anotar + Pasar tempo
 
 #### Anotar + Recoller
 
@@ -76,6 +78,8 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 ### Combinacións
 Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 
+Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
+
 #### Anotar marxinalia + Arrastrar herba ao cacho
 
 #### Anotar marxinalia + Colocar herba no cacho
@@ -95,6 +99,8 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 #### Anotar marxinalia + Incorporar misión
 
 #### Anotar marxinalia + Moverse
+
+#### Anotar marxinalia + Pasar tempo
 
 #### Anotar marxinalia + Recoller
 
@@ -141,6 +147,8 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 ### Combinacións
 Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinalia + Arrastrar herba ao cacho|Anotar marxinalia]]
 
+Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinalia + Arrastrar herba ao cacho|Anotar marxinalia]]
+
 #### Arrastrar herba ao cacho + Colocar herba no cacho
 
 #### Arrastrar herba ao cacho + Cortar
@@ -158,6 +166,8 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 #### Arrastrar herba ao cacho + Incorporar misión
 
 #### Arrastrar herba ao cacho + Moverse
+
+#### Arrastrar herba ao cacho + Pasar tempo
 
 #### Arrastrar herba ao cacho + Recoller
 
@@ -204,6 +214,8 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 ### Combinacións
 Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia + Colocar herba no cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Colocar herba no cacho|Arrastrar herba ao cacho]]
 
+Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia + Colocar herba no cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Colocar herba no cacho|Arrastrar herba ao cacho]]
+
 #### Colocar herba no cacho + Cortar
 
 #### Colocar herba no cacho + Crear cacho
@@ -219,6 +231,8 @@ Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia 
 #### Colocar herba no cacho + Incorporar misión
 
 #### Colocar herba no cacho + Moverse
+
+#### Colocar herba no cacho + Pasar tempo
 
 #### Colocar herba no cacho + Recoller
 
@@ -265,6 +279,8 @@ Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia 
 ### Combinacións
 Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Cortar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Cortar|Colocar herba no cacho]]
 
+Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Cortar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Cortar|Colocar herba no cacho]]
+
 #### Cortar + Crear cacho
 
 #### Cortar + Dar obxecto
@@ -278,6 +294,8 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 #### Cortar + Incorporar misión
 
 #### Cortar + Moverse
+
+#### Cortar + Pasar tempo
 
 #### Cortar + Recoller
 
@@ -324,6 +342,8 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 ### Combinacións
 Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Crear cacho|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Crear cacho|Colocar herba no cacho]] · [[#Cortar + Crear cacho|Cortar]]
 
+Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cacho|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Crear cacho|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Crear cacho|Colocar herba no cacho]] · [[#Cortar + Crear cacho|Cortar]]
+
 #### Crear cacho + Dar obxecto
 
 #### Crear cacho + Falar
@@ -335,6 +355,8 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cac
 #### Crear cacho + Incorporar misión
 
 #### Crear cacho + Moverse
+
+#### Crear cacho + Pasar tempo
 
 #### Crear cacho + Recoller
 
@@ -381,6 +403,8 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cac
 ### Combinacións
 Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxecto|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Dar obxecto|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Dar obxecto|Colocar herba no cacho]] · [[#Cortar + Dar obxecto|Cortar]] · [[#Crear cacho + Dar obxecto|Crear cacho]]
 
+Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxecto|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Dar obxecto|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Dar obxecto|Colocar herba no cacho]] · [[#Cortar + Dar obxecto|Cortar]] · [[#Crear cacho + Dar obxecto|Crear cacho]]
+
 #### Dar obxecto + Falar
 
 #### Dar obxecto + Gardar no inventario
@@ -390,6 +414,8 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxec
 #### Dar obxecto + Incorporar misión
 
 #### Dar obxecto + Moverse
+
+#### Dar obxecto + Pasar tempo
 
 #### Dar obxecto + Recoller
 
@@ -436,6 +462,8 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxec
 ### Combinacións
 Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Falar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Falar|Colocar herba no cacho]] · [[#Cortar + Falar|Cortar]] · [[#Crear cacho + Falar|Crear cacho]] · [[#Dar obxecto + Falar|Dar obxecto]]
 
+Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Falar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Falar|Colocar herba no cacho]] · [[#Cortar + Falar|Cortar]] · [[#Crear cacho + Falar|Crear cacho]] · [[#Dar obxecto + Falar|Dar obxecto]]
+
 #### Falar + Gardar no inventario
 
 #### Falar + Identificar
@@ -443,6 +471,8 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar ma
 #### Falar + Incorporar misión
 
 #### Falar + Moverse
+
+#### Falar + Pasar tempo
 
 #### Falar + Recoller
 
@@ -489,11 +519,15 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar ma
 ### Combinacións
 Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + Gardar no inventario|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Gardar no inventario|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Gardar no inventario|Colocar herba no cacho]] · [[#Cortar + Gardar no inventario|Cortar]] · [[#Crear cacho + Gardar no inventario|Crear cacho]] · [[#Dar obxecto + Gardar no inventario|Dar obxecto]] · [[#Falar + Gardar no inventario|Falar]]
 
+Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + Gardar no inventario|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Gardar no inventario|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Gardar no inventario|Colocar herba no cacho]] · [[#Cortar + Gardar no inventario|Cortar]] · [[#Crear cacho + Gardar no inventario|Crear cacho]] · [[#Dar obxecto + Gardar no inventario|Dar obxecto]] · [[#Falar + Gardar no inventario|Falar]]
+
 #### Gardar no inventario + Identificar
 
 #### Gardar no inventario + Incorporar misión
 
 #### Gardar no inventario + Moverse
+
+#### Gardar no inventario + Pasar tempo
 
 #### Gardar no inventario + Recoller
 
@@ -540,9 +574,13 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 ### Combinacións
 Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identificar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Identificar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Identificar|Colocar herba no cacho]] · [[#Cortar + Identificar|Cortar]] · [[#Crear cacho + Identificar|Crear cacho]] · [[#Dar obxecto + Identificar|Dar obxecto]] · [[#Falar + Identificar|Falar]] · [[#Gardar no inventario + Identificar|Gardar no inventario]]
 
+Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identificar|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Identificar|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Identificar|Colocar herba no cacho]] · [[#Cortar + Identificar|Cortar]] · [[#Crear cacho + Identificar|Crear cacho]] · [[#Dar obxecto + Identificar|Dar obxecto]] · [[#Falar + Identificar|Falar]] · [[#Gardar no inventario + Identificar|Gardar no inventario]]
+
 #### Identificar + Incorporar misión
 
 #### Identificar + Moverse
+
+#### Identificar + Pasar tempo
 
 #### Identificar + Recoller
 
@@ -589,7 +627,11 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identific
 ### Combinacións
 Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + Incorporar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Incorporar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Incorporar misión|Colocar herba no cacho]] · [[#Cortar + Incorporar misión|Cortar]] · [[#Crear cacho + Incorporar misión|Crear cacho]] · [[#Dar obxecto + Incorporar misión|Dar obxecto]] · [[#Falar + Incorporar misión|Falar]] · [[#Gardar no inventario + Incorporar misión|Gardar no inventario]] · [[#Identificar + Incorporar misión|Identificar]]
 
+Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + Incorporar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Incorporar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Incorporar misión|Colocar herba no cacho]] · [[#Cortar + Incorporar misión|Cortar]] · [[#Crear cacho + Incorporar misión|Crear cacho]] · [[#Dar obxecto + Incorporar misión|Dar obxecto]] · [[#Falar + Incorporar misión|Falar]] · [[#Gardar no inventario + Incorporar misión|Gardar no inventario]] · [[#Identificar + Incorporar misión|Identificar]]
+
 #### Incorporar misión + Moverse
+
+#### Incorporar misión + Pasar tempo
 
 #### Incorporar misión + Recoller
 
@@ -636,6 +678,10 @@ Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + In
 ### Combinacións
 Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Moverse|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Moverse|Colocar herba no cacho]] · [[#Cortar + Moverse|Cortar]] · [[#Crear cacho + Moverse|Crear cacho]] · [[#Dar obxecto + Moverse|Dar obxecto]] · [[#Falar + Moverse|Falar]] · [[#Gardar no inventario + Moverse|Gardar no inventario]] · [[#Identificar + Moverse|Identificar]] · [[#Incorporar misión + Moverse|Incorporar misión]]
 
+Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Moverse|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Moverse|Colocar herba no cacho]] · [[#Cortar + Moverse|Cortar]] · [[#Crear cacho + Moverse|Crear cacho]] · [[#Dar obxecto + Moverse|Dar obxecto]] · [[#Falar + Moverse|Falar]] · [[#Gardar no inventario + Moverse|Gardar no inventario]] · [[#Identificar + Moverse|Identificar]] · [[#Incorporar misión + Moverse|Incorporar misión]]
+
+#### Moverse + Pasar tempo
+
 #### Moverse + Recoller
 
 #### Moverse + Tachar misión
@@ -676,9 +722,56 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 
 #### Xenera · Moverse
 
+## Pasar tempo
+
+### Combinacións
+Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tempo|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Pasar tempo|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Pasar tempo|Colocar herba no cacho]] · [[#Cortar + Pasar tempo|Cortar]] · [[#Crear cacho + Pasar tempo|Crear cacho]] · [[#Dar obxecto + Pasar tempo|Dar obxecto]] · [[#Falar + Pasar tempo|Falar]] · [[#Gardar no inventario + Pasar tempo|Gardar no inventario]] · [[#Identificar + Pasar tempo|Identificar]] · [[#Incorporar misión + Pasar tempo|Incorporar misión]] · [[#Moverse + Pasar tempo|Moverse]]
+
+#### Pasar tempo + Recoller
+
+#### Pasar tempo + Tachar misión
+
+### Operacións
+
+#### A veces · Pasar tempo
+
+#### Ao revés · Pasar tempo
+
+#### Cada X Y · Pasar tempo
+
+#### Canto máis X máis Y · Pasar tempo
+
+#### Canto menos X máis Y · Pasar tempo
+
+#### Destrúe · Pasar tempo
+
+#### Máis · Pasar tempo
+
+#### Menos · Pasar tempo
+
+#### Necesitas máis · Pasar tempo
+
+#### Necesitas menos · Pasar tempo
+
+#### Non/Nunca · Pasar tempo
+
+#### Outra vez · Pasar tempo
+
+#### Se X entón Y · Pasar tempo
+
+#### Sempre · Pasar tempo
+
+#### X <> Y · Pasar tempo
+
+#### X = Y · Pasar tempo
+
+#### Xenera · Pasar tempo
+
 ## Recoller
 
 ### Combinacións
+Ver tamén: [[#Anotar + Recoller|Anotar]] · [[#Anotar marxinalia + Recoller|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Recoller|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Recoller|Colocar herba no cacho]] · [[#Cortar + Recoller|Cortar]] · [[#Crear cacho + Recoller|Crear cacho]] · [[#Dar obxecto + Recoller|Dar obxecto]] · [[#Falar + Recoller|Falar]] · [[#Gardar no inventario + Recoller|Gardar no inventario]] · [[#Identificar + Recoller|Identificar]] · [[#Incorporar misión + Recoller|Incorporar misión]] · [[#Moverse + Recoller|Moverse]] · [[#Pasar tempo + Recoller|Pasar tempo]]
+
 Ver tamén: [[#Anotar + Recoller|Anotar]] · [[#Anotar marxinalia + Recoller|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Recoller|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Recoller|Colocar herba no cacho]] · [[#Cortar + Recoller|Cortar]] · [[#Crear cacho + Recoller|Crear cacho]] · [[#Dar obxecto + Recoller|Dar obxecto]] · [[#Falar + Recoller|Falar]] · [[#Gardar no inventario + Recoller|Gardar no inventario]] · [[#Identificar + Recoller|Identificar]] · [[#Incorporar misión + Recoller|Incorporar misión]] · [[#Moverse + Recoller|Moverse]]
 
 #### Recoller + Tachar misión
@@ -722,6 +815,8 @@ Ver tamén: [[#Anotar + Recoller|Anotar]] · [[#Anotar marxinalia + Recoller|Ano
 ## Tachar misión
 
 ### Combinacións
+Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Tachar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Tachar misión|Colocar herba no cacho]] · [[#Cortar + Tachar misión|Cortar]] · [[#Crear cacho + Tachar misión|Crear cacho]] · [[#Dar obxecto + Tachar misión|Dar obxecto]] · [[#Falar + Tachar misión|Falar]] · [[#Gardar no inventario + Tachar misión|Gardar no inventario]] · [[#Identificar + Tachar misión|Identificar]] · [[#Incorporar misión + Tachar misión|Incorporar misión]] · [[#Moverse + Tachar misión|Moverse]] · [[#Pasar tempo + Tachar misión|Pasar tempo]] · [[#Recoller + Tachar misión|Recoller]]
+
 Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar misión|Anotar marxinalia]] · [[#Arrastrar herba ao cacho + Tachar misión|Arrastrar herba ao cacho]] · [[#Colocar herba no cacho + Tachar misión|Colocar herba no cacho]] · [[#Cortar + Tachar misión|Cortar]] · [[#Crear cacho + Tachar misión|Crear cacho]] · [[#Dar obxecto + Tachar misión|Dar obxecto]] · [[#Falar + Tachar misión|Falar]] · [[#Gardar no inventario + Tachar misión|Gardar no inventario]] · [[#Identificar + Tachar misión|Identificar]] · [[#Incorporar misión + Tachar misión|Incorporar misión]] · [[#Moverse + Tachar misión|Moverse]] · [[#Recoller + Tachar misión|Recoller]]
 
 ### Operacións
