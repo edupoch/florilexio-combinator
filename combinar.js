@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Combinator: genera y actualiza un cuaderno de combinaciones para Obsidian.
 //
-// Uso: node combinar.js [ficheiro.md]   (por defecto: combinacions.md)
+// Uso: node combinar.js [fichero.md]   (por defecto: combinacions.md)
 //
 // Lee las listas `mecanicas` y `operacions` del front matter, regenera el cuerpo
 // (un `## Índice` con enlaces a cada mecánica y la matriz, y una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
@@ -383,16 +383,28 @@ function procesar(texto, nota = 'combinacions') {
   return { markdown, svg, notaMatriz, conteos, nuevas, orfas, mecanicas, operaciones };
 }
 
-function main(argumento) {
-  const ruta = path.resolve(argumento || 'combinacions.md');
-  const resultado = procesar(fs.readFileSync(ruta, 'utf8'), path.basename(ruta, '.md'));
-  const { markdown, svg, notaMatriz, nuevas, orfas, mecanicas, operaciones } = resultado;
+const leerCuaderno = ruta => procesar(fs.readFileSync(ruta, 'utf8'), path.basename(ruta, '.md'));
 
+// Escribe `matriz.md` y `matriz.svg` junto al cuaderno; devuelve los nombres de los que cambiaron.
+function escribirMatrices(ruta, { svg, notaMatriz }) {
   const carpeta = path.dirname(ruta);
-  const actualizados = [
-    escribirSiCambia(ruta, markdown, true) && path.basename(ruta),
+  return [
     escribirSiCambia(path.join(carpeta, `${NOTA_MATRIZ}.md`), notaMatriz, false) && `${NOTA_MATRIZ}.md`,
     escribirSiCambia(path.join(carpeta, SVG_NOME), svg, false) && SVG_NOME,
+  ].filter(Boolean);
+}
+
+// Regenera solo las matrices, sin tocar el cuaderno.
+const actualizarMatrices = ruta => escribirMatrices(ruta, leerCuaderno(ruta));
+
+function main(argumento) {
+  const ruta = path.resolve(argumento || 'combinacions.md');
+  const resultado = leerCuaderno(ruta);
+  const { markdown, nuevas, orfas, mecanicas, operaciones } = resultado;
+
+  const actualizados = [
+    escribirSiCambia(ruta, markdown, true) && path.basename(ruta),
+    ...escribirMatrices(ruta, resultado),
   ].filter(Boolean);
 
   const pares = (mecanicas.length * (mecanicas.length - 1)) / 2;
@@ -402,7 +414,7 @@ function main(argumento) {
   console.log(actualizados.length ? `Actualizado: ${actualizados.join(', ')}.` : 'Sin cambios.');
 }
 
-module.exports = { procesar, contar, estado, claveDeTitulo };
+module.exports = { procesar, actualizarMatrices, contar, estado, claveDeTitulo };
 
 if (require.main === module) {
   try {

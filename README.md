@@ -18,6 +18,8 @@ vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya exis
 | `npm run combinar` | Actualiza `combinacions.md`, `matriz.md` y `matriz.svg`. |
 | `node combinar.js` | Lo mismo, sin pasar por npm. |
 | `node combinar.js otro.md` | Actualiza otro cuaderno; la matriz se crea junto a él. |
+| `npm run vigilar` | Se queda vigilando `combinacions.md` y regenera la matriz cada vez que se guarda. Ctrl+C para salir. |
+| `node vigilar.js otro.md` | Lo mismo, con otro cuaderno. |
 | `npm test` | Ejecuta los tests automáticos. |
 | `node --test --test-reporter=spec` | Los tests, con un informe legible test a test. |
 
@@ -50,6 +52,11 @@ ningún fichero**.
 3. Abre `combinacions.md` en Obsidian y anota ideas bajo cada combinación.
 4. Repite cuando cambien las listas. Ejecutarlo de más no hace daño: si no hay nada
    nuevo, no cambia nada.
+
+Durante una sesión de trabajo puedes dejar `npm run vigilar` abierto en una terminal:
+la matriz se actualiza sola mientras anotáis. El vigilante **solo regenera la matriz,
+nunca el cuaderno** (para no pisar lo que se está escribiendo en Obsidian). Si cambias
+las listas, ejecuta `npm run combinar` para crear las combinaciones nuevas.
 
 ## Estructura del cuaderno
 
@@ -135,6 +142,7 @@ Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
 | Fichero | Contenido |
 | --- | --- |
 | `combinar.js` | El script. |
+| `vigilar.js` | Vigila el cuaderno y regenera la matriz al guardar. |
 | `combinacions.md` | El cuaderno: listas en el front matter y notas del equipo. |
 | `matriz.md` | Generado: la matriz con enlaces para Obsidian. No se edita a mano. |
 | `matriz.svg` | Generado: la matriz como imagen. No se edita a mano. |

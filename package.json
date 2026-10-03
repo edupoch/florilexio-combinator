@@ -4,6 +4,7 @@
   "description": "Cuaderno de combinaciones de mecánicas y operaciones para Obsidian",
   "scripts": {
     "combinar": "node combinar.js",
+    "vigilar": "node vigilar.js",
     "test": "node --test"
   }
 }

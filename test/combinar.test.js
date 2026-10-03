@@ -5,11 +5,12 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { execFileSync, spawnSync } = require('child_process');
+const { execFileSync, spawn, spawnSync } = require('child_process');
 
-const { procesar, contar, estado, claveDeTitulo } = require('../combinar.js');
+const { procesar, actualizarMatrices, contar, estado, claveDeTitulo } = require('../combinar.js');
 
 const SCRIPT = path.join(__dirname, '..', 'combinar.js');
+const VIGILAR = path.join(__dirname, '..', 'vigilar.js');
 
 // --- Utilidades ---------------------------------------------------------------
 
@@ -519,4 +520,68 @@ test('la línea de comandos no toca el fichero si hay un error', t => {
   assert.match(r.stderr, /no válidos/);
   assert.equal(fs.readFileSync(ruta, 'utf8'), original);
   assert.deepEqual(fs.readdirSync(dir), ['malo.md']);
+});
+
+// --- Regenerar solo las matrices y vigilar ------------------------------------
+
+function carpetaTemporal(t) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'combinator-'));
+  t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
+  return dir;
+}
+
+// Espera hasta que `condicion()` sea verdadera o falla tras `ms`.
+async function esperar(condicion, descripcion, ms = 5000) {
+  const limite = Date.now() + ms;
+  while (!condicion()) {
+    if (Date.now() > limite) throw new Error(`Tiempo agotado esperando: ${descripcion}`);
+    await new Promise(r => setTimeout(r, 50));
+  }
+}
+
+test('actualizarMatrices regenera las matrices sin tocar el cuaderno', t => {
+  const dir = carpetaTemporal(t);
+  const ruta = path.join(dir, 'combinacions.md');
+  // Una nota sin regenerar el cuaderno (falta la estructura) no debe reescribirlo.
+  const texto = cuaderno(MECS, OPS, '\n#### Cortar + Moverse\n- [+] idea\n');
+  fs.writeFileSync(ruta, texto);
+
+  assert.deepEqual(actualizarMatrices(ruta), ['matriz.md', 'matriz.svg']);
+  assert.equal(fs.readFileSync(ruta, 'utf8'), texto);
+  assert.ok(!fs.existsSync(ruta + '.bak'));
+  assert.ok(fs.readFileSync(path.join(dir, 'matriz.svg'), 'utf8').includes('Cortar + Moverse: 1 aceptadas'));
+  assert.deepEqual(actualizarMatrices(ruta), [], 'sin cambios no reescribe nada');
+});
+
+test('vigilar regenera las matrices al guardar el cuaderno y sobrevive a los errores', async t => {
+  const dir = carpetaTemporal(t);
+  const ruta = path.join(dir, 'combinacions.md');
+  fs.writeFileSync(ruta, ejecutar(cuaderno(MECS, OPS)));
+  const svg = () => fs.existsSync(path.join(dir, 'matriz.svg')) ? fs.readFileSync(path.join(dir, 'matriz.svg'), 'utf8') : '';
+
+  const proceso = spawn('node', [VIGILAR, ruta], { stdio: ['ignore', 'pipe', 'pipe'] });
+  t.after(() => proceso.kill());
+  let salida = '';
+  let errores = '';
+  proceso.stdout.on('data', d => { salida += d; });
+  proceso.stderr.on('data', d => { errores += d; });
+
+  await esperar(() => salida.includes('Vigilando') && svg().includes('0 aceptadas'), 'arranque');
+
+  // Guardar con una nota nueva actualiza la matriz, y el cuaderno queda tal cual.
+  const conNota = anotar(fs.readFileSync(ruta, 'utf8'), 'Máis · Falar', '- [+] idea');
+  fs.writeFileSync(ruta, conNota);
+  await esperar(() => svg().includes('Máis · Falar: 1 aceptadas'), 'matriz con la nota nueva');
+  assert.equal(fs.readFileSync(ruta, 'utf8'), conNota);
+
+  // Un error se informa, no detiene el proceso ni toca las matrices.
+  const antes = svg();
+  fs.writeFileSync(ruta, cambiarListas(conNota, ['A+B', 'Cortar'], OPS));
+  await esperar(() => errores.includes('no válidos'), 'aviso de error');
+  assert.equal(proceso.exitCode, null, 'sigue vigilando');
+  assert.equal(svg(), antes);
+
+  // Al corregirlo, vuelve a actualizar.
+  fs.writeFileSync(ruta, cambiarListas(conNota, ['Cortar', 'Falar'], OPS));
+  await esperar(() => !svg().includes('Moverse'), 'matriz con las listas corregidas');
 });
