@@ -348,7 +348,7 @@ test('un `####` escrito dentro de una nota se convierte en entrada, pero no se p
 
 test('ninguna línea de nota se pierde ante cambios aleatorios de las listas', () => {
   const POOL_M = ['Moverse', 'Cortar', 'Recoller', 'Falar', 'Saltar', 'Gardar no inventario', 'Dar obxecto', 'Ánade'];
-  const POOL_O = ['Non/Nunca', 'Máis', 'Menos', 'Ao revés', 'X = Y', 'X <> Y', 'Se X entón Y'];
+  const POOL_O = ['Non/Nunca', 'Máis', 'Menos', 'Ao revés', 'X = Y', 'X ≠ Y', 'Se X entón Y'];
 
   for (let semilla = 1; semilla <= 60; semilla++) {
     const azar = aleatorio(semilla);
@@ -411,6 +411,23 @@ test('rechaza nombres que romperían títulos o enlaces', () => {
   for (const reservado of ['Índice', 'Orfas', 'combinacións', 'Operacións']) {
     assert.throws(() => procesar(cuaderno([reservado, 'Cortar'], ['Non'])), /reservado/, reservado);
   }
+});
+
+test('rechaza nombres que Obsidian no distinguiría al resolver enlaces', () => {
+  // Obsidian cambia por espacios ! " # $ % & ( ) * + , . : ; < = > ? @ ^ ` { | } ~ / [ ] \
+  assert.throws(() => procesar(cuaderno(MECS, ['X <> Y', 'X = Y'])),
+    /no distingue[\s\S]*"X <> Y · Cortar" y "X = Y · Cortar"/);
+  assert.throws(() => procesar(cuaderno(MECS, ['Non/Nunca', 'Non Nunca'])), /no distingue/);
+  assert.throws(() => procesar(cuaderno(['Anotar', 'Cortar', 'Anotar Cortar'], OPS)),
+    /"Anotar Cortar" y "Anotar \+ Cortar"/, 'una mecánica contra un par');
+  assert.throws(() => procesar(cuaderno(['Índice?', 'Cortar'], OPS)), /"Índice" y "Índice\?"/, 'contra un título reservado');
+  // Lo que sí se distingue no da error.
+  assert.doesNotThrow(() => procesar(cuaderno(MECS, ['X = Y', 'X ≠ Y', 'X distinto de Y', 'Non/Nunca'])));
+});
+
+test('resume las colisiones cuando son muchas', () => {
+  const mecs = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+  assert.throws(() => procesar(cuaderno(mecs, ['X <> Y', 'X = Y'])), /… y 2 más/);
 });
 
 test('rechaza un fichero sin front matter o sin listas', () => {

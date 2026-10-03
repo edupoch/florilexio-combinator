@@ -265,36 +265,36 @@
 <rect x="436.2" y="550.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>Sempre · Moverse: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="446.2" y="564.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="458.2" y="550.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>Sempre · Pasar tempo: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="468.2" y="564.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="480.2" y="550.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>Sempre · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<text x="185.2" y="586.3998266896446" text-anchor="end">X &lt;&gt; Y</text>
-<rect x="194.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="216.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="238.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="260.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="282.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="326.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="348.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="370.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>X &lt;&gt; Y · Gardar no inventario: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="380.2" y="586.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
-<rect x="392.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="414.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="436.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="458.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="480.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X &lt;&gt; Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<text x="185.2" y="608.3998266896446" text-anchor="end">X = Y</text>
-<rect x="194.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="216.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="238.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>X = Y · Arrastrar herba ao cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="248.2" y="608.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
-<rect x="260.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="282.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="326.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="348.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="370.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="392.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="414.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="436.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="458.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="480.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="586.3998266896446" text-anchor="end">X = Y</text>
+<rect x="194.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>X = Y · Arrastrar herba ao cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="248.2" y="586.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
+<rect x="260.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="392.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="572.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X = Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<text x="185.2" y="608.3998266896446" text-anchor="end">X distinto de Y</text>
+<rect x="194.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="216.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="238.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="260.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="326.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="370.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f5c542"><title>X distinto de Y · Gardar no inventario: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="380.2" y="608.3998266896446" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
+<rect x="392.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="414.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="436.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Moverse: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="458.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="480.2" y="594.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>X distinto de Y · Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <text x="185.2" y="630.3998266896446" text-anchor="end">Xenera</text>
 <rect x="194.2" y="616.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Anotar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="216.2" y="616.3998266896446" width="20" height="20" rx="3" fill="#f0f0f0"><title>Xenera · Anotar marxinalia: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>

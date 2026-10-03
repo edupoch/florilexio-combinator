@@ -101,6 +101,33 @@ function validar(lista, nombre) {
   return resultado.sort(comparar);
 }
 
+// Obsidian resuelve los enlaces a títulos cambiando estos caracteres por espacios
+// (función de normalización de títulos de Obsidian), así que dos títulos que solo se
+// diferencian en ellos llevan al mismo sitio: el primero que aparece.
+const IGNORADOS_OBSIDIAN = /[!"#$%&()*+,.:;<=>?@^`{|}~\/[\]\\\r\n]/g;
+const destinoObsidian = s => s.replace(IGNORADOS_OBSIDIAN, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+
+function comprobarDestinos(mecanicas, operaciones) {
+  const titulos = [INDICE, ORFAS, ...mecanicas];
+  mecanicas.forEach((m, i) => mecanicas.slice(i + 1).forEach(otra => titulos.push(`${m}${SEP_PAR}${otra}`)));
+  for (const op of operaciones) for (const m of mecanicas) titulos.push(`${op}${SEP_OP}${m}`);
+
+  const vistos = new Map();
+  const choques = [];
+  for (const titulo of titulos) {
+    const k = destinoObsidian(titulo);
+    if (vistos.has(k)) choques.push(`"${vistos.get(k)}" y "${titulo}"`);
+    else vistos.set(k, titulo);
+  }
+  if (choques.length) {
+    const resto = choques.length > 5 ? `\n  … y ${choques.length - 5} más` : '';
+    throw new Error(
+      'Obsidian no distingue estos títulos, porque al resolver enlaces ignora ' +
+      '! " # $ % & ( ) * + , . : ; < = > ? @ ^ ` { | } ~ / [ ] \\:\n  ' +
+      choques.slice(0, 5).join('\n  ') + resto + '\nCambia uno de los nombres para que se diferencien en algo más.');
+  }
+}
+
 // --- Lectura de notas -------------------------------------------------------
 
 // Devuelve el preámbulo (texto antes del primer `##`) y un Map clave -> {titulo, lineas}.
@@ -374,6 +401,7 @@ function procesar(texto, nota = 'combinacions') {
   const fm = separarFrontMatter(texto);
   const mecanicas = validar(leerLista(fm.yaml, /^mec[aá]nicas\s*:/i, 'mecanicas'), 'mecanicas');
   const operaciones = validar(leerLista(fm.yaml, /^operaci[oó]ns\s*:/i, 'operacions'), 'operacions');
+  comprobarDestinos(mecanicas, operaciones);
   const { preambulo, notas } = leerNotas(fm.cuerpo);
   const { markdown, conteos, nuevas, orfas } = generarMarkdown(fm.bruto, preambulo, notas, mecanicas, operaciones);
   const svg = generarSVG(mecanicas, operaciones, conteos);

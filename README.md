@@ -134,6 +134,10 @@ Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
   regeneran. Para tus propios enlaces usa otra forma (por ejemplo, `- [[Otra nota]]`).
 - Los nombres no pueden contener `+ · # | ^ [ ] :` ni llamarse `Índice`, `Orfas`,
   `Combinacións` u `Operacións`. El script avisa si ocurre.
+- Dos nombres no pueden diferenciarse solo en signos de puntuación. Al resolver
+  enlaces, Obsidian cambia por espacios ``! " # $ % & ( ) * + , . : ; < = > ? @ ^ ` { | } ~ / [ ] \``,
+  así que para él `X <> Y` y `X = Y` son el mismo título y sus enlaces llevarían al mismo
+  sitio. El script lo detecta y pide cambiar uno.
 - Si varias personas editan a la vez, sincronizad (git, Obsidian Sync…) antes de
   ejecutar el script.
 

@@ -1,6 +1,6 @@
 ---
 mecanicas: Moverse, Cortar, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Incorporar misión, Tachar misión, Anotar marxinalia, Arrastrar herba ao cacho, Colocar herba no cacho, Crear cacho, Pasar tempo
-operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Canto máis X menos Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y, Con outras cousas
+operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X distinto de Y, Outra vez, A veces, Sempre, Se X entón Y, Canto máis X máis Y, Canto menos X máis Y, Canto máis X menos Y, Necesitas máis, Necesitas menos, Xenera, Destrúe, Cada X Y, Con outras cousas
 ---
 
 ## Índice
@@ -88,9 +88,9 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X <> Y, Outra vez, A vece
 
 #### Sempre · Anotar
 
-#### X <> Y · Anotar
-
 #### X = Y · Anotar
+
+#### X distinto de Y · Anotar
 
 #### Xenera · Anotar
 
@@ -158,9 +158,9 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 
 #### Sempre · Anotar marxinalia
 
-#### X <> Y · Anotar marxinalia
-
 #### X = Y · Anotar marxinalia
+
+#### X distinto de Y · Anotar marxinalia
 
 #### Xenera · Anotar marxinalia
 
@@ -225,10 +225,10 @@ Ver tamén: [[#Anotar + Arrastrar herba ao cacho|Anotar]] · [[#Anotar marxinali
 
 #### Sempre · Arrastrar herba ao cacho
 
-#### X <> Y · Arrastrar herba ao cacho
-
 #### X = Y · Arrastrar herba ao cacho
 - [ ] Poder botar no cacho cousas que non son herbas pero que funcionen como tal
+
+#### X distinto de Y · Arrastrar herba ao cacho
 
 #### Xenera · Arrastrar herba ao cacho
 
@@ -291,9 +291,9 @@ Ver tamén: [[#Anotar + Colocar herba no cacho|Anotar]] · [[#Anotar marxinalia 
 
 #### Sempre · Colocar herba no cacho
 
-#### X <> Y · Colocar herba no cacho
-
 #### X = Y · Colocar herba no cacho
+
+#### X distinto de Y · Colocar herba no cacho
 
 #### Xenera · Colocar herba no cacho
 
@@ -363,9 +363,9 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 
 #### Sempre · Cortar
 
-#### X <> Y · Cortar
-
 #### X = Y · Cortar
+
+#### X distinto de Y · Cortar
 
 #### Xenera · Cortar
 
@@ -426,9 +426,9 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Anotar marxinalia + Crear cac
 
 #### Sempre · Crear cacho
 
-#### X <> Y · Crear cacho
-
 #### X = Y · Crear cacho
+
+#### X distinto de Y · Crear cacho
 
 #### Xenera · Crear cacho
 
@@ -485,9 +485,9 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Anotar marxinalia + Dar obxec
 
 #### Sempre · Dar obxecto
 
-#### X <> Y · Dar obxecto
-
 #### X = Y · Dar obxecto
+
+#### X distinto de Y · Dar obxecto
 
 #### Xenera · Dar obxecto
 
@@ -542,9 +542,9 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Anotar marxinalia + Falar|Anotar ma
 
 #### Sempre · Falar
 
-#### X <> Y · Falar
-
 #### X = Y · Falar
+
+#### X distinto de Y · Falar
 
 #### Xenera · Falar
 
@@ -605,10 +605,10 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Anotar marxinalia + 
 
 #### Sempre · Gardar no inventario
 
-#### X <> Y · Gardar no inventario
-- [ ] Variacións de herbas, como os peixes mutantes de Dredge. Herbas mutantes
-
 #### X = Y · Gardar no inventario
+
+#### X distinto de Y · Gardar no inventario
+- [ ] Variacións de herbas, como os peixes mutantes de Dredge. Herbas mutantes
 
 #### Xenera · Gardar no inventario
 
@@ -660,9 +660,9 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Anotar marxinalia + Identific
 
 #### Sempre · Identificar
 
-#### X <> Y · Identificar
-
 #### X = Y · Identificar
+
+#### X distinto de Y · Identificar
 
 #### Xenera · Identificar
 
@@ -711,9 +711,9 @@ Ver tamén: [[#Anotar + Incorporar misión|Anotar]] · [[#Anotar marxinalia + In
 
 #### Sempre · Incorporar misión
 
-#### X <> Y · Incorporar misión
-
 #### X = Y · Incorporar misión
+
+#### X distinto de Y · Incorporar misión
 
 #### Xenera · Incorporar misión
 
@@ -762,9 +762,9 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Anotar marxinalia + Moverse|Anota
 #### Sempre · Moverse
 - [ ] Se levas unha ortiga, non podes parar de moverte
 
-#### X <> Y · Moverse
-
 #### X = Y · Moverse
+
+#### X distinto de Y · Moverse
 
 #### Xenera · Moverse
 
@@ -814,9 +814,9 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Anotar marxinalia + Pasar tem
 #### Sempre · Pasar tempo
 - [ ] Momentos no que o tempo pasa independentemente do que fagas, a tempo real
 
-#### X <> Y · Pasar tempo
-
 #### X = Y · Pasar tempo
+
+#### X distinto de Y · Pasar tempo
 
 #### Xenera · Pasar tempo
 - [ ] Accións ou obxectos que permiten extender o tempo límite do día
@@ -860,8 +860,8 @@ Ver tamén: [[#Anotar + Tachar misión|Anotar]] · [[#Anotar marxinalia + Tachar
 
 #### Sempre · Tachar misión
 
-#### X <> Y · Tachar misión
-
 #### X = Y · Tachar misión
+
+#### X distinto de Y · Tachar misión
 
 #### Xenera · Tachar misión
