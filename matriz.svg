@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="584" height="1151" viewBox="0 0 584 1151" font-family="sans-serif" font-size="12" fill="#222">
 <rect width="100%" height="100%" fill="#fff"/>
 <text x="20" y="24" font-size="18" font-weight="bold">Combinator</text>
-<text x="20" y="44" >26/357 combinacións con notas · 0 aceptadas · 34 pendentes · 0 descartadas</text>
+<text x="20" y="44" >29/357 combinacións con notas · 0 aceptadas · 37 pendentes · 0 descartadas</text>
 <rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
 <text x="40" y="64" >Baleira</text>
 <rect x="97.6" y="53" width="14" height="14" rx="2" fill="#f5c542"/>
@@ -330,7 +330,7 @@
 <rect x="238.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Anotar + Crear cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="314.2" y="817.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="326.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="348.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="803.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -344,7 +344,7 @@
 <rect x="238.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Arrastrar herba ao cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Colocar herba no cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="304.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="304.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Anotar marxinalia + Crear cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="314.2" y="839.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="326.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="348.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="825.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -388,7 +388,7 @@
 <rect x="260.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Cortar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="304.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="326.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Dar obxecto: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="348.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="348.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Cortar + Falar: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="358.2" y="905.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="370.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Cortar + Gardar no inventario: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="380.2" y="905.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="392.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Identificar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="414.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Incorporar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -396,8 +396,8 @@
 <rect x="458.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Pasar tempo: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="480.2" y="891.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Tachar misión: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <text x="185.2" y="927.7996533792891" text-anchor="end">Crear cacho</text>
-<rect x="194.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="216.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="194.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Anotar + Crear cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="204.2" y="927.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
+<rect x="216.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Anotar marxinalia + Crear cacho: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="226.2" y="927.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="238.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="282.2" y="913.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Crear cacho: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -428,7 +428,7 @@
 <rect x="216.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar marxinalia + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="238.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Arrastrar herba ao cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="260.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Colocar herba no cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="282.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="282.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f5c542"><title>Cortar + Falar: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="292.2" y="971.7996533792891" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="304.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="326.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto + Falar: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="370.2" y="957.7996533792891" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar + Gardar no inventario: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>

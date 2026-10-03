@@ -34,6 +34,7 @@ operacions: Non/Nunca, Máis, Menos, Ao revés, X = Y, X distinto de Y, Outra ve
 #### Anotar + Cortar
 
 #### Anotar + Crear cacho
+- [ ] Misión principal
 
 #### Anotar + Dar obxecto
 
@@ -106,6 +107,7 @@ Ver tamén: [[#Anotar + Anotar marxinalia|Anotar]]
 #### Anotar marxinalia + Cortar
 
 #### Anotar marxinalia + Crear cacho
+- [ ] Misión secundaria
 
 #### Anotar marxinalia + Dar obxecto
 
@@ -307,6 +309,7 @@ Ver tamén: [[#Anotar + Cortar|Anotar]] · [[#Anotar marxinalia + Cortar|Anotar 
 #### Cortar + Dar obxecto
 
 #### Cortar + Falar
+- [ ] Nalgúns diálogos dispara o minixogo de cortar conversas ou argumentos
 
 #### Cortar + Gardar no inventario
 - [ ] Tixeiras que che permiten cortar certo tipo de herbas
