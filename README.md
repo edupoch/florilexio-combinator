@@ -1,4 +1,4 @@
-# Combinator
+# Florilexio Combinator
 
 Cuaderno de Obsidian para generar ideas de diseño combinando **mecánicas** entre sí
 (`Cortar + Moverse`) y **operaciones** con mecánicas (`Non/Nunca · Cortar`).

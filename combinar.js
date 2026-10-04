@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Combinator: genera y actualiza un cuaderno de combinaciones para Obsidian.
+// Florilexio Combinator: genera y actualiza un cuaderno de combinaciones para Obsidian.
 //
 // Uso: node combinar.js [fichero.md]   (por defecto: combinacions.md)
 //
@@ -317,7 +317,7 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
   const texto = (x, yy, contenido, extra = '') =>
     `<text x="${x}" y="${yy}" ${extra}>${escapar(contenido)}</text>`;
 
-  piezas.push(texto(MARGEN, y + 4, 'Combinator', 'font-size="18" font-weight="bold"'));
+  piezas.push(texto(MARGEN, y + 4, 'Florilexio Combinator', 'font-size="18" font-weight="bold"'));
   y += 24;
   piezas.push(texto(MARGEN, y,
     `${total.exploradas}/${total.combinacions} combinacións con notas · ` +

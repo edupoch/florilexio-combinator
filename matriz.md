@@ -2,7 +2,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="1069" viewBox="0 0 520 1069" style="max-width:100%;height:auto" font-family="sans-serif" font-size="12" fill="#222">
 <rect width="100%" height="100%" fill="#fff"/>
-<text x="20" y="24" font-size="18" font-weight="bold">Combinator</text>
+<text x="20" y="24" font-size="18" font-weight="bold">Florilexio Combinator</text>
 <text x="20" y="44" >38/234 combinacións con notas · 1 aceptadas · 47 pendentes · 0 descartadas</text>
 <rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
 <text x="40" y="64" >Baleira</text>
