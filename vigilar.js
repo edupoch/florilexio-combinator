@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Vigila el cuaderno y regenera `matriz.md` y `matriz.svg` cada vez que se guarda.
+// Vigila el cuaderno y regenera `matriz.md`, `matriz.svg` y `matriz.html` cada vez que se guarda.
 // No modifica el cuaderno: para crear combinaciones nuevas, usa `npm run combinar`.
 //
 // Uso: node vigilar.js [fichero.md]   (por defecto: combinacions.md). Ctrl+C para salir.

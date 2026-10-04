@@ -2,5 +2,9 @@
 *.tmp
 node_modules/
 
+# Generado: se publica en GitHub Pages desde el workflow
+matriz.html
+_site/
+
 # Obsidian: estado local de cada persona (ficheros abiertos, paneles…)
 .obsidian/workspace*.json

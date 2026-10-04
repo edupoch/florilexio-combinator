@@ -7,12 +7,14 @@
 // (un `## Índice` con enlaces a cada mecánica y la matriz, y una `##` por mecánica, con sus pares en `### Combinacións` y sus operaciones
 // en `### Operacións`, en orden alfabético) conservando las notas escritas bajo
 // cada título `####`. Genera al lado `matriz.md`, una nota con la matriz en SVG
-// cuyas casillas enlazan con su combinación, y `matriz.svg`, la misma imagen sin enlaces.
+// cuyas casillas enlazan con su combinación, `matriz.svg`, la misma imagen sin enlaces, y
+// `matriz.html`, una página con la matriz y todas las notas, para verla en el navegador.
 // Las notas que ya no encajan en ninguna combinación van a la sección `## Orfas`.
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
+const { generarHTML } = require('./html.js');
 
 const LOCALE = 'gl';
 const SEP_PAR = ' + ';
@@ -26,6 +28,7 @@ const INDICE = 'Índice';
 const ENLACE_INDICE_GENERADO = /^- \[\[#[^\]]*\]\]\s*$/;
 const RESERVADOS = [INDICE, ORFAS, GRUPO_PARES, GRUPO_OPS];
 const SVG_NOME = 'matriz.svg';
+const HTML_NOME = 'matriz.html';
 const NOTA_MATRIZ = 'matriz';
 const EMBED = `![[${NOTA_MATRIZ}]]`;
 const EMBEDS_GENERADOS = new Set([EMBED, `![[${NOTA_MATRIZ}.md]]`, `![[${SVG_NOME}]]`]);
@@ -294,8 +297,8 @@ const COLORES = {
 
 const escapar = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// Con `nota`, cada casilla enlaza con su título en esa nota de Obsidian.
-function generarSVG(mecanicas, operaciones, conteos, nota = null) {
+// Con `enlace`, cada casilla es un enlace: `enlace(titulo)` devuelve los atributos de su `<a>`.
+function generarSVG(mecanicas, operaciones, conteos, enlace = null) {
   const FUENTE = 12, ANCHO_LETRA = 6.8, CELDA = 22, MARGEN = 20;
   const anchoTexto = s => s.length * ANCHO_LETRA;
   const diagonal = lista => Math.max(0, ...lista.map(anchoTexto)) * Math.SQRT1_2;
@@ -358,10 +361,8 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
           casilla += texto(cx + CELDA / 2, fy + CELDA / 2 + 4, String(notasTotales),
             `text-anchor="middle" font-size="10" fill="${color.texto}" pointer-events="none"`);
         }
-        if (nota) {
-          const destino = escapar(`${nota}#${titulo}`);
-          casilla = `<a class="internal-link" data-href="${destino}" href="${destino}">${casilla}</a>`;
-        }
+        const atributos = enlace && enlace(titulo);
+        if (atributos) casilla = `<a ${atributos}>${casilla}</a>`;
         piezas.push(casilla);
       });
     });
@@ -381,7 +382,7 @@ function generarSVG(mecanicas, operaciones, conteos, nota = null) {
 
   const ancho = Math.ceil(Math.max(anchoTotal, 520));
   const alto = Math.ceil(y);
-  const estilo = nota ? ' style="max-width:100%;height:auto"' : '';
+  const estilo = enlace ? ' style="max-width:100%;height:auto"' : '';
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}"${estilo} ` +
     `font-family="sans-serif" font-size="${FUENTE}" fill="#222">\n` +
     `<rect width="100%" height="100%" fill="#fff"/>\n${piezas.join('\n')}\n</svg>\n`;
@@ -410,18 +411,23 @@ function procesar(texto, nota = 'combinacions') {
   const svg = generarSVG(mecanicas, operaciones, conteos);
   // Sin líneas en blanco dentro del SVG: Obsidian cortaría ahí el bloque HTML.
   const notaMatriz = `%% Generado por combinar.js a partir de ${nota}.md: no editar. %%\n\n` +
-    generarSVG(mecanicas, operaciones, conteos, nota);
-  return { markdown, svg, notaMatriz, conteos, nuevas, orfas, mecanicas, operaciones };
+    generarSVG(mecanicas, operaciones, conteos, titulo => {
+      const destino = escapar(`${nota}#${titulo}`);
+      return `class="internal-link" data-href="${destino}" href="${destino}"`;
+    });
+  const html = generarHTML(markdown, enlace => generarSVG(mecanicas, operaciones, conteos, enlace));
+  return { markdown, svg, notaMatriz, html, conteos, nuevas, orfas, mecanicas, operaciones };
 }
 
 const leerCuaderno = ruta => procesar(fs.readFileSync(ruta, 'utf8'), path.basename(ruta, '.md'));
 
-// Escribe `matriz.md` y `matriz.svg` junto al cuaderno; devuelve los nombres de los que cambiaron.
-function escribirMatrices(ruta, { svg, notaMatriz }) {
+// Escribe `matriz.md`, `matriz.svg` y `matriz.html` junto al cuaderno; devuelve los nombres de los que cambiaron.
+function escribirMatrices(ruta, { svg, notaMatriz, html }) {
   const carpeta = path.dirname(ruta);
   return [
     escribirSiCambia(path.join(carpeta, `${NOTA_MATRIZ}.md`), notaMatriz, false) && `${NOTA_MATRIZ}.md`,
     escribirSiCambia(path.join(carpeta, SVG_NOME), svg, false) && SVG_NOME,
+    escribirSiCambia(path.join(carpeta, HTML_NOME), html, false) && HTML_NOME,
   ].filter(Boolean);
 }
 

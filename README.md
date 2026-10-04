@@ -15,7 +15,7 @@ vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya exis
 
 | Comando | Qué hace |
 | --- | --- |
-| `npm run combinar` | Actualiza `combinacions.md`, `matriz.md` y `matriz.svg`. |
+| `npm run combinar` | Actualiza `combinacions.md`, `matriz.md`, `matriz.svg` y `matriz.html`. |
 | `node combinar.js` | Lo mismo, sin pasar por npm. |
 | `node combinar.js otro.md` | Actualiza otro cuaderno; la matriz se crea junto a él. |
 | `npm run vigilar` | Se queda vigilando `combinacions.md` y regenera la matriz cada vez que se guarda. Ctrl+C para salir. |
@@ -54,7 +54,7 @@ ningún fichero**.
    nuevo, no cambia nada.
 
 Durante una sesión de trabajo puedes dejar `npm run vigilar` abierto en una terminal:
-la matriz se actualiza sola mientras anotáis. El vigilante **solo regenera la matriz,
+la matriz (`matriz.md`, `matriz.svg` y `matriz.html`) se actualiza sola mientras anotáis. El vigilante **solo regenera la matriz,
 nunca el cuaderno** (para no pisar lo que se está escribiendo en Obsidian). Si cambias
 las listas, ejecuta `npm run combinar` para crear las combinaciones nuevas.
 
@@ -111,6 +111,22 @@ cantidad de notas.
 - En Obsidian está en la nota `matriz.md`, incrustada en el índice. **Al pulsar una
   casilla se salta a esa combinación**, y al pasar el ratón se ven sus notas.
 - `matriz.svg` es la misma imagen sin enlaces, para verla fuera de Obsidian.
+- `matriz.html` es una página web con la matriz y, debajo, todas las notas del
+  cuaderno. **Al pulsar una casilla se salta a su sección**, y el botón «↑ Matriz»
+  vuelve arriba. Se abre con cualquier navegador y es la que se publica en GitHub Pages.
+
+## Publicar en GitHub Pages
+
+El workflow `.github/workflows/pages.yml` publica `matriz.html` como página principal
+cada vez que se hace push a `main` (o a mano, desde la pestaña Actions → «Run workflow»).
+Antes ejecuta los tests y `npm run combinar`, así que la web siempre refleja el
+cuaderno, aunque no se haya regenerado en local.
+
+Configuración, una sola vez: en GitHub, **Settings → Pages → Build and deployment →
+Source: GitHub Actions**. La dirección será `https://<usuario>.github.io/<repositorio>/`.
+
+Ojo: la página es pública aunque el repositorio sea privado (salvo en planes de
+empresa), y en el plan gratuito Pages solo funciona con repositorios públicos.
 
 ## Qué pasa con las notas al cambiar las listas
 
@@ -147,8 +163,11 @@ Antes de sobrescribir el cuaderno, el script guarda la versión anterior en
 | --- | --- |
 | `combinar.js` | El script. |
 | `vigilar.js` | Vigila el cuaderno y regenera la matriz al guardar. |
+| `html.js` | Genera la página `matriz.html` a partir del cuaderno. |
 | `combinacions.md` | El cuaderno: listas en el front matter y notas del equipo. |
 | `matriz.md` | Generado: la matriz con enlaces para Obsidian. No se edita a mano. |
 | `matriz.svg` | Generado: la matriz como imagen. No se edita a mano. |
+| `matriz.html` | Generado: página web con la matriz y las notas (git lo ignora). |
+| `.github/workflows/pages.yml` | Publica `matriz.html` en GitHub Pages. |
 | `test/combinar.test.js` | Tests automáticos (`node:test`). |
 | `docs/ideas/combinator.md` | Documento de diseño original. |

@@ -520,6 +520,36 @@ test('la nota de la matriz usa el nombre del cuaderno', () => {
   assert.ok(procesar(cuaderno(MECS, OPS)).notaMatriz.includes('data-href="combinacions#'));
 });
 
+// --- Página HTML ----------------------------------------------------------------
+
+test('la página HTML enlaza cada casilla con la sección de su combinación', () => {
+  const md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
+  const { html } = procesar(md);
+  assert.match(html, /^<!doctype html>/);
+  const hrefs = [...html.matchAll(/<a href="#([^"]+)"><rect /g)].map(m => m[1]);
+  assert.equal(hrefs.length, 2 * 6 + 4 * 3);
+  const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map(m => m[1]));
+  for (const h of hrefs) assert.ok(ids.has(h), `existe la sección #${h}`);
+  assert.ok(html.includes('<h4 id="cortar-moverse">Cortar + Moverse</h4>'));
+  assert.ok(html.includes('<h4 id="x-y-falar">X &lt;&gt; Y · Falar</h4>'));
+  assert.equal(hrefs.filter(h => h === 'cortar-moverse').length, 2, 'las dos casillas del par');
+  assert.ok(!html.includes('mecanicas:'), 'sin front matter');
+});
+
+test('la página HTML muestra las notas con su estado y los enlaces internos', () => {
+  let md = ejecutar(cuaderno(MECS, OPS));
+  md = anotar(md, 'Cortar + Moverse', '- [+] **sí**', '- [ ] quizá <b>', '- [-] non', '  - sub [[Outra nota]]');
+  const { html } = procesar(md);
+  assert.ok(html.includes('<li class="tarea aceptada">'));
+  assert.ok(html.includes('<strong>sí</strong>'));
+  assert.ok(html.includes('quizá &lt;b&gt;'));
+  assert.ok(html.includes('<li class="tarea descartada">'));
+  assert.ok(html.includes('<ul><li>sub <span class="wikilink">Outra nota</span></li></ul>'));
+  assert.ok(html.includes('Ver tamén: <a href="#cortar-moverse">Cortar</a>'));
+  assert.ok(html.includes('<div class="matriz" id="matriz"><svg'), 'la matriz está en el índice');
+  assert.equal(html.split('<svg').length, 2);
+});
+
 // --- Línea de comandos --------------------------------------------------------
 
 test('la línea de comandos escribe el cuaderno, la matriz y una copia de seguridad', t => {
@@ -579,7 +609,7 @@ test('actualizarMatrices regenera las matrices sin tocar el cuaderno', t => {
   const texto = cuaderno(MECS, OPS, '\n#### Cortar + Moverse\n- [+] idea\n');
   fs.writeFileSync(ruta, texto);
 
-  assert.deepEqual(actualizarMatrices(ruta), ['matriz.md', 'matriz.svg']);
+  assert.deepEqual(actualizarMatrices(ruta), ['matriz.md', 'matriz.svg', 'matriz.html']);
   assert.equal(fs.readFileSync(ruta, 'utf8'), texto);
   assert.ok(!fs.existsSync(ruta + '.bak'));
   assert.ok(fs.readFileSync(path.join(dir, 'matriz.svg'), 'utf8').includes('Cortar + Moverse: 1 aceptadas'));
