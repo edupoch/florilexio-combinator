@@ -559,6 +559,19 @@ test('la página HTML muestra las notas con su estado y los enlaces internos', (
   assert.equal(html.split('Florilexio Combinator').length, 3, 'en <title> y <h1>, no repetido en la matriz');
 });
 
+test('la página HTML sugiere combinaciones al azar, de todas o solo de las vacías', () => {
+  const md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar + Moverse', '- [+] a');
+  const { html } = procesar(md);
+  assert.ok(html.includes('>Danos 1</button>'));
+  assert.ok(html.includes('>Danos 1 sen notas</button>'));
+  assert.ok(html.includes('Que vos suxire...'));
+  const datos = JSON.parse(html.match(/const combinacions = (\[.*?\]);/)[1]);
+  assert.equal(datos.length, 6 + 4 * 3);
+  assert.deepEqual(datos.filter(c => !c.baleira), [{ titulo: 'Cortar + Moverse', id: 'cortar-moverse', baleira: false }]);
+  assert.ok(datos.some(c => c.titulo === 'X <> Y · Falar'));
+  assert.ok(!html.includes('X <> Y · Falar"'), 'el "<" va escapado dentro del script');
+});
+
 // --- Línea de comandos --------------------------------------------------------
 
 test('la línea de comandos escribe el cuaderno, la matriz y una copia de seguridad', t => {

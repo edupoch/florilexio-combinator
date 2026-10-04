@@ -158,8 +158,10 @@ const esTitulo = (b, max = 6) => typeof b === 'object' && b.nivel <= max;
 // Agrupa cada combinación (`####`) con sus notas en una sección marcada con su estado.
 // Las combinaciones sin notas se juntan al final de su grupo (`###`), bajo "Sen notas",
 // en una lista compacta de etiquetas.
+// Devuelve también la lista de combinaciones, para el botón que sugiere una al azar.
 function componer(lista, info) {
   const salida = [];
+  const combinacions = [];
   let baleiras = [];
   const soltarBaleiras = () => {
     if (baleiras.length) salida.push(`<h4 class="sen-notas">Sen notas</h4>\n<ul class="baleiras">${baleiras.join('')}</ul>`);
@@ -174,6 +176,7 @@ function componer(lista, info) {
     }
     const notas = [];
     while (i + 1 < lista.length && !esTitulo(lista[i + 1], 4)) notas.push(aHTML(lista[++i]));
+    combinacions.push({ titulo: b.texto, id: b.id, baleira: !notas.length });
     if (!notas.length) {
       baleiras.push(`<li id="${b.id}">${b.contenido}</li>`);
       continue;
@@ -183,7 +186,7 @@ function componer(lista, info) {
     salida.push(`<section class="combinacion ${estado}"><h4 id="${b.id}">${b.contenido}${cifra}</h4>\n${notas.join('\n')}</section>`);
   }
   soltarBaleiras();
-  return salida;
+  return { salida, combinacions };
 }
 
 const ESTILO = `
@@ -243,6 +246,18 @@ mark{background:color-mix(in srgb,var(--pendiente) 40%,transparent)}
 
 .subir{position:fixed;right:16px;bottom:16px;background:#fff;color:var(--texto);border:1px solid var(--liña);border-radius:4px;padding:6px 12px;font-size:.875rem;text-decoration:none}
 .subir:hover{border-color:var(--texto)}
+
+.azar{display:flex;flex-wrap:wrap;gap:8px;margin:-16px 0 32px}
+button,.ir{font:inherit;font-size:.875rem;line-height:1.5;padding:6px 12px;border-radius:4px;border:1px solid var(--liña);background:#fff;color:var(--texto);cursor:pointer;text-decoration:none}
+button:hover,.ir:hover{border-color:var(--texto)}
+button:focus-visible,.ir:focus-visible{outline:2px solid var(--texto);outline-offset:2px}
+.azar button:first-child,.ir{background:var(--texto);border-color:var(--texto);color:#fff}
+dialog{width:min(480px,calc(100% - 32px));border:0;border-radius:8px;padding:24px;color:var(--texto);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+dialog::backdrop{background:rgba(0,0,0,.35)}
+dialog h2{border:0;padding:0;margin:0 0 16px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave)}
+.suxerida{font-size:1.5rem;line-height:1.3;font-weight:700;margin:0 0 4px}
+.accions{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.accions .pechar{margin-left:auto}
 footer{color:var(--suave);font-size:.75rem;margin-top:64px}
 `;
 
@@ -257,9 +272,12 @@ function generarHTML(markdown, matriz, { info = () => null, colores = {}, titulo
     const id = ids.get(claveTitulo(t));
     return id ? `href="#${id}"` : null;
   }).trim();
-  let html = componer(bloques(lineas, ids, porLinea), info).join('\n');
+  const { salida, combinacions } = componer(bloques(lineas, ids, porLinea), info);
+  let html = salida.join('\n');
+  // En un <script>, "<" escapado para que ningún título pueda cerrar la etiqueta.
+  const datos = JSON.stringify(combinacions).replace(/</g, '\\u003c');
   html = html.includes(MARCA_MATRIZ)
-    ? html.replace(MARCA_MATRIZ, `<div class="matriz" id="matriz">${svg}</div>`)
+    ? html.replace(MARCA_MATRIZ, () => `<div class="matriz" id="matriz">${svg}</div>`)
     : `<div class="matriz" id="matriz">${svg}</div>\n${html}`;
   html = html.split(MARCA_MATRIZ).join('');
   const color = (estado, porDefecto) => (colores[estado] && colores[estado].fondo) || porDefecto;
@@ -277,13 +295,63 @@ function generarHTML(markdown, matriz, { info = () => null, colores = {}, titulo
 <body>
 <main>
 <h1>${escapar(titulo)}</h1>
+<div class="azar">
+<button type="button" data-modo="todas">Danos 1</button>
+<button type="button" data-modo="baleiras">Danos 1 sen notas</button>
+</div>
 ${html}
 <footer>Xerado por combinar.js a partir de combinacions.md.</footer>
 </main>
 <a class="subir" href="#matriz">↑ Matriz</a>
+<dialog id="suxestion" aria-labelledby="suxestion-titulo">
+<h2 id="suxestion-titulo">Que vos suxire...</h2>
+<p class="suxerida"></p>
+<div class="accions">
+<button type="button" class="outra">Outra</button>
+<a class="ir" href="#">Ir á combinación</a>
+<button type="button" class="pechar">Pechar</button>
+</div>
+</dialog>
+<script>${SCRIPT_AZAR.replace('DATOS', () => datos)}</script>
 </body>
 </html>
 `;
 }
+
+// Botones "Danos 1": abre un diálogo con una combinación al azar, de todas o solo de las vacías.
+const SCRIPT_AZAR = `
+(() => {
+  const combinacions = DATOS;
+  const dialogo = document.getElementById('suxestion');
+  const texto = dialogo.querySelector('.suxerida');
+  const ir = dialogo.querySelector('.ir');
+  let modo = 'todas';
+  let anterior = null;
+  const suxerir = () => {
+    const opcions = combinacions.filter(c => modo === 'todas' || c.baleira);
+    if (!opcions.length) {
+      texto.textContent = 'Non queda ningunha combinación sen notas.';
+      ir.hidden = true;
+      return;
+    }
+    let c;
+    do c = opcions[Math.floor(Math.random() * opcions.length)];
+    while (opcions.length > 1 && c === anterior);
+    anterior = c;
+    texto.textContent = c.titulo;
+    ir.hidden = false;
+    ir.href = '#' + c.id;
+  };
+  document.querySelectorAll('.azar button').forEach(b => b.addEventListener('click', () => {
+    modo = b.dataset.modo;
+    suxerir();
+    dialogo.showModal();
+  }));
+  dialogo.querySelector('.outra').addEventListener('click', suxerir);
+  dialogo.querySelector('.pechar').addEventListener('click', () => dialogo.close());
+  ir.addEventListener('click', () => dialogo.close());
+  dialogo.addEventListener('click', e => { if (e.target === dialogo) dialogo.close(); });
+})();
+`;
 
 module.exports = { generarHTML };
