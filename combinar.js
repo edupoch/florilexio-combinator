@@ -46,11 +46,17 @@ const claveGrupo = (grupo, m) => 'g:' + clave(grupo) + '|' + clave(m);
 // Nombre canónico de un grupo (`Combinacións`/`Operacións`), o null si no lo es.
 const grupo = titulo => [GRUPO_PARES, GRUPO_OPS].find(g => clave(g) === clave(titulo)) || null;
 
-function claveDeTitulo(titulo) {
+// Las combinaciones con operación se titulan "Mecánica · Operación". Los cuadernos
+// antiguos usaban "Operación · Mecánica": con `operaciones` (las claves de la lista
+// actual) se reconocen también, para que sus notas pasen al título nuevo.
+function claveDeTitulo(titulo, operaciones = new Set()) {
   const par = titulo.split(SEP_PAR);
   if (par.length === 2) return clavePar(par[0], par[1]);
   const op = titulo.split(SEP_OP);
-  if (op.length === 2) return claveOp(op[0], op[1]);
+  if (op.length === 2) {
+    const antiguo = operaciones.has(clave(op[0])) && !operaciones.has(clave(op[1]));
+    return antiguo ? claveOp(op[0], op[1]) : claveOp(op[1], op[0]);
+  }
   // Notas generales de un grupo que quedaron huérfanas: "Combinacións de Cortar".
   const deGrupo = titulo.match(/^(\S+) de (.+)$/);
   if (deGrupo && grupo(deGrupo[1])) return claveGrupo(deGrupo[1], deGrupo[2]);
@@ -113,7 +119,7 @@ const destinoObsidian = s => s.replace(IGNORADOS_OBSIDIAN, ' ').replace(/\s+/g, 
 function comprobarDestinos(mecanicas, operaciones) {
   const titulos = [INDICE, ORFAS, ...mecanicas];
   mecanicas.forEach((m, i) => mecanicas.slice(i + 1).forEach(otra => titulos.push(`${m}${SEP_PAR}${otra}`)));
-  for (const op of operaciones) for (const m of mecanicas) titulos.push(`${op}${SEP_OP}${m}`);
+  for (const op of operaciones) for (const m of mecanicas) titulos.push(`${m}${SEP_OP}${op}`);
 
   const vistos = new Map();
   const choques = [];
@@ -137,7 +143,7 @@ function comprobarDestinos(mecanicas, operaciones) {
 // Solo `##`, `###` y `####` son estructura; todo lo demás es nota y se copia literal.
 // Las entradas se reconocen por su título, así que también se leen las que están
 // en `###` (formato anterior) o fuera de su sección.
-function leerNotas(cuerpo) {
+function leerNotas(cuerpo, operaciones = new Set()) {
   const preambulo = [];
   const notas = new Map();
   let destino = preambulo;
@@ -165,7 +171,7 @@ function leerNotas(cuerpo) {
       const nivel = titulo[1].length;
       const texto = normalizar(titulo[2]);
       enIndice = nivel === 2 && clave(texto) === clave(INDICE);
-      let k = claveDeTitulo(texto);
+      let k = claveDeTitulo(texto, operaciones);
       let nombre = texto;
       if (nivel === 2) {
         seccion = texto;
@@ -260,7 +266,7 @@ function generarMarkdown(frontMatter, preambulo, notas, mecanicas, operaciones) 
     const notasOps = notasDe(claveGrupo(GRUPO_OPS, m));
     if (operaciones.length || notasOps.length) {
       titulo(`### ${GRUPO_OPS}`, notasOps);
-      for (const op of operaciones) entrada(claveOp(op, m), `${op}${SEP_OP}${m}`);
+      for (const op of operaciones) entrada(claveOp(op, m), `${m}${SEP_OP}${op}`);
     }
   });
 
@@ -373,8 +379,8 @@ function generarSVG(mecanicas, operaciones, conteos, enlace = null, conTitulo = 
     y += filas.length * CELDA + 40;
   };
 
-  bloque('Operación · mecánica', operaciones, mecanicas,
-    (op, m) => claveOp(op, m), (op, m) => `${op}${SEP_OP}${m}`);
+  bloque('Mecánica · operación', operaciones, mecanicas,
+    (op, m) => claveOp(op, m), (op, m) => `${m}${SEP_OP}${op}`);
   if (mecanicas.length > 1) {
     // Cuadrado completo en espejo: cada par aparece dos veces, simétrico respecto a la
     // diagonal, y ambas casillas enlazan con su único título (primero el nombre alfabético).
@@ -409,7 +415,7 @@ function procesar(texto, nota = 'combinacions') {
   const mecanicas = validar(leerLista(fm.yaml, /^mec[aá]nicas\s*:/i, 'mecanicas'), 'mecanicas');
   const operaciones = validar(leerLista(fm.yaml, /^operaci[oó]ns\s*:/i, 'operacions'), 'operacions');
   comprobarDestinos(mecanicas, operaciones);
-  const { preambulo, notas } = leerNotas(fm.cuerpo);
+  const { preambulo, notas } = leerNotas(fm.cuerpo, new Set(operaciones.map(clave)));
   const { markdown, conteos, nuevas, orfas } = generarMarkdown(fm.bruto, preambulo, notas, mecanicas, operaciones);
   const svg = generarSVG(mecanicas, operaciones, conteos);
   // Sin líneas en blanco dentro del SVG: Obsidian cortaría ahí el bloque HTML.
@@ -455,7 +461,7 @@ function main(argumento) {
 
   const pares = (mecanicas.length * (mecanicas.length - 1)) / 2;
   console.log(`${mecanicas.length} mecánicas, ${operaciones.length} operaciones → ` +
-    `${pares} pares + ${mecanicas.length * operaciones.length} operación·mecánica.`);
+    `${pares} pares + ${mecanicas.length * operaciones.length} mecánica·operación.`);
   console.log(`Combinaciones nuevas: ${nuevas}. Huérfanas: ${orfas}.`);
   console.log(actualizados.length ? `Actualizado: ${actualizados.join(', ')}.` : 'Sin cambios.');
 }

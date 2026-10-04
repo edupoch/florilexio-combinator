@@ -39,53 +39,53 @@ operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás 
 
 ### Operacións
 
-#### Ao revés · Anotar
+#### Anotar · Ao revés
 
-#### Ás veces · Anotar
+#### Anotar · Ás veces
 
-#### Cada X Y · Anotar
+#### Anotar · Cada X Y
 
-#### Caduca · Anotar
+#### Anotar · Caduca
 
-#### Canto máis X máis Y · Anotar
+#### Anotar · Canto máis X máis Y
 
-#### Con outras cousas · Anotar
+#### Anotar · Con outras cousas
 
-#### Contra ti · Anotar
+#### Anotar · Contra ti
 - [ ] Alguén che cambia as notas do caderno
 
-#### Despois · Anotar
+#### Anotar · Despois
 
-#### Destrúe · Anotar
+#### Anotar · Destrúe
 - [ ] Momentos nos que perdes anotacións, son como perder recordos
 
-#### Fóra · Anotar
+#### Anotar · Fóra
 
-#### Irreversible · Anotar
+#### Anotar · Irreversible
 
-#### Máis · Anotar
+#### Anotar · Máis
 
-#### Mal · Anotar
+#### Anotar · Mal
 
-#### Mentres X Y · Anotar
+#### Anotar · Mentres X Y
 
-#### Necesitas máis · Anotar
+#### Anotar · Necesitas máis
 
-#### Non/Nunca · Anotar
+#### Anotar · Non/Nunca
 - [ ] Momentos nos que non tes o florilexio
 - [ ] Momentos nos que non tes con que escribir no florilexio
 
-#### Outra vez · Anotar
+#### Anotar · Outra vez
 
-#### Outro o fai · Anotar
+#### Anotar · Outro o fai
 
-#### Sempre · Anotar
+#### Anotar · Sempre
 
-#### X = Y · Anotar
+#### Anotar · X = Y
 
-#### X distinto de Y · Anotar
+#### Anotar · X distinto de Y
 
-#### Xenera · Anotar
+#### Anotar · Xenera
 
 ## Cortar
 
@@ -110,59 +110,59 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 
 ### Operacións
 
-#### Ao revés · Cortar
+#### Cortar · Ao revés
 
-#### Ás veces · Cortar
+#### Cortar · Ás veces
 
-#### Cada X Y · Cortar
+#### Cortar · Cada X Y
 
-#### Caduca · Cortar
+#### Cortar · Caduca
 
-#### Canto máis X máis Y · Cortar
+#### Cortar · Canto máis X máis Y
 
-#### Con outras cousas · Cortar
+#### Cortar · Con outras cousas
 - [ ] Cortar o fío da vida
 - [ ] Cortar unha relación
 - [ ] Cortar un pensamento rumiante
 - [ ] Cortar un cable para avanzar nunha misión
 - [ ] Cortar bimbio para facer un cesto
 
-#### Contra ti · Cortar
+#### Cortar · Contra ti
 
-#### Despois · Cortar
+#### Cortar · Despois
 
-#### Destrúe · Cortar
+#### Cortar · Destrúe
 
-#### Fóra · Cortar
+#### Cortar · Fóra
 
-#### Irreversible · Cortar
+#### Cortar · Irreversible
 - [ ] O que cortas non volve medrar nesa partida
 
-#### Máis · Cortar
+#### Cortar · Máis
 - [ ] Se chove, é máis difícil cortar herbas
 
-#### Mal · Cortar
+#### Cortar · Mal
 
-#### Mentres X Y · Cortar
+#### Cortar · Mentres X Y
 
-#### Necesitas máis · Cortar
+#### Cortar · Necesitas máis
 - [ ] Obxecto que che permita cortar herbas con menos cortes
 
-#### Non/Nunca · Cortar
+#### Cortar · Non/Nunca
 - [ ] Momentos nos que perdes a habilidade de cortar herbas
 
-#### Outra vez · Cortar
+#### Cortar · Outra vez
 
-#### Outro o fai · Cortar
+#### Cortar · Outro o fai
 - [ ] Outros personaxes compiten polas mesmas herbas e córtanas antes ca ti
 
-#### Sempre · Cortar
+#### Cortar · Sempre
 
-#### X = Y · Cortar
+#### Cortar · X = Y
 
-#### X distinto de Y · Cortar
+#### Cortar · X distinto de Y
 
-#### Xenera · Cortar
+#### Cortar · Xenera
 
 ## Crear cacho
 
@@ -183,52 +183,52 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Cortar + Crear cacho|Cortar]]
 
 ### Operacións
 
-#### Ao revés · Crear cacho
+#### Crear cacho · Ao revés
 
-#### Ás veces · Crear cacho
+#### Crear cacho · Ás veces
 
-#### Cada X Y · Crear cacho
+#### Crear cacho · Cada X Y
 
-#### Caduca · Crear cacho
+#### Crear cacho · Caduca
 
-#### Canto máis X máis Y · Crear cacho
+#### Crear cacho · Canto máis X máis Y
 
-#### Con outras cousas · Crear cacho
+#### Crear cacho · Con outras cousas
 - [ ] Facer unha infusión
 - [ ] Xuntar pensamentos
 
-#### Contra ti · Crear cacho
+#### Crear cacho · Contra ti
 
-#### Despois · Crear cacho
+#### Crear cacho · Despois
 
-#### Destrúe · Crear cacho
+#### Crear cacho · Destrúe
 
-#### Fóra · Crear cacho
+#### Crear cacho · Fóra
 
-#### Irreversible · Crear cacho
+#### Crear cacho · Irreversible
 
-#### Máis · Crear cacho
+#### Crear cacho · Máis
 
-#### Mal · Crear cacho
+#### Crear cacho · Mal
 
-#### Mentres X Y · Crear cacho
+#### Crear cacho · Mentres X Y
 
-#### Necesitas máis · Crear cacho
+#### Crear cacho · Necesitas máis
 
-#### Non/Nunca · Crear cacho
+#### Crear cacho · Non/Nunca
 
-#### Outra vez · Crear cacho
+#### Crear cacho · Outra vez
 
-#### Outro o fai · Crear cacho
+#### Crear cacho · Outro o fai
 
-#### Sempre · Crear cacho
+#### Crear cacho · Sempre
 
-#### X = Y · Crear cacho
+#### Crear cacho · X = Y
 - [ ] Poder botar no cacho cousas que non son herbas pero que funcionen como tal
 
-#### X distinto de Y · Crear cacho
+#### Crear cacho · X distinto de Y
 
-#### Xenera · Crear cacho
+#### Crear cacho · Xenera
 
 ## Dar obxecto
 
@@ -247,49 +247,49 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 
 ### Operacións
 
-#### Ao revés · Dar obxecto
+#### Dar obxecto · Ao revés
 
-#### Ás veces · Dar obxecto
+#### Dar obxecto · Ás veces
 
-#### Cada X Y · Dar obxecto
+#### Dar obxecto · Cada X Y
 
-#### Caduca · Dar obxecto
+#### Dar obxecto · Caduca
 
-#### Canto máis X máis Y · Dar obxecto
+#### Dar obxecto · Canto máis X máis Y
 
-#### Con outras cousas · Dar obxecto
+#### Dar obxecto · Con outras cousas
 
-#### Contra ti · Dar obxecto
+#### Dar obxecto · Contra ti
 
-#### Despois · Dar obxecto
+#### Dar obxecto · Despois
 
-#### Destrúe · Dar obxecto
+#### Dar obxecto · Destrúe
 
-#### Fóra · Dar obxecto
+#### Dar obxecto · Fóra
 
-#### Irreversible · Dar obxecto
+#### Dar obxecto · Irreversible
 
-#### Máis · Dar obxecto
+#### Dar obxecto · Máis
 
-#### Mal · Dar obxecto
+#### Dar obxecto · Mal
 
-#### Mentres X Y · Dar obxecto
+#### Dar obxecto · Mentres X Y
 
-#### Necesitas máis · Dar obxecto
+#### Dar obxecto · Necesitas máis
 
-#### Non/Nunca · Dar obxecto
+#### Dar obxecto · Non/Nunca
 
-#### Outra vez · Dar obxecto
+#### Dar obxecto · Outra vez
 
-#### Outro o fai · Dar obxecto
+#### Dar obxecto · Outro o fai
 
-#### Sempre · Dar obxecto
+#### Dar obxecto · Sempre
 
-#### X = Y · Dar obxecto
+#### Dar obxecto · X = Y
 
-#### X distinto de Y · Dar obxecto
+#### Dar obxecto · X distinto de Y
 
-#### Xenera · Dar obxecto
+#### Dar obxecto · Xenera
 
 ## Falar
 
@@ -306,51 +306,51 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear
 
 ### Operacións
 
-#### Ao revés · Falar
+#### Falar · Ao revés
 
-#### Ás veces · Falar
+#### Falar · Ás veces
 
-#### Cada X Y · Falar
+#### Falar · Cada X Y
 
-#### Caduca · Falar
+#### Falar · Caduca
 
-#### Canto máis X máis Y · Falar
+#### Falar · Canto máis X máis Y
 
-#### Con outras cousas · Falar
+#### Falar · Con outras cousas
 - [x] Falar con obxectos inanimados
 
-#### Contra ti · Falar
+#### Falar · Contra ti
 
-#### Despois · Falar
+#### Falar · Despois
 
-#### Destrúe · Falar
+#### Falar · Destrúe
 
-#### Fóra · Falar
+#### Falar · Fóra
 
-#### Irreversible · Falar
+#### Falar · Irreversible
 
-#### Máis · Falar
+#### Falar · Máis
 
-#### Mal · Falar
+#### Falar · Mal
 
-#### Mentres X Y · Falar
+#### Falar · Mentres X Y
 - [ ] A conversa segue mentres fas outra cousa e podes perder información
 
-#### Necesitas máis · Falar
+#### Falar · Necesitas máis
 
-#### Non/Nunca · Falar
+#### Falar · Non/Nunca
 
-#### Outra vez · Falar
+#### Falar · Outra vez
 
-#### Outro o fai · Falar
+#### Falar · Outro o fai
 
-#### Sempre · Falar
+#### Falar · Sempre
 
-#### X = Y · Falar
+#### Falar · X = Y
 
-#### X distinto de Y · Falar
+#### Falar · X distinto de Y
 
-#### Xenera · Falar
+#### Falar · Xenera
 
 ## Gardar no inventario
 
@@ -369,55 +369,55 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 
 ### Operacións
 
-#### Ao revés · Gardar no inventario
+#### Gardar no inventario · Ao revés
 
-#### Ás veces · Gardar no inventario
+#### Gardar no inventario · Ás veces
 
-#### Cada X Y · Gardar no inventario
+#### Gardar no inventario · Cada X Y
 
-#### Caduca · Gardar no inventario
+#### Gardar no inventario · Caduca
 - [ ] As herbas murchan se pasan moito tempo no inventario
 
-#### Canto máis X máis Y · Gardar no inventario
+#### Gardar no inventario · Canto máis X máis Y
 - [ ] Canto máis herbas teñas dun tipo, máis rápido te moves (por exemplo, ortiga)
 - [ ] Canto máis herbas teñas dun tipo, máis lento pasa o tempo
 
-#### Con outras cousas · Gardar no inventario
+#### Gardar no inventario · Con outras cousas
 
-#### Contra ti · Gardar no inventario
+#### Gardar no inventario · Contra ti
 
-#### Despois · Gardar no inventario
+#### Gardar no inventario · Despois
 
-#### Destrúe · Gardar no inventario
+#### Gardar no inventario · Destrúe
 - [ ] Vento violento: faiche perder herbas
 
-#### Fóra · Gardar no inventario
+#### Gardar no inventario · Fóra
 
-#### Irreversible · Gardar no inventario
+#### Gardar no inventario · Irreversible
 
-#### Máis · Gardar no inventario
+#### Gardar no inventario · Máis
 
-#### Mal · Gardar no inventario
+#### Gardar no inventario · Mal
 
-#### Mentres X Y · Gardar no inventario
+#### Gardar no inventario · Mentres X Y
 
-#### Necesitas máis · Gardar no inventario
+#### Gardar no inventario · Necesitas máis
 
-#### Non/Nunca · Gardar no inventario
+#### Gardar no inventario · Non/Nunca
 - [ ] Obxecto ou herba demasiado grande. Por exemplo, a flor do fento macho
 
-#### Outra vez · Gardar no inventario
+#### Gardar no inventario · Outra vez
 
-#### Outro o fai · Gardar no inventario
+#### Gardar no inventario · Outro o fai
 
-#### Sempre · Gardar no inventario
+#### Gardar no inventario · Sempre
 
-#### X = Y · Gardar no inventario
+#### Gardar no inventario · X = Y
 
-#### X distinto de Y · Gardar no inventario
+#### Gardar no inventario · X distinto de Y
 - [ ] Variacións de herbas, como os peixes mutantes de Dredge. Herbas mutantes
 
-#### Xenera · Gardar no inventario
+#### Gardar no inventario · Xenera
 
 ## Identificar
 
@@ -431,52 +431,52 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 
 ### Operacións
 
-#### Ao revés · Identificar
+#### Identificar · Ao revés
 
-#### Ás veces · Identificar
+#### Identificar · Ás veces
 - [ ] Herbas que só aparecen en determinadas partidas
 
-#### Cada X Y · Identificar
+#### Identificar · Cada X Y
 
-#### Caduca · Identificar
+#### Identificar · Caduca
 
-#### Canto máis X máis Y · Identificar
+#### Identificar · Canto máis X máis Y
 
-#### Con outras cousas · Identificar
+#### Identificar · Con outras cousas
 
-#### Contra ti · Identificar
+#### Identificar · Contra ti
 
-#### Despois · Identificar
+#### Identificar · Despois
 - [ ] Non sabes que herba é ata o día seguinte
 
-#### Destrúe · Identificar
+#### Identificar · Destrúe
 
-#### Fóra · Identificar
+#### Identificar · Fóra
 
-#### Irreversible · Identificar
+#### Identificar · Irreversible
 
-#### Máis · Identificar
+#### Identificar · Máis
 
-#### Mal · Identificar
+#### Identificar · Mal
 
-#### Mentres X Y · Identificar
+#### Identificar · Mentres X Y
 
-#### Necesitas máis · Identificar
+#### Identificar · Necesitas máis
 
-#### Non/Nunca · Identificar
+#### Identificar · Non/Nunca
 - [ ] Momentos nos que levas no inventario obxectos ou herbas que non identificaches previamente. Mesmo poden ter implicacións negativas (como por exemplo, que o tempo vaia máis rápido) e non o saibas.
 
-#### Outra vez · Identificar
+#### Identificar · Outra vez
 
-#### Outro o fai · Identificar
+#### Identificar · Outro o fai
 
-#### Sempre · Identificar
+#### Identificar · Sempre
 
-#### X = Y · Identificar
+#### Identificar · X = Y
 
-#### X distinto de Y · Identificar
+#### Identificar · X distinto de Y
 
-#### Xenera · Identificar
+#### Identificar · Xenera
 
 ## Moverse
 
@@ -488,52 +488,52 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#C
 
 ### Operacións
 
-#### Ao revés · Moverse
+#### Moverse · Ao revés
 - [ ] Herba que che altera a dirección do movemento
 
-#### Ás veces · Moverse
+#### Moverse · Ás veces
 
-#### Cada X Y · Moverse
+#### Moverse · Cada X Y
 
-#### Caduca · Moverse
+#### Moverse · Caduca
 
-#### Canto máis X máis Y · Moverse
+#### Moverse · Canto máis X máis Y
 
-#### Con outras cousas · Moverse
+#### Moverse · Con outras cousas
 
-#### Contra ti · Moverse
+#### Moverse · Contra ti
 
-#### Despois · Moverse
+#### Moverse · Despois
 
-#### Destrúe · Moverse
+#### Moverse · Destrúe
 
-#### Fóra · Moverse
+#### Moverse · Fóra
 
-#### Irreversible · Moverse
+#### Moverse · Irreversible
 
-#### Máis · Moverse
+#### Moverse · Máis
 
-#### Mal · Moverse
+#### Moverse · Mal
 
-#### Mentres X Y · Moverse
+#### Moverse · Mentres X Y
 
-#### Necesitas máis · Moverse
+#### Moverse · Necesitas máis
 
-#### Non/Nunca · Moverse
+#### Moverse · Non/Nunca
 - [ ] Momentos nos que non te podes mover
 
-#### Outra vez · Moverse
+#### Moverse · Outra vez
 
-#### Outro o fai · Moverse
+#### Moverse · Outro o fai
 
-#### Sempre · Moverse
+#### Moverse · Sempre
 - [ ] Se levas unha ortiga, non podes parar de moverte
 
-#### X = Y · Moverse
+#### Moverse · X = Y
 
-#### X distinto de Y · Moverse
+#### Moverse · X distinto de Y
 
-#### Xenera · Moverse
+#### Moverse · Xenera
 
 ## Pasar tempo
 
@@ -542,54 +542,54 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 
 ### Operacións
 
-#### Ao revés · Pasar tempo
+#### Pasar tempo · Ao revés
 - [ ] Momentos nos que o tempo redúcese en vez de avanzar
 
-#### Ás veces · Pasar tempo
+#### Pasar tempo · Ás veces
 
-#### Cada X Y · Pasar tempo
+#### Pasar tempo · Cada X Y
 
-#### Caduca · Pasar tempo
+#### Pasar tempo · Caduca
 
-#### Canto máis X máis Y · Pasar tempo
+#### Pasar tempo · Canto máis X máis Y
 
-#### Con outras cousas · Pasar tempo
+#### Pasar tempo · Con outras cousas
 - [ ] Nun momento o reloxo non indica horas, senón anos
 
-#### Contra ti · Pasar tempo
+#### Pasar tempo · Contra ti
 
-#### Despois · Pasar tempo
+#### Pasar tempo · Despois
 
-#### Destrúe · Pasar tempo
+#### Pasar tempo · Destrúe
 
-#### Fóra · Pasar tempo
+#### Pasar tempo · Fóra
 
-#### Irreversible · Pasar tempo
+#### Pasar tempo · Irreversible
 
-#### Máis · Pasar tempo
+#### Pasar tempo · Máis
 - [ ] Coa idade, o tempo pasa máis rápido
 - [ ] Co vento lento, o tempo pasa máis lento
 
-#### Mal · Pasar tempo
+#### Pasar tempo · Mal
 
-#### Mentres X Y · Pasar tempo
+#### Pasar tempo · Mentres X Y
 
-#### Necesitas máis · Pasar tempo
+#### Pasar tempo · Necesitas máis
 
-#### Non/Nunca · Pasar tempo
+#### Pasar tempo · Non/Nunca
 - [ ] Momentos nos que non pasa o tempo
 
-#### Outra vez · Pasar tempo
+#### Pasar tempo · Outra vez
 - [ ] Obxecto ou herba que che permita repetir o día ou mesmo a vida mantendo os coñecementos
 
-#### Outro o fai · Pasar tempo
+#### Pasar tempo · Outro o fai
 
-#### Sempre · Pasar tempo
+#### Pasar tempo · Sempre
 - [ ] Momentos no que o tempo pasa independentemente do que fagas, a tempo real
 
-#### X = Y · Pasar tempo
+#### Pasar tempo · X = Y
 
-#### X distinto de Y · Pasar tempo
+#### Pasar tempo · X distinto de Y
 
-#### Xenera · Pasar tempo
+#### Pasar tempo · Xenera
 - [ ] Accións ou obxectos que permiten extender o tempo límite do día

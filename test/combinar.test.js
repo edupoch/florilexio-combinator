@@ -68,13 +68,13 @@ const OPS = ['Non/Nunca', 'Máis', 'X <> Y'];
 
 // --- Generación ---------------------------------------------------------------
 
-test('genera todos los pares y todas las combinaciones operación · mecánica', () => {
+test('genera todos los pares y todas las combinaciones mecánica · operación', () => {
   const md = ejecutar(cuaderno(MECS, OPS));
   const h4 = titulos(md).filter(t => t.startsWith('#### '));
   assert.equal(h4.length, 6 + 4 * 3);
   assert.equal(new Set(h4).size, h4.length, 'no hay títulos duplicados');
   assert.ok(md.includes('#### Cortar + Moverse\n'));
-  assert.ok(md.includes('#### X <> Y · Falar\n'));
+  assert.ok(md.includes('#### Falar · X <> Y\n'));
 });
 
 test('ordena mecánicas, pares y operaciones alfabéticamente', () => {
@@ -86,7 +86,7 @@ test('ordena mecánicas, pares y operaciones alfabéticamente', () => {
   assert.deepEqual(cortar, [
     '## Cortar',
     '### Combinacións', '#### Cortar + Falar', '#### Cortar + Moverse', '#### Cortar + Recoller',
-    '### Operacións', '#### Máis · Cortar', '#### Non/Nunca · Cortar', '#### X <> Y · Cortar',
+    '### Operacións', '#### Cortar · Máis', '#### Cortar · Non/Nunca', '#### Cortar · X <> Y',
   ]);
 });
 
@@ -118,7 +118,7 @@ test('empieza con un índice que enlaza todas las mecánicas, seguido de la matr
 });
 
 test('el índice enlaza Orfas solo mientras existe', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] x');
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [ ] x');
   md = ejecutar(cambiarListas(md, ['Cortar', 'Moverse'], OPS));
   assert.deepEqual(notasDe(md, 'Índice', '##').slice(0, 3), ['- [[#Cortar|Cortar]]', '- [[#Moverse|Moverse]]', '- [[#Orfas|Orfas]]']);
   assert.ok(!md.includes('[[#Falar|Falar]]'), 'no quedan enlaces a mecánicas eliminadas');
@@ -159,9 +159,9 @@ test('copia las notas literalmente, con sublistas, espacios y líneas en blanco'
     '##### un subtítulo propio',
     '- [-] descartada',
   ];
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Non/Nunca · Cortar', ...lineas);
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Cortar · Non/Nunca', ...lineas);
   md = ejecutar(md);
-  assert.deepEqual(notasDe(md, 'Non/Nunca · Cortar'), lineas);
+  assert.deepEqual(notasDe(md, 'Cortar · Non/Nunca'), lineas);
 });
 
 test('los títulos dentro de bloques de código no se interpretan', () => {
@@ -196,9 +196,9 @@ test('conserva las notas generales de una mecánica y de sus grupos sin duplicar
 
 test('no borra líneas de nota que se parecen a las generadas', () => {
   const lineas = ['Ver tamén: o documento de deseño', '![[matriz]]', '![[matriz.svg]]', 'Ver tamén: [[#Cortar + Falar|Cortar]]'];
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', ...lineas);
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', ...lineas);
   md = ejecutar(md);
-  assert.deepEqual(notasDe(md, 'Máis · Falar'), lineas);
+  assert.deepEqual(notasDe(md, 'Falar · Máis'), lineas);
 });
 
 test('no duplica "Ver tamén" aunque haya líneas en blanco o copias anteriores', () => {
@@ -215,10 +215,10 @@ test('no duplica "Ver tamén" aunque haya líneas en blanco o copias anteriores'
 test('reordenar las listas no mueve ni pierde notas', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
   md = anotar(md, 'Cortar + Moverse', '- [ ] par');
-  md = anotar(md, 'Máis · Recoller', '- [ ] op');
+  md = anotar(md, 'Recoller · Máis', '- [ ] op');
   md = ejecutar(cambiarListas(md, [...MECS].reverse(), [...OPS].reverse()));
   assert.deepEqual(notasDe(md, 'Cortar + Moverse'), ['- [ ] par']);
-  assert.deepEqual(notasDe(md, 'Máis · Recoller'), ['- [ ] op']);
+  assert.deepEqual(notasDe(md, 'Recoller · Máis'), ['- [ ] op']);
   assert.ok(!md.includes('## Orfas'));
 });
 
@@ -240,7 +240,7 @@ test('ignora mayúsculas y espacios de más al emparejar notas', () => {
 test('las notas de una mecánica eliminada van a Orfas y vuelven al restaurarla', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
   md = anotar(md, 'Cortar + Moverse', '- [+] par');
-  md = anotar(md, 'Non/Nunca · Cortar', '- [-] op');
+  md = anotar(md, 'Cortar · Non/Nunca', '- [-] op');
   md = md
     .replace('## Cortar\n', '## Cortar\nGeneral de cortar.\n')
     .replace(/(## Cortar[\s\S]*?### Combinacións\n)/, '$1Pares de cortar.\n')
@@ -250,7 +250,7 @@ test('las notas de una mecánica eliminada van a Orfas y vuelven al restaurarla'
   assert.ok(!titulos(sinCortar).includes('## Cortar'));
   const orfas = desde(sinCortar, '## Orfas');
   assert.deepEqual(notasDe(orfas, 'Cortar + Moverse', '###'), ['- [+] par']);
-  assert.deepEqual(notasDe(orfas, 'Non/Nunca · Cortar', '###'), ['- [-] op']);
+  assert.deepEqual(notasDe(orfas, 'Cortar · Non/Nunca', '###'), ['- [-] op']);
   assert.deepEqual(notasDe(orfas, 'Cortar', '###'), ['General de cortar.']);
   assert.deepEqual(notasDe(orfas, 'Combinacións de Cortar', '###'), ['Pares de cortar.']);
   assert.deepEqual(notasDe(orfas, 'Operacións de Cortar', '###'), ['Ops de cortar.']);
@@ -263,9 +263,9 @@ test('las notas de una mecánica eliminada van a Orfas y vuelven al restaurarla'
 });
 
 test('las notas de una operación eliminada van a Orfas', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'X <> Y · Falar', '- [ ] distinto');
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · X <> Y', '- [ ] distinto');
   md = ejecutar(cambiarListas(md, MECS, ['Non/Nunca', 'Máis']));
-  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'X <> Y · Falar', '###'), ['- [ ] distinto']);
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Falar · X <> Y', '###'), ['- [ ] distinto']);
 });
 
 test('las combinaciones vacías eliminadas desaparecen sin dejar huérfanas', () => {
@@ -273,16 +273,16 @@ test('las combinaciones vacías eliminadas desaparecen sin dejar huérfanas', ()
   assert.ok(!md.includes('## Orfas'));
   assert.deepEqual(titulos(md), [
     '## Índice',
-    '## Cortar', '### Combinacións', '#### Cortar + Moverse', '### Operacións', '#### Máis · Cortar',
-    '## Moverse', '### Combinacións', '### Operacións', '#### Máis · Moverse',
+    '## Cortar', '### Combinacións', '#### Cortar + Moverse', '### Operacións', '#### Cortar · Máis',
+    '## Moverse', '### Combinacións', '### Operacións', '#### Moverse · Máis',
   ]);
 });
 
 test('un título editado a mano lleva sus notas a Orfas', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] idea');
-  md = ejecutar(md.replace('#### Máis · Falar', '#### Máis · Falar moito'));
-  assert.ok(md.includes('#### Máis · Falar\n'), 'la combinación se regenera vacía');
-  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Máis · Falar moito', '###'), ['- [ ] idea']);
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [ ] idea');
+  md = ejecutar(md.replace('#### Falar · Máis', '#### Falar moito · Máis'));
+  assert.ok(md.includes('#### Falar · Máis\n'), 'la combinación se regenera vacía');
+  assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Falar moito · Máis', '###'), ['- [ ] idea']);
 });
 
 test('una sección `##` inventada se conserva en Orfas', () => {
@@ -293,11 +293,11 @@ test('una sección `##` inventada se conserva en Orfas', () => {
 });
 
 test('fusiona las notas de un título repetido', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] primera');
-  md += '\n#### Máis · Falar\n- [ ] segunda\n';
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [ ] primera');
+  md += '\n#### Falar · Máis\n- [ ] segunda\n';
   md = ejecutar(md);
-  assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [ ] primera', '', '- [ ] segunda']);
-  assert.equal(titulos(md).filter(t => t === '#### Máis · Falar').length, 1);
+  assert.deepEqual(notasDe(md, 'Falar · Máis'), ['- [ ] primera', '', '- [ ] segunda']);
+  assert.equal(titulos(md).filter(t => t === '#### Falar · Máis').length, 1);
 });
 
 test('al restaurar, fusiona las notas de Orfas con las nuevas de la misma combinación', () => {
@@ -311,7 +311,7 @@ test('al restaurar, fusiona las notas de Orfas con las nuevas de la misma combin
 });
 
 test('el texto escrito directamente bajo `## Orfas` se conserva', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] x');
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [ ] x');
   md = ejecutar(cambiarListas(md, MECS, ['Non/Nunca']));
   md = md.replace('## Orfas\n', '## Orfas\nRevisar estas el viernes.\n');
   md = ejecutar(md);
@@ -319,28 +319,28 @@ test('el texto escrito directamente bajo `## Orfas` se conserva', () => {
 });
 
 test('acepta saltos de línea de Windows sin perder notas', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [+] crlf');
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [+] crlf');
   md = ejecutar(md.replace(/\n/g, '\r\n'));
-  assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [+] crlf']);
+  assert.deepEqual(notasDe(md, 'Falar · Máis'), ['- [+] crlf']);
 });
 
 test('migra el formato anterior (combinaciones en `###`) sin perder notas', () => {
   const anterior = cuaderno(['Cortar', 'Moverse'], ['Máis'],
     '\n![[matriz.svg]]\n\n' +
-    '## Cortar\n\nGeneral.\n\n### Cortar + Moverse\n- [+] par\n\n### Máis · Cortar\n- [-] op\n\n' +
-    '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Máis · Moverse\n- [ ] outra\n');
+    '## Cortar\n\nGeneral.\n\n### Cortar + Moverse\n- [+] par\n\n### Cortar · Máis\n- [-] op\n\n' +
+    '## Moverse\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Moverse · Máis\n- [ ] outra\n');
   const md = ejecutar(anterior);
   assert.equal(md, cuaderno(['Cortar', 'Moverse'], ['Máis'],
     '\n## Índice\n- [[#Cortar|Cortar]]\n- [[#Moverse|Moverse]]\n\n![[matriz]]\n\n' +
-    '## Cortar\nGeneral.\n\n### Combinacións\n\n#### Cortar + Moverse\n- [+] par\n\n### Operacións\n\n#### Máis · Cortar\n- [-] op\n\n' +
-    '## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Operacións\n\n#### Máis · Moverse\n- [ ] outra\n'));
+    '## Cortar\nGeneral.\n\n### Combinacións\n\n#### Cortar + Moverse\n- [+] par\n\n### Operacións\n\n#### Cortar · Máis\n- [-] op\n\n' +
+    '## Moverse\n\n### Combinacións\nVer tamén: [[#Cortar + Moverse|Cortar]]\n\n### Operacións\n\n#### Moverse · Máis\n- [ ] outra\n'));
   assert.equal(ejecutar(md), md);
 });
 
 test('un `####` escrito dentro de una nota se convierte en entrada, pero no se pierde', () => {
-  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Máis · Falar', '- [ ] antes', '#### Subtítulo propio', 'despois');
+  let md = anotar(ejecutar(cuaderno(MECS, OPS)), 'Falar · Máis', '- [ ] antes', '#### Subtítulo propio', 'despois');
   md = ejecutar(md);
-  assert.deepEqual(notasDe(md, 'Máis · Falar'), ['- [ ] antes']);
+  assert.deepEqual(notasDe(md, 'Falar · Máis'), ['- [ ] antes']);
   assert.deepEqual(notasDe(desde(md, '## Orfas'), 'Subtítulo propio', '###'), ['despois']);
 });
 
@@ -416,7 +416,7 @@ test('rechaza nombres que romperían títulos o enlaces', () => {
 test('rechaza nombres que Obsidian no distinguiría al resolver enlaces', () => {
   // Obsidian cambia por espacios ! " # $ % & ( ) * + , . : ; < = > ? @ ^ ` { | } ~ / [ ] \
   assert.throws(() => procesar(cuaderno(MECS, ['X <> Y', 'X = Y'])),
-    /no distingue[\s\S]*"X <> Y · Cortar" y "X = Y · Cortar"/);
+    /no distingue[\s\S]*"Cortar · X <> Y" y "Cortar · X = Y"/);
   assert.throws(() => procesar(cuaderno(MECS, ['Non/Nunca', 'Non Nunca'])), /no distingue/);
   assert.throws(() => procesar(cuaderno(['Anotar', 'Cortar', 'Anotar Cortar'], OPS)),
     /"Anotar Cortar" y "Anotar \+ Cortar"/, 'una mecánica contra un par');
@@ -452,7 +452,8 @@ test('calcula el estado de una combinación', () => {
 
 test('reconoce el tipo de cada título', () => {
   assert.equal(claveDeTitulo('Moverse + Cortar'), claveDeTitulo('cortar + MOVERSE'));
-  assert.equal(claveDeTitulo('Non · Cortar'), 'o:non|cortar');
+  assert.equal(claveDeTitulo('Cortar · Non'), 'o:non|cortar');
+  assert.equal(claveDeTitulo('Non · Cortar', new Set(['non'])), 'o:non|cortar', 'orden antiguo, si se conoce la operación');
   assert.equal(claveDeTitulo('Cortar'), 's:cortar');
   assert.equal(claveDeTitulo('Combinacións de Gardar no inventario'), 'g:combinacións|gardar no inventario');
   assert.equal(claveDeTitulo('Ideas de Cortar'), 's:ideas de cortar');
@@ -463,13 +464,13 @@ test('reconoce el tipo de cada título', () => {
 test('la matriz tiene una celda por combinación con su estado', () => {
   let md = ejecutar(cuaderno(MECS, OPS));
   md = anotar(md, 'Cortar + Moverse', '- [+] a', '- [ ] b');
-  md = anotar(md, 'X <> Y · Falar', '- [-] c');
+  md = anotar(md, 'Falar · X <> Y', '- [-] c');
   const { svg } = procesar(md);
   assert.match(svg, /^<svg [^>]*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/);
   assert.ok(svg.trimEnd().endsWith('</svg>'));
   assert.equal((svg.match(/<title>/g) || []).length, 2 * 6 + 4 * 3, 'cada par aparece dos veces');
   assert.ok(svg.includes('<title>Cortar + Moverse: 1 aceptadas, 1 pendentes, 0 descartadas</title>'));
-  assert.ok(svg.includes('<title>X &lt;&gt; Y · Falar: 0 aceptadas, 0 pendentes, 1 descartadas</title>'));
+  assert.ok(svg.includes('<title>Falar · X &lt;&gt; Y: 0 aceptadas, 0 pendentes, 1 descartadas</title>'));
   assert.ok(!/<[^>/!a-z]/.test(svg.replace(/<\/?[a-z]/g, '')), 'no hay "<" sin escapar');
   assert.ok(!svg.includes('<a '), 'matriz.svg no lleva enlaces');
 });
@@ -506,7 +507,7 @@ test('cada casilla de la nota de la matriz enlaza con su combinación', () => {
   for (const [, dataHref, href] of enlaces) assert.equal(dataHref, href);
   const destinos = enlaces.map(e => e[1]);
   assert.ok(destinos.includes('caderno#Cortar + Moverse'));
-  assert.ok(destinos.includes('caderno#X &lt;&gt; Y · Falar'));
+  assert.ok(destinos.includes('caderno#Falar · X &lt;&gt; Y'));
   // Cada destino es un título `####` real del cuaderno.
   const h4 = new Set(titulos(md).filter(t => t.startsWith('#### ')).map(t => t.slice(5)));
   for (const d of destinos) {
@@ -520,6 +521,15 @@ test('la nota de la matriz usa el nombre del cuaderno', () => {
   assert.ok(procesar(cuaderno(MECS, OPS)).notaMatriz.includes('data-href="combinacions#'));
 });
 
+test('migra las combinaciones del orden antiguo "Operación · Mecánica" sin perder notas', () => {
+  const antiguo = cuaderno(MECS, OPS, '\n## Cortar\n\n### Operacións\n\n#### Máis · Cortar\n- [+] vella\n\n#### X <> Y · Cortar\n- [-] outra\n');
+  const md = ejecutar(antiguo);
+  assert.deepEqual(notasDe(md, 'Cortar · Máis'), ['- [+] vella']);
+  assert.deepEqual(notasDe(md, 'Cortar · X <> Y'), ['- [-] outra']);
+  assert.ok(!md.includes('## Orfas'));
+  assert.ok(!md.includes('Máis · Cortar'));
+});
+
 // --- Página HTML ----------------------------------------------------------------
 
 test('la página HTML enlaza cada casilla con la sección de su combinación', () => {
@@ -531,7 +541,7 @@ test('la página HTML enlaza cada casilla con la sección de su combinación', (
   const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map(m => m[1]));
   for (const h of hrefs) assert.ok(ids.has(h), `existe la sección #${h}`);
   assert.ok(html.includes('<section class="combinacion aceptada"><h4 id="cortar-moverse">Cortar + Moverse<span class="total">1 nota</span></h4>'));
-  assert.ok(html.includes('<li id="x-y-falar">X &lt;&gt; Y · Falar</li>'), 'las vacías van en la lista compacta');
+  assert.ok(html.includes('<li id="falar-x-y">Falar · X &lt;&gt; Y</li>'), 'las vacías van en la lista compacta');
   const cortar = html.slice(html.indexOf('<h2 id="cortar">'), html.indexOf('<h2 id="falar">'));
   assert.deepEqual([...cortar.matchAll(/<h[34][^>]*>([^<]*)/g)].map(m => m[1]), [
     'Combinacións', 'Cortar + Moverse', 'Sen notas', 'Operacións', 'Sen notas',
@@ -568,8 +578,8 @@ test('la página HTML sugiere combinaciones al azar, de todas o solo de las vac�
   const datos = JSON.parse(html.match(/const combinacions = (\[.*?\]);/)[1]);
   assert.equal(datos.length, 6 + 4 * 3);
   assert.deepEqual(datos.filter(c => !c.baleira), [{ titulo: 'Cortar + Moverse', id: 'cortar-moverse', baleira: false }]);
-  assert.ok(datos.some(c => c.titulo === 'X <> Y · Falar'));
-  assert.ok(!html.includes('X <> Y · Falar"'), 'el "<" va escapado dentro del script');
+  assert.ok(datos.some(c => c.titulo === 'Falar · X <> Y'));
+  assert.ok(!html.includes('Falar · X <> Y"'), 'el "<" va escapado dentro del script');
 });
 
 // --- Línea de comandos --------------------------------------------------------
@@ -654,9 +664,9 @@ test('vigilar regenera las matrices al guardar el cuaderno y sobrevive a los err
   await esperar(() => salida.includes('Vigilando') && svg().includes('0 aceptadas'), 'arranque');
 
   // Guardar con una nota nueva actualiza la matriz, y el cuaderno queda tal cual.
-  const conNota = anotar(fs.readFileSync(ruta, 'utf8'), 'Máis · Falar', '- [+] idea');
+  const conNota = anotar(fs.readFileSync(ruta, 'utf8'), 'Falar · Máis', '- [+] idea');
   fs.writeFileSync(ruta, conNota);
-  await esperar(() => svg().includes('Máis · Falar: 1 aceptadas'), 'matriz con la nota nueva');
+  await esperar(() => svg().includes('Falar · Máis: 1 aceptadas'), 'matriz con la nota nueva');
   assert.equal(fs.readFileSync(ruta, 'utf8'), conNota);
 
   // Un error se informa, no detiene el proceso ni toca las matrices.

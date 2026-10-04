@@ -1,7 +1,7 @@
 # Florilexio Combinator
 
 Cuaderno de Obsidian para generar ideas de diseño combinando **mecánicas** entre sí
-(`Cortar + Moverse`) y **operaciones** con mecánicas (`Non/Nunca · Cortar`).
+(`Cortar + Moverse`) y **operaciones** con mecánicas (`Cortar · Non/Nunca`).
 
 El script `combinar.js` crea en `combinacions.md` una entrada por combinación y, cada
 vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya existen.
@@ -26,7 +26,7 @@ vez que se vuelve a ejecutar, añade las nuevas sin perder las notas que ya exis
 Al terminar, el script resume lo que ha hecho:
 
 ```
-14 mecánicas, 17 operaciones → 91 pares + 238 operación·mecánica.
+14 mecánicas, 17 operaciones → 91 pares + 238 mecánica·operación.
 Combinaciones nuevas: 0. Huérfanas: 0.
 Sin cambios.
 ```
@@ -82,7 +82,7 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 
 ### Operacións
 
-#### Non/Nunca · Cortar
+#### Cortar · Non/Nunca
 ```
 
 - El **índice** del principio enlaza todas las mecánicas (y `Orfas`, si existe) y
