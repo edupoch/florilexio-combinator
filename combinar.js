@@ -298,7 +298,8 @@ const COLORES = {
 const escapar = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 // Con `enlace`, cada casilla es un enlace: `enlace(titulo)` devuelve los atributos de su `<a>`.
-function generarSVG(mecanicas, operaciones, conteos, enlace = null) {
+// Sin `conTitulo`, se omite el título (la página HTML ya lo lleva).
+function generarSVG(mecanicas, operaciones, conteos, enlace = null, conTitulo = true) {
   const FUENTE = 12, ANCHO_LETRA = 6.8, CELDA = 22, MARGEN = 20;
   const anchoTexto = s => s.length * ANCHO_LETRA;
   const diagonal = lista => Math.max(0, ...lista.map(anchoTexto)) * Math.SQRT1_2;
@@ -320,8 +321,10 @@ function generarSVG(mecanicas, operaciones, conteos, enlace = null) {
   const texto = (x, yy, contenido, extra = '') =>
     `<text x="${x}" y="${yy}" ${extra}>${escapar(contenido)}</text>`;
 
-  piezas.push(texto(MARGEN, y + 4, 'Florilexio Combinator', 'font-size="18" font-weight="bold"'));
-  y += 24;
+  if (conTitulo) {
+    piezas.push(texto(MARGEN, y + 4, 'Florilexio Combinator', 'font-size="18" font-weight="bold"'));
+    y += 24;
+  }
   piezas.push(texto(MARGEN, y,
     `${total.exploradas}/${total.combinacions} combinacións con notas · ` +
     `${total.aceptadas} aceptadas · ${total.pendientes} pendentes · ${total.descartadas} descartadas`));
@@ -415,7 +418,13 @@ function procesar(texto, nota = 'combinacions') {
       const destino = escapar(`${nota}#${titulo}`);
       return `class="internal-link" data-href="${destino}" href="${destino}"`;
     });
-  const html = generarHTML(markdown, enlace => generarSVG(mecanicas, operaciones, conteos, enlace));
+  const html = generarHTML(markdown, enlace => generarSVG(mecanicas, operaciones, conteos, enlace, false), {
+    colores: COLORES,
+    info: titulo => {
+      const c = conteos.get(claveDeTitulo(normalizar(titulo)));
+      return c && { estado: estado(c), total: c.aceptadas + c.pendientes + c.descartadas };
+    },
+  });
   return { markdown, svg, notaMatriz, html, conteos, nuevas, orfas, mecanicas, operaciones };
 }
 

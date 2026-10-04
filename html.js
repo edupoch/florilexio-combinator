@@ -8,6 +8,7 @@
 
 const EMBED_MATRIZ = /^!\[\[matriz(\.md|\.svg)?\]\]$/;
 const MARCA_MATRIZ = '\u0000MATRIZ\u0000';
+const VER_TAMEN = 'Ver tamén:';
 
 const escapar = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const claveTitulo = s => s.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
@@ -83,6 +84,8 @@ function lista(items, ids) {
   return html;
 }
 
+// Devuelve una lista de bloques: cadenas HTML, salvo los títulos, que son objetos
+// para poder agrupar después cada combinación con sus notas.
 function bloques(lineas, ids, porLinea = new Map(), desplazamiento = 0) {
   const salida = [];
   let i = 0;
@@ -101,7 +104,7 @@ function bloques(lineas, ids, porLinea = new Map(), desplazamiento = 0) {
     if (titulo) {
       const n = titulo[1].length;
       const id = porLinea.get(i + desplazamiento);
-      salida.push(`<h${n}${id ? ` id="${id}"` : ''}>${enLinea(titulo[2], ids)}</h${n}>`);
+      salida.push({ nivel: n, id, texto: titulo[2], contenido: enLinea(titulo[2], ids) });
       i++;
       continue;
     }
@@ -118,7 +121,7 @@ function bloques(lineas, ids, porLinea = new Map(), desplazamiento = 0) {
     if (/^\s*>/.test(l)) {
       const cita = [];
       for (; i < lineas.length && /^\s*>/.test(lineas[i]); i++) cita.push(lineas[i].replace(/^\s*>\s?/, ''));
-      salida.push(`<blockquote>${bloques(cita, ids).join('\n')}</blockquote>`);
+      salida.push(`<blockquote>${bloques(cita, ids).map(aHTML).join('\n')}</blockquote>`);
       continue;
     }
     if (ITEM.test(l)) {
@@ -143,47 +146,110 @@ function bloques(lineas, ids, porLinea = new Map(), desplazamiento = 0) {
     const parrafo = [];
     for (; i < lineas.length && lineas[i].trim() && !/^(#{1,6}\s|\s*>|\s*(```|~~~))/.test(lineas[i]) &&
       !ITEM.test(lineas[i]) && !EMBED_MATRIZ.test(lineas[i].trim()); i++) parrafo.push(lineas[i]);
-    salida.push(`<p>${parrafo.map(p => enLinea(p.trim(), ids)).join('<br>')}</p>`);
+    const clase = parrafo[0].startsWith(VER_TAMEN) ? ' class="ver-tamen"' : '';
+    salida.push(`<p${clase}>${parrafo.map(p => enLinea(p.trim(), ids)).join('<br>')}</p>`);
   }
   return salida;
 }
 
+const aHTML = b => (typeof b === 'string' ? b : `<h${b.nivel}${b.id ? ` id="${b.id}"` : ''}>${b.contenido}</h${b.nivel}>`);
+const esTitulo = (b, max = 6) => typeof b === 'object' && b.nivel <= max;
+
+// Agrupa cada combinación (`####`) con sus notas en una sección marcada con su estado.
+// Las combinaciones sin notas se juntan al final de su grupo (`###`), bajo "Sen notas",
+// en una lista compacta de etiquetas.
+function componer(lista, info) {
+  const salida = [];
+  let baleiras = [];
+  const soltarBaleiras = () => {
+    if (baleiras.length) salida.push(`<h4 class="sen-notas">Sen notas</h4>\n<ul class="baleiras">${baleiras.join('')}</ul>`);
+    baleiras = [];
+  };
+  for (let i = 0; i < lista.length; i++) {
+    const b = lista[i];
+    if (!esTitulo(b) || b.nivel !== 4) {
+      if (esTitulo(b, 3)) soltarBaleiras();
+      salida.push(aHTML(b));
+      continue;
+    }
+    const notas = [];
+    while (i + 1 < lista.length && !esTitulo(lista[i + 1], 4)) notas.push(aHTML(lista[++i]));
+    if (!notas.length) {
+      baleiras.push(`<li id="${b.id}">${b.contenido}</li>`);
+      continue;
+    }
+    const { estado = 'pendiente', total = 0 } = info(b.texto) || {};
+    const cifra = total ? `<span class="total">${total} ${total === 1 ? 'nota' : 'notas'}</span>` : '';
+    salida.push(`<section class="combinacion ${estado}"><h4 id="${b.id}">${b.contenido}${cifra}</h4>\n${notas.join('\n')}</section>`);
+  }
+  soltarBaleiras();
+  return salida;
+}
+
 const ESTILO = `
-:root{--fondo:#fafaf7;--texto:#222;--suave:#777;--borde:#e2e2dc;--tarjeta:#fff;--acento:#2e7d32;--marca:#fff3c4;--pendiente:#f5c542;--aceptada:#43a047;--descartada:#9e9e9e}
-@media (prefers-color-scheme:dark){:root{--fondo:#1b1b1a;--texto:#e6e6e3;--suave:#9a9a95;--borde:#3a3a37;--tarjeta:#242423;--acento:#7cc47f;--marca:#5a4b12}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:16px}
-body{margin:0;background:var(--fondo);color:var(--texto);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:860px;margin:0 auto;padding:24px 16px 96px}
-h2{font-size:1.45rem;margin:2.2em 0 .4em;padding-bottom:.2em;border-bottom:2px solid var(--borde)}
-h3{font-size:1.1rem;margin:1.6em 0 .3em;color:var(--suave);text-transform:uppercase;letter-spacing:.04em}
-h4{font-size:1.05rem;margin:1.2em 0 .2em}
-h4+h4,h4+h3,h4+h2{margin-top:.2em}
-h4:has(+h4),h4:has(+h3),h4:has(+h2){color:var(--suave);font-weight:500}
-:target{background:var(--marca);border-radius:4px;box-shadow:0 0 0 6px var(--marca);color:inherit!important}
-a{color:var(--acento)}
-.matriz{overflow-x:auto;margin:16px -16px;padding:0 16px;-webkit-overflow-scrolling:touch}
-.matriz svg{display:block;border:1px solid var(--borde);border-radius:8px}
-.matriz a rect{cursor:pointer;transition:opacity .1s}
-.matriz a:hover rect{opacity:.7}
-ul,ol{padding-left:1.4em;margin:.3em 0}
-li.tarea{list-style:none;margin-left:-1.4em;display:flex;gap:.5em;align-items:baseline}
-.marca{flex:none;display:inline-grid;place-items:center;width:1.05em;height:1.05em;border-radius:3px;font-size:.8em;color:#fff;transform:translateY(.12em)}
-.pendiente .marca{border:2px solid var(--pendiente)}
-.aceptada .marca{background:var(--aceptada)}
-.descartada .marca{background:var(--descartada)}
-.descartada>span:last-child{text-decoration:line-through;color:var(--suave)}
-blockquote{margin:.5em 0;padding:.1em 1em;border-left:3px solid var(--borde);color:var(--suave)}
-pre{background:var(--tarjeta);border:1px solid var(--borde);border-radius:6px;padding:10px;overflow-x:auto}
-code{font-size:.9em}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:#fff;color:var(--texto);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:720px;margin:0 auto;padding:32px 16px 96px}
+a{color:inherit;text-decoration-color:var(--liña);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+a:focus-visible,li:focus-visible{outline:2px solid var(--texto);outline-offset:2px;border-radius:2px}
+
+h1{font-size:2.25rem;line-height:1.15;font-weight:700;letter-spacing:-.02em;margin:0 0 32px}
+h2{font-size:1.75rem;line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:64px 0 0;padding-top:24px;border-top:1px solid var(--liña)}
+h3{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave);margin:32px 0 12px}
+h4{font-size:1rem;font-weight:600;margin:0 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+h5,h6{font-size:.9rem;margin:16px 0 4px}
+p{margin:8px 0}
+
+#indice{border:0;padding:0;margin:0 0 16px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--suave)}
+#indice+ul{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.95rem}
+#indice+ul li{display:inline}
+.matriz{overflow-x:auto;margin:0 -16px;padding:0 16px}
+.matriz svg{display:block}
+.matriz a rect{cursor:pointer}
+.matriz a:hover rect,.matriz a:focus rect{stroke:var(--texto);stroke-width:1.5}
+
+.ver-tamen{font-size:.875rem;color:var(--suave)}
+.ver-tamen a{color:var(--texto)}
+
+.combinacion{margin:12px 0;padding:8px 16px;border-left:3px solid var(--estado)}
+.combinacion.pendiente{--estado:var(--pendiente)}
+.combinacion.aceptada{--estado:var(--aceptada)}
+.combinacion.descartada{--estado:var(--descartada)}
+.combinacion.descartada h4{color:var(--suave)}
+.total{flex:none;font-size:.75rem;font-weight:400;color:var(--suave)}
+.combinacion:has(h4:target){background:var(--baleira)}
+
+.sen-notas{font-size:.875rem;font-weight:600;color:var(--suave);margin:24px 0 8px}
+.baleiras{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px}
+.baleiras li{font-size:.75rem;line-height:1.5;padding:2px 8px;border-radius:3px;background:var(--baleira);color:var(--suave)}
+.baleiras li:target{background:var(--texto);color:#fff}
+
+ul,ol{padding-left:24px;margin:4px 0}
+li{margin:2px 0}
+li.tarea{list-style:none;margin-left:-24px;display:flex;gap:8px;align-items:flex-start}
+.marca{flex:none;display:inline-grid;place-items:center;width:14px;height:14px;border-radius:2px;font-size:10px;line-height:1;color:#fff;margin-top:6px}
+.tarea.pendiente .marca{background:var(--pendiente)}
+.tarea.aceptada .marca{background:var(--aceptada)}
+.tarea.descartada .marca{background:var(--descartada)}
+.tarea.descartada>span:last-child{text-decoration:line-through;color:var(--suave)}
+
+blockquote{margin:8px 0;padding:0 16px;border-left:2px solid var(--liña);color:var(--suave)}
+pre{background:var(--baleira);border-radius:4px;padding:12px;overflow-x:auto}
+code{font-size:.875em}
+mark{background:color-mix(in srgb,var(--pendiente) 40%,transparent)}
 .wikilink{border-bottom:1px dotted var(--suave)}
-.subir{position:fixed;right:16px;bottom:16px;background:var(--tarjeta);color:var(--texto);border:1px solid var(--borde);border-radius:999px;padding:8px 14px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.15);font-size:.9rem}
-footer{color:var(--suave);font-size:.85rem;margin-top:4em}
+
+.subir{position:fixed;right:16px;bottom:16px;background:#fff;color:var(--texto);border:1px solid var(--liña);border-radius:4px;padding:6px 12px;font-size:.875rem;text-decoration:none}
+.subir:hover{border-color:var(--texto)}
+footer{color:var(--suave);font-size:.75rem;margin-top:64px}
 `;
 
 // `markdown`: el cuaderno regenerado. `matriz(enlace)`: devuelve el SVG, donde
-// `enlace(titulo)` da el atributo href de cada casilla.
-function generarHTML(markdown, matriz, titulo = 'Florilexio Combinator') {
+// `enlace(titulo)` da el atributo href de cada casilla. `info(titulo)`: estado y número
+// de notas de una combinación. `colores`: los colores de la matriz, por estado.
+function generarHTML(markdown, matriz, { info = () => null, colores = {}, titulo = 'Florilexio Combinator' } = {}) {
   const cuerpo = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '').replace(/%%[\s\S]*?%%/g, '');
   const lineas = cuerpo.split(/\r?\n/);
   const { ids, porLinea } = asignarIds(lineas);
@@ -191,23 +257,28 @@ function generarHTML(markdown, matriz, titulo = 'Florilexio Combinator') {
     const id = ids.get(claveTitulo(t));
     return id ? `href="#${id}"` : null;
   }).trim();
-  let html = bloques(lineas, ids, porLinea).join('\n');
+  let html = componer(bloques(lineas, ids, porLinea), info).join('\n');
   html = html.includes(MARCA_MATRIZ)
     ? html.replace(MARCA_MATRIZ, `<div class="matriz" id="matriz">${svg}</div>`)
     : `<div class="matriz" id="matriz">${svg}</div>\n${html}`;
   html = html.split(MARCA_MATRIZ).join('');
+  const color = (estado, porDefecto) => (colores[estado] && colores[estado].fondo) || porDefecto;
+  const variables = `:root{--texto:#222;--suave:#6b6b6b;--liña:#e4e4e4;` +
+    `--baleira:${color('vacia', '#f0f0f0')};--pendiente:${color('pendiente', '#f5c542')};` +
+    `--aceptada:${color('aceptada', '#43a047')};--descartada:${color('descartada', '#9e9e9e')}}`;
   return `<!doctype html>
 <html lang="gl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapar(titulo)}</title>
-<style>${ESTILO}</style>
+<style>${variables}${ESTILO}</style>
 </head>
 <body>
 <main>
+<h1>${escapar(titulo)}</h1>
 ${html}
-<footer>Xerado por combinar.js. Non editar: os cambios fanse en combinacions.md.</footer>
+<footer>Xerado por combinar.js a partir de combinacions.md.</footer>
 </main>
 <a class="subir" href="#matriz">↑ Matriz</a>
 </body>

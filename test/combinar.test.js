@@ -530,8 +530,13 @@ test('la página HTML enlaza cada casilla con la sección de su combinación', (
   assert.equal(hrefs.length, 2 * 6 + 4 * 3);
   const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map(m => m[1]));
   for (const h of hrefs) assert.ok(ids.has(h), `existe la sección #${h}`);
-  assert.ok(html.includes('<h4 id="cortar-moverse">Cortar + Moverse</h4>'));
-  assert.ok(html.includes('<h4 id="x-y-falar">X &lt;&gt; Y · Falar</h4>'));
+  assert.ok(html.includes('<section class="combinacion aceptada"><h4 id="cortar-moverse">Cortar + Moverse<span class="total">1 nota</span></h4>'));
+  assert.ok(html.includes('<li id="x-y-falar">X &lt;&gt; Y · Falar</li>'), 'las vacías van en la lista compacta');
+  const cortar = html.slice(html.indexOf('<h2 id="cortar">'), html.indexOf('<h2 id="falar">'));
+  assert.deepEqual([...cortar.matchAll(/<h[34][^>]*>([^<]*)/g)].map(m => m[1]), [
+    'Combinacións', 'Cortar + Moverse', 'Sen notas', 'Operacións', 'Sen notas',
+  ], 'las vacías van al final de cada grupo');
+  assert.match(cortar, /Sen notas<\/h4>\n<ul class="baleiras"><li id="cortar-falar">Cortar \+ Falar<\/li><li id="cortar-recoller">/);
   assert.equal(hrefs.filter(h => h === 'cortar-moverse').length, 2, 'las dos casillas del par');
   assert.ok(!html.includes('mecanicas:'), 'sin front matter');
 });
@@ -544,10 +549,14 @@ test('la página HTML muestra las notas con su estado y los enlaces internos', (
   assert.ok(html.includes('<strong>sí</strong>'));
   assert.ok(html.includes('quizá &lt;b&gt;'));
   assert.ok(html.includes('<li class="tarea descartada">'));
+  assert.ok(html.includes('<section class="combinacion aceptada"><h4 id="cortar-moverse">Cortar + Moverse<span class="total">3 notas</span>'));
+  assert.ok(html.includes('--aceptada:#43a047'), 'usa los colores de la matriz');
   assert.ok(html.includes('<ul><li>sub <span class="wikilink">Outra nota</span></li></ul>'));
   assert.ok(html.includes('Ver tamén: <a href="#cortar-moverse">Cortar</a>'));
   assert.ok(html.includes('<div class="matriz" id="matriz"><svg'), 'la matriz está en el índice');
   assert.equal(html.split('<svg').length, 2);
+  assert.ok(html.includes('<main>\n<h1>Florilexio Combinator</h1>'));
+  assert.equal(html.split('Florilexio Combinator').length, 3, 'en <title> y <h1>, no repetido en la matriz');
 });
 
 // --- Línea de comandos --------------------------------------------------------
