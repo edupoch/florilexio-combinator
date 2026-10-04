@@ -1,9 +1,10 @@
 ---
 mecanicas: Moverse, Cortar, Gardar no inventario, Dar obxecto, Falar, Identificar, Anotar, Crear cacho, Pasar tempo
-operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás veces, Sempre, Se X entón Y, Canto máis X máis Y, Necesitas máis, Xenera, Destrúe, Cada X Y, Con outras cousas, Mentres X Y, Con atraso, Caduca, Irreversible, Outro o fai, Contra ti
+operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás veces, Sempre, Canto máis X máis Y, Necesitas máis, Xenera, Destrúe, Cada X Y, Con outras cousas, Mentres X Y, Despois, Caduca, Irreversible, Outro o fai, Contra ti, Mal, Fóra
 ---
 
 ## Índice
+
 - [[#Anotar|Anotar]]
 - [[#Cortar|Cortar]]
 - [[#Crear cacho|Crear cacho]]
@@ -23,6 +24,7 @@ operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás 
 #### Anotar + Cortar
 
 #### Anotar + Crear cacho
+
 - [ ] Misión principal
 
 #### Anotar + Dar obxecto
@@ -49,14 +51,16 @@ operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás 
 
 #### Canto máis X máis Y · Anotar
 
-#### Con atraso · Anotar
+#### Despois · Anotar
 
 #### Con outras cousas · Anotar
 
 #### Contra ti · Anotar
+
 - [ ] Alguén che cambia as notas do caderno
 
 #### Destrúe · Anotar
+
 - [ ] Momentos nos que perdes anotacións, son como perder recordos
 
 #### Irreversible · Anotar
@@ -68,14 +72,13 @@ operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás 
 #### Necesitas máis · Anotar
 
 #### Non/Nunca · Anotar
+
 - [ ] Momentos nos que non tes o florilexio
 - [ ] Momentos nos que non tes con que escribir no florilexio
 
 #### Outra vez · Anotar
 
 #### Outro o fai · Anotar
-
-#### Se X entón Y · Anotar
 
 #### Sempre · Anotar
 
@@ -88,6 +91,7 @@ operacions: Non/Nunca, Máis, Ao revés, X = Y, X distinto de Y, Outra vez, Ás 
 ## Cortar
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Cortar|Anotar]]
 
 #### Cortar + Crear cacho
@@ -95,9 +99,11 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 #### Cortar + Dar obxecto
 
 #### Cortar + Falar
+
 - [ ] Nalgúns diálogos dispara o minixogo de cortar conversas ou argumentos
 
 #### Cortar + Gardar no inventario
+
 - [ ] Tixeiras que che permiten cortar certo tipo de herbas
 
 #### Cortar + Identificar
@@ -118,9 +124,10 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 
 #### Canto máis X máis Y · Cortar
 
-#### Con atraso · Cortar
+#### Despois · Cortar
 
 #### Con outras cousas · Cortar
+
 - [ ] Cortar o fío da vida
 - [ ] Cortar unha relación
 - [ ] Cortar un pensamento rumiante
@@ -132,25 +139,28 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 #### Destrúe · Cortar
 
 #### Irreversible · Cortar
+
 - [ ] O que cortas non volve medrar nesa partida
 
 #### Máis · Cortar
+
 - [ ] Se chove, é máis difícil cortar herbas
 
 #### Mentres X Y · Cortar
 
 #### Necesitas máis · Cortar
+
 - [ ] Obxecto que che permita cortar herbas con menos cortes
 
 #### Non/Nunca · Cortar
+
 - [ ] Momentos nos que perdes a habilidade de cortar herbas
 
 #### Outra vez · Cortar
 
 #### Outro o fai · Cortar
-- [ ] Outros personaxes compiten polas mesmas herbas e córtanas antes ca ti
 
-#### Se X entón Y · Cortar
+- [ ] Outros personaxes compiten polas mesmas herbas e córtanas antes ca ti
 
 #### Sempre · Cortar
 
@@ -163,6 +173,7 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 ## Crear cacho
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Cortar + Crear cacho|Cortar]]
 
 #### Crear cacho + Dar obxecto
@@ -189,9 +200,10 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Cortar + Crear cacho|Cortar]]
 
 #### Canto máis X máis Y · Crear cacho
 
-#### Con atraso · Crear cacho
+#### Despois · Crear cacho
 
 #### Con outras cousas · Crear cacho
+
 - [ ] Facer unha infusión
 - [ ] Xuntar pensamentos
 
@@ -213,11 +225,10 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Cortar + Crear cacho|Cortar]]
 
 #### Outro o fai · Crear cacho
 
-#### Se X entón Y · Crear cacho
-
 #### Sempre · Crear cacho
 
 #### X = Y · Crear cacho
+
 - [ ] Poder botar no cacho cousas que non son herbas pero que funcionen como tal
 
 #### X distinto de Y · Crear cacho
@@ -227,6 +238,7 @@ Ver tamén: [[#Anotar + Crear cacho|Anotar]] · [[#Cortar + Crear cacho|Cortar]]
 ## Dar obxecto
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]] · [[#Crear cacho + Dar obxecto|Crear cacho]]
 
 #### Dar obxecto + Falar
@@ -251,7 +263,7 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 
 #### Canto máis X máis Y · Dar obxecto
 
-#### Con atraso · Dar obxecto
+#### Despois · Dar obxecto
 
 #### Con outras cousas · Dar obxecto
 
@@ -273,8 +285,6 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 
 #### Outro o fai · Dar obxecto
 
-#### Se X entón Y · Dar obxecto
-
 #### Sempre · Dar obxecto
 
 #### X = Y · Dar obxecto
@@ -286,6 +296,7 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 ## Falar
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear cacho + Falar|Crear cacho]] · [[#Dar obxecto + Falar|Dar obxecto]]
 
 #### Falar + Gardar no inventario
@@ -308,9 +319,11 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear
 
 #### Canto máis X máis Y · Falar
 
-#### Con atraso · Falar
+#### Despois · Falar
 
 #### Con outras cousas · Falar
+
+- [x] Falar con obxectos inanimados
 
 #### Contra ti · Falar
 
@@ -321,6 +334,7 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear
 #### Máis · Falar
 
 #### Mentres X Y · Falar
+
 - [ ] A conversa segue mentres fas outra cousa e podes perder información
 
 #### Necesitas máis · Falar
@@ -330,8 +344,6 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear
 #### Outra vez · Falar
 
 #### Outro o fai · Falar
-
-#### Se X entón Y · Falar
 
 #### Sempre · Falar
 
@@ -344,14 +356,17 @@ Ver tamén: [[#Anotar + Falar|Anotar]] · [[#Cortar + Falar|Cortar]] · [[#Crear
 ## Gardar no inventario
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no inventario|Cortar]] · [[#Crear cacho + Gardar no inventario|Crear cacho]] · [[#Dar obxecto + Gardar no inventario|Dar obxecto]] · [[#Falar + Gardar no inventario|Falar]]
 
 #### Gardar no inventario + Identificar
 
 #### Gardar no inventario + Moverse
+
 - [ ] Unha bicicleta, que che permite moverte máis rápido
 
 #### Gardar no inventario + Pasar tempo
+
 - [ ] Obxectos que fan pasar o tempo máis rápido
 - [ ] Obxectos que fan pasar o tempo máis lento
 - [ ] Obxectos que deteñen o tempo
@@ -365,19 +380,22 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 #### Cada X Y · Gardar no inventario
 
 #### Caduca · Gardar no inventario
+
 - [ ] As herbas murchan se pasan moito tempo no inventario
 
 #### Canto máis X máis Y · Gardar no inventario
+
 - [ ] Canto máis herbas teñas dun tipo, máis rápido te moves (por exemplo, ortiga)
 - [ ] Canto máis herbas teñas dun tipo, máis lento pasa o tempo
 
-#### Con atraso · Gardar no inventario
+#### Despois · Gardar no inventario
 
 #### Con outras cousas · Gardar no inventario
 
 #### Contra ti · Gardar no inventario
 
 #### Destrúe · Gardar no inventario
+
 - [ ] Vento violento: faiche perder herbas
 
 #### Irreversible · Gardar no inventario
@@ -389,19 +407,19 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 #### Necesitas máis · Gardar no inventario
 
 #### Non/Nunca · Gardar no inventario
+
 - [ ] Obxecto ou herba demasiado grande. Por exemplo, a flor do fento macho
 
 #### Outra vez · Gardar no inventario
 
 #### Outro o fai · Gardar no inventario
 
-#### Se X entón Y · Gardar no inventario
-
 #### Sempre · Gardar no inventario
 
 #### X = Y · Gardar no inventario
 
 #### X distinto de Y · Gardar no inventario
+
 - [ ] Variacións de herbas, como os peixes mutantes de Dredge. Herbas mutantes
 
 #### Xenera · Gardar no inventario
@@ -409,9 +427,11 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 ## Identificar
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]] · [[#Crear cacho + Identificar|Crear cacho]] · [[#Dar obxecto + Identificar|Dar obxecto]] · [[#Falar + Identificar|Falar]] · [[#Gardar no inventario + Identificar|Gardar no inventario]]
 
 #### Identificar + Moverse
+
 - [ ] Unha herba que só a podes identificar se estás en movemento ou quedo
 
 #### Identificar + Pasar tempo
@@ -421,6 +441,7 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 #### Ao revés · Identificar
 
 #### Ás veces · Identificar
+- [ ] Herbas que só aparecen en determinadas partidas
 
 #### Cada X Y · Identificar
 
@@ -428,7 +449,8 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 
 #### Canto máis X máis Y · Identificar
 
-#### Con atraso · Identificar
+#### Despois · Identificar
+
 - [ ] Non sabes que herba é ata o día seguinte
 
 #### Con outras cousas · Identificar
@@ -446,13 +468,12 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 #### Necesitas máis · Identificar
 
 #### Non/Nunca · Identificar
+
 - [ ] Momentos nos que levas no inventario obxectos ou herbas que non identificaches previamente. Mesmo poden ter implicacións negativas (como por exemplo, que o tempo vaia máis rápido) e non o saibas.
 
 #### Outra vez · Identificar
 
 #### Outro o fai · Identificar
-
-#### Se X entón Y · Identificar
 
 #### Sempre · Identificar
 
@@ -465,14 +486,17 @@ Ver tamén: [[#Anotar + Identificar|Anotar]] · [[#Cortar + Identificar|Cortar]]
 ## Moverse
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#Crear cacho + Moverse|Crear cacho]] · [[#Dar obxecto + Moverse|Dar obxecto]] · [[#Falar + Moverse|Falar]] · [[#Gardar no inventario + Moverse|Gardar no inventario]] · [[#Identificar + Moverse|Identificar]]
 
 #### Moverse + Pasar tempo
+
 - [ ] Unha herba ou obxecto que che fai perder tempo se te moves
 
 ### Operacións
 
 #### Ao revés · Moverse
+
 - [ ] Herba que che altera a dirección do movemento
 
 #### Ás veces · Moverse
@@ -483,7 +507,7 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#C
 
 #### Canto máis X máis Y · Moverse
 
-#### Con atraso · Moverse
+#### Despois · Moverse
 
 #### Con outras cousas · Moverse
 
@@ -500,15 +524,15 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#C
 #### Necesitas máis · Moverse
 
 #### Non/Nunca · Moverse
+
 - [ ] Momentos nos que non te podes mover
 
 #### Outra vez · Moverse
 
 #### Outro o fai · Moverse
 
-#### Se X entón Y · Moverse
-
 #### Sempre · Moverse
+
 - [ ] Se levas unha ortiga, non podes parar de moverte
 
 #### X = Y · Moverse
@@ -520,11 +544,13 @@ Ver tamén: [[#Anotar + Moverse|Anotar]] · [[#Cortar + Moverse|Cortar]] · [[#C
 ## Pasar tempo
 
 ### Combinacións
+
 Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]] · [[#Crear cacho + Pasar tempo|Crear cacho]] · [[#Dar obxecto + Pasar tempo|Dar obxecto]] · [[#Falar + Pasar tempo|Falar]] · [[#Gardar no inventario + Pasar tempo|Gardar no inventario]] · [[#Identificar + Pasar tempo|Identificar]] · [[#Moverse + Pasar tempo|Moverse]]
 
 ### Operacións
 
 #### Ao revés · Pasar tempo
+
 - [ ] Momentos nos que o tempo redúcese en vez de avanzar
 
 #### Ás veces · Pasar tempo
@@ -535,9 +561,11 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 
 #### Canto máis X máis Y · Pasar tempo
 
-#### Con atraso · Pasar tempo
+#### Despois · Pasar tempo
 
 #### Con outras cousas · Pasar tempo
+
+- [ ] Nun momento o reloxo non indica horas, senón anos
 
 #### Contra ti · Pasar tempo
 
@@ -546,6 +574,7 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 #### Irreversible · Pasar tempo
 
 #### Máis · Pasar tempo
+
 - [ ] Coa idade, o tempo pasa máis rápido
 - [ ] Co vento lento, o tempo pasa máis lento
 
@@ -554,16 +583,17 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 #### Necesitas máis · Pasar tempo
 
 #### Non/Nunca · Pasar tempo
+
 - [ ] Momentos nos que non pasa o tempo
 
 #### Outra vez · Pasar tempo
+
 - [ ] Obxecto ou herba que che permita repetir o día ou mesmo a vida mantendo os coñecementos
 
 #### Outro o fai · Pasar tempo
 
-#### Se X entón Y · Pasar tempo
-
 #### Sempre · Pasar tempo
+
 - [ ] Momentos no que o tempo pasa independentemente do que fagas, a tempo real
 
 #### X = Y · Pasar tempo
@@ -571,4 +601,5 @@ Ver tamén: [[#Anotar + Pasar tempo|Anotar]] · [[#Cortar + Pasar tempo|Cortar]]
 #### X distinto de Y · Pasar tempo
 
 #### Xenera · Pasar tempo
+
 - [ ] Accións ou obxectos que permiten extender o tempo límite do día
