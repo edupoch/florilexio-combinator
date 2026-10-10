@@ -128,6 +128,7 @@ Ver tamén: [[#Anotar + Cortar|Anotar]]
 - [ ] Cortar bimbio para facer un cesto
 
 #### Cortar · Contra ti
+- [ ] Herbas que fan que perdas cousas ao cortalas (velenosas, con espiñas), que fan que perdas algunha habilidade (vas máis lento, perdes máis tempo do que deberías)
 
 #### Cortar · Despois
 
@@ -266,7 +267,9 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 #### Dar obxecto · Destrúe
 
 #### Dar obxecto · Fóra
-
+- [ ] Obxecto que se da deixándoo nun sitio para que un NPC o recolla noutro no mesmo día
+- [ ] Obxecto que se da deixándoo nun sitio para que un NPC o recolla noutro ano. Por exemplo, enterrar algo (semente, cápsula do tempo)
+- [ ] Obxecto que deixas nun sitio e o recolles ti noutro ano pero alterado. Algo que se degrada ou algo que adquire propiedades (queixo nunha cova para que colla sabor, tixeiras que deixas nunha lagoa máxica e que, cantos máis anos quede, máis lento é o minixogo de cortar e podes coller herbas máis difíciles)
 #### Dar obxecto · Irreversible
 
 #### Dar obxecto · Máis
@@ -274,6 +277,8 @@ Ver tamén: [[#Anotar + Dar obxecto|Anotar]] · [[#Cortar + Dar obxecto|Cortar]]
 #### Dar obxecto · Mal
 
 #### Dar obxecto · Mentres X Y
+- [ ] Dar un obxecto cando estea pasando algo (a unha determinada hora, cando o sol estea nunha posición), e ocorre algo. Por exemplo, dar un obxecto cando estea a fogueira para que alguén a queime.
+- [ ] Cando das un obxecto fas avanzar outra parte da historia que igual xa non podes explorar
 
 #### Dar obxecto · Necesitas máis
 

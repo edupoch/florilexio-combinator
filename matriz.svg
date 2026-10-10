@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="1069" viewBox="0 0 520 1069" font-family="sans-serif" font-size="12" fill="#222">
 <rect width="100%" height="100%" fill="#fff"/>
 <text x="20" y="24" font-size="18" font-weight="bold">Florilexio Combinator</text>
-<text x="20" y="44" >38/234 combinacións con notas · 1 aceptadas · 47 pendentes · 0 descartadas</text>
+<text x="20" y="44" >41/234 combinacións con notas · 1 aceptadas · 53 pendentes · 0 descartadas</text>
 <rect x="20" y="53" width="14" height="14" rx="2" fill="#f0f0f0"/>
 <text x="40" y="64" >Baleira</text>
 <rect x="97.6" y="53" width="14" height="14" rx="2" fill="#f5c542"/>
@@ -82,7 +82,7 @@
 <rect x="343" y="311.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Pasar tempo · Con outras cousas: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="353" y="325.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <text x="158" y="347.16652224137044" text-anchor="end">Contra ti</text>
 <rect x="167" y="333.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Anotar · Contra ti: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="177" y="347.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
-<rect x="189" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar · Contra ti: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="189" y="333.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Cortar · Contra ti: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="199" y="347.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="211" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho · Contra ti: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="233" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto · Contra ti: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="255" y="333.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar · Contra ti: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -114,7 +114,7 @@
 <rect x="167" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="189" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="211" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="233" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="233" y="399.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Dar obxecto · Fóra: 0 aceptadas, 3 pendentes, 0 descartadas</title></rect><text x="243" y="413.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">3</text>
 <rect x="255" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Falar · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="277" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="299" y="399.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar · Fóra: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
@@ -154,7 +154,7 @@
 <rect x="167" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Anotar · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="189" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Cortar · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="211" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Crear cacho · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
-<rect x="233" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Dar obxecto · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
+<rect x="233" y="487.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Dar obxecto · Mentres X Y: 0 aceptadas, 2 pendentes, 0 descartadas</title></rect><text x="243" y="501.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">2</text>
 <rect x="255" y="487.16652224137044" width="20" height="20" rx="3" fill="#f5c542"><title>Falar · Mentres X Y: 0 aceptadas, 1 pendentes, 0 descartadas</title></rect><text x="265" y="501.16652224137044" text-anchor="middle" font-size="10" fill="#333" pointer-events="none">1</text>
 <rect x="277" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Gardar no inventario · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
 <rect x="299" y="487.16652224137044" width="20" height="20" rx="3" fill="#f0f0f0"><title>Identificar · Mentres X Y: 0 aceptadas, 0 pendentes, 0 descartadas</title></rect>
