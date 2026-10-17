@@ -392,6 +392,7 @@ Ver tamén: [[#Anotar + Gardar no inventario|Anotar]] · [[#Cortar + Gardar no i
 #### Gardar no inventario · Contra ti
 
 #### Gardar no inventario · Despois
+- [ ] Obxecto que cambia mentres está no teu inventario. Ex. herba que seca despois de x horas no inventario. Ovo que se convirte en polo
 
 #### Gardar no inventario · Destrúe
 - [ ] Vento violento: faiche perder herbas
